@@ -25,7 +25,12 @@ def severity_and_score(
     )
 
     is_critical = any(k.lower() in lower for k in critical_kw) or source_type == "SANCTIONS"
-    is_high = any(k.lower() in lower for k in high_kw) or source_type in ("PEP", "NEWS")
+    is_high = any(k.lower() in lower for k in high_kw) or source_type in (
+        "PEP",
+        "NEWS",
+        "WANTED",
+        "CORPORATE",
+    )
 
     if source_type == "SANCTIONS" and entity_name.lower() in lower:
         severity = "CRITICAL"

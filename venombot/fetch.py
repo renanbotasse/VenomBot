@@ -7,8 +7,10 @@ import urllib.error
 import urllib.request
 from typing import Optional
 
-DEFAULT_USER_AGENT = "VenomBot-AML-Crawler/1.0 (+compliance screening)"
-DEFAULT_TIMEOUT = 20
+DEFAULT_USER_AGENT = (
+    "Mozilla/5.0 (compatible; VenomBot/1.0; +https://github.com/renanbotasse/VenomBot)"
+)
+DEFAULT_TIMEOUT = 90
 
 
 def fetch_url(
@@ -16,12 +18,23 @@ def fetch_url(
     *,
     user_agent: str = DEFAULT_USER_AGENT,
     timeout: int = DEFAULT_TIMEOUT,
+    max_bytes: Optional[int] = None,
 ) -> Optional[str]:
-    req = urllib.request.Request(url, headers={"User-Agent": user_agent})
+    req = urllib.request.Request(
+        url,
+        headers={
+            "User-Agent": user_agent,
+            "Accept": "text/csv,application/xml,text/xml,application/rss+xml,application/json,text/html,*/*",
+            "Accept-Language": "en-US,en;q=0.9,ar;q=0.8",
+        },
+    )
     try:
         with urllib.request.urlopen(req, timeout=timeout) as resp:
-            raw = resp.read()
-            for encoding in ("utf-8", "latin-1", "cp1256"):
+            if max_bytes is not None and max_bytes > 0:
+                raw = resp.read(max_bytes)
+            else:
+                raw = resp.read()
+            for encoding in ("utf-8", "utf-8-sig", "latin-1", "cp1256"):
                 try:
                     return raw.decode(encoding)
                 except UnicodeDecodeError:
@@ -32,8 +45,31 @@ def fetch_url(
         return None
 
 
+def _looks_like_markup(content: str) -> bool:
+    head = content.lstrip()[:800].lower()
+    if head.startswith("<?xml") or head.startswith("<!doctype") or head.startswith("<html"):
+        return True
+    if head.startswith("<rss") or head.startswith("<feed"):
+        return True
+    if "<consolidated_list" in head or "<html" in head:
+        return True
+    if head[:1].isdigit() or head.startswith('"id"') or head.startswith("{") or head.startswith("["):
+        return False
+    if "," in head[:40] and "<" not in head[:40]:
+        return False
+    return False
+
+
 def strip_html(content: str) -> str:
-    if "<" not in content or ">" not in content:
+    """Strip tags from HTML/RSS while preserving CSV/JSON/UN XML for parsers."""
+    if not content:
+        return content
+    head = content.lstrip()[:800]
+    if head.startswith("<?xml") or "<CONSOLIDATED_LIST" in head:
+        return content
+    if head.startswith("{") or head.startswith("["):
+        return content
+    if not _looks_like_markup(content):
         return content
     text = re.sub(r"<script[^>]*>.*?</script>", " ", content, flags=re.I | re.S)
     text = re.sub(r"<style[^>]*>.*?</style>", " ", text, flags=re.I | re.S)

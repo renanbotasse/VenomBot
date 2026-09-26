@@ -13,9 +13,11 @@ class AMLSource:
     name: str
     url: str
     language: str  # "en" | "ar" | "mixed"
-    region: str  # "US" | "MENA" | "GLOBAL"
-    source_type: str  # "SANCTIONS" | "PEP" | "NEWS" | "GREY_LIST"
+    region: str  # "US" | "MENA" | "GLOBAL" | "EU" | "UK" | etc
+    source_type: str  # "SANCTIONS" | "PEP" | "NEWS" | "GREY_LIST" | "CORPORATE" | "RISK" | "WANTED"
     update_frequency: str = "daily"
+    # Cap download size for huge lists (bytes). None = no cap at fetch time.
+    max_bytes: Optional[int] = None
 
 
 @dataclass
@@ -29,13 +31,29 @@ class Snapshot:
     region: str = ""
     source_type: str = ""
 
+    # Sanctions lists are multi‑MB; news/HTML stay smaller.
+    CONTENT_LIMITS = {
+        "SANCTIONS": 8_000_000,
+        "PEP": 8_000_000,
+        "WANTED": 2_000_000,
+        "GREY_LIST": 500_000,
+        "CORPORATE": 500_000,
+        "RISK": 500_000,
+        "NEWS": 200_000,
+    }
+    DEFAULT_CONTENT_LIMIT = 200_000
+
     @staticmethod
     def make(
         source: AMLSource,
         content: str,
         fetched_at: Optional[str] = None,
     ) -> Snapshot:
-        truncated = content[:10_240]
+        limit = Snapshot.CONTENT_LIMITS.get(
+            source.source_type,
+            Snapshot.DEFAULT_CONTENT_LIMIT,
+        )
+        truncated = content[:limit]
         ts = fetched_at or datetime.now(timezone.utc).isoformat()
         checksum = hashlib.sha256(truncated.encode("utf-8")).hexdigest()
         language = source.language if source.language != "mixed" else "mixed"

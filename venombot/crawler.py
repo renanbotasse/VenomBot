@@ -27,7 +27,12 @@ class MultilingualWebCrawler:
 
     def crawl_source(self, source: AMLSource) -> Snapshot:
         print(f"  Crawling {source.name} ({source.language}/{source.region})...")
-        content = fetch_url(source.url, user_agent=self.USER_AGENT, timeout=self.TIMEOUT)
+        content = fetch_url(
+            source.url,
+            user_agent=self.USER_AGENT,
+            timeout=self.TIMEOUT,
+            max_bytes=source.max_bytes,
+        )
         if content is None or len(content.strip()) < 50:
             if self.use_sample_fallback:
                 content = SAMPLE_CONTENT.get(source.name, f"Demo content for {source.name}")
@@ -46,6 +51,7 @@ class MultilingualWebCrawler:
                 region=source.region,
                 source_type=source.source_type,
                 update_frequency=source.update_frequency,
+                max_bytes=source.max_bytes,
             )
         else:
             source_for_snap = source

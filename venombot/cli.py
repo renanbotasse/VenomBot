@@ -58,7 +58,6 @@ def cmd_report(args: argparse.Namespace) -> int:
         data = json.loads(findings_path.read_text(encoding="utf-8"))
         fields = AMLFinding.__dataclass_fields__
         for item in data.get("findings", []):
-            # Migrate legacy partner_* keys if present
             if "entity_name" not in item and "partner_name" in item:
                 item["entity_name"] = item.pop("partner_name")
             if "entity_country" not in item and "partner_country" in item:
