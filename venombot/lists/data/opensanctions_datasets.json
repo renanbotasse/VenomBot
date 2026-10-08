@@ -1,0 +1,7652 @@
+{
+"generated_from": "https://data.opensanctions.org/datasets/latest/index.json",
+"generated_at": "2026-10-08T21:10:28",
+"datasets": [
+{
+"name": "abuja_mou_detention",
+"title": "Abuja MoU Detention List",
+"type": "source",
+"tags": [
+"sector.maritime"
+],
+"collections": [
+"default",
+"maritime"
+],
+"targets": 210,
+"country": "zz",
+"official": true,
+"publisher": "Abuja MoU",
+"frequency": "weekly"
+},
+{
+"name": "ad_consell_general",
+"title": "Andorra General Council Members",
+"type": "source",
+"tags": [
+"list.pep"
+],
+"collections": [
+"default",
+"peps"
+],
+"targets": 28,
+"country": "ad",
+"official": true,
+"publisher": "Consell General",
+"frequency": "monthly"
+},
+{
+"name": "adb_sanctions",
+"title": "Asian Development Bank Sanctions",
+"type": "source",
+"tags": [
+"list.debarment",
+"sector.devbank"
+],
+"collections": [
+"default",
+"debarment"
+],
+"targets": 1438,
+"country": "zz",
+"official": true,
+"publisher": "ADB",
+"frequency": "daily"
+},
+{
+"name": "ae_dfsa_prohibited",
+"title": "United Arab Emirates DFSA Prohibited/Restricted Individuals",
+"type": "source",
+"tags": [
+"sector.financial"
+],
+"collections": [
+"default",
+"regulatory",
+"crime"
+],
+"targets": 24,
+"country": "ae",
+"official": true,
+"publisher": "DFSA",
+"frequency": "daily"
+},
+{
+"name": "ae_local_terrorists",
+"title": "United Arab Emirates Local Terrorist List",
+"type": "source",
+"tags": [
+"list.sanction",
+"sector.maritime"
+],
+"collections": [
+"default",
+"maritime",
+"sanctions"
+],
+"targets": 308,
+"country": "ae",
+"official": true,
+"publisher": "EOCN",
+"frequency": "daily"
+},
+{
+"name": "afdb_sanctions",
+"title": "African Development Bank Debarred Entities",
+"type": "source",
+"tags": [
+"list.debarment",
+"sector.devbank"
+],
+"collections": [
+"default",
+"debarment"
+],
+"targets": 1321,
+"country": "zz",
+"official": true,
+"publisher": "AfDB",
+"frequency": "daily"
+},
+{
+"name": "al_kuvendi",
+"title": "Albania Members of Parliament",
+"type": "source",
+"tags": [
+"list.pep"
+],
+"collections": [
+"default",
+"peps"
+],
+"targets": 140,
+"country": "al",
+"official": true,
+"publisher": "Kuvendi i Shqipërisë",
+"frequency": "monthly"
+},
+{
+"name": "am_hetq_officials",
+"title": "Armenia Public Officials and Associates",
+"type": "source",
+"tags": [
+"list.pep"
+],
+"collections": [
+"default",
+"peps"
+],
+"targets": 7565,
+"country": "am",
+"official": false,
+"publisher": "Hetq Online",
+"frequency": "never"
+},
+{
+"name": "am_national_assembly",
+"title": "Armenia Members of the National Assembly",
+"type": "source",
+"tags": [
+"list.pep"
+],
+"collections": [
+"default",
+"peps"
+],
+"targets": 921,
+"country": "am",
+"official": true,
+"publisher": "Azgayin Zhoghov",
+"frequency": "monthly"
+},
+{
+"name": "ar_parliament",
+"title": "Argentina Members of Parliament",
+"type": "source",
+"tags": [
+"list.pep"
+],
+"collections": [
+"default",
+"peps"
+],
+"targets": 1127,
+"country": "ar",
+"official": true,
+"publisher": "HCDN",
+"frequency": "monthly"
+},
+{
+"name": "ar_repet",
+"title": "Argentina RePET Sanctions",
+"type": "source",
+"tags": [
+"list.sanction"
+],
+"collections": [
+"default",
+"sanctions"
+],
+"targets": 1161,
+"country": "ar",
+"official": true,
+"publisher": "MdJ",
+"frequency": "daily"
+},
+{
+"name": "ar_senado",
+"title": "Argentina Members of Senate",
+"type": "source",
+"tags": [
+"list.pep"
+],
+"collections": [
+"default",
+"peps"
+],
+"targets": 290,
+"country": "ar",
+"official": true,
+"publisher": "Honorable Senado de la Nación Argentina",
+"frequency": "monthly"
+},
+{
+"name": "at_meine_abgeordneten",
+"title": "Austria Public Officials",
+"type": "source",
+"tags": [
+"list.pep"
+],
+"collections": [
+"default",
+"peps"
+],
+"targets": 830,
+"country": "at",
+"official": false,
+"publisher": "Meine Abgeordneten",
+"frequency": "daily"
+},
+{
+"name": "at_nbter_sanctions",
+"title": "Austrian National Bank Regulations on Terrorism Financing Restrictions",
+"type": "source",
+"tags": [
+"list.sanction",
+"juris.eu"
+],
+"collections": [
+"default",
+"eu_sanctions",
+"sanctions"
+],
+"targets": 48,
+"country": "at",
+"official": true,
+"publisher": "OeNB",
+"frequency": "never"
+},
+{
+"name": "at_parlament",
+"title": "Austrian Members of Parliament",
+"type": "source",
+"tags": [
+"list.pep"
+],
+"collections": [
+"default",
+"peps"
+],
+"targets": 927,
+"country": "at",
+"official": true,
+"publisher": "Austrian Parliament",
+"frequency": "monthly"
+},
+{
+"name": "au_abf_sanctioned_sponsors",
+"title": "Australian Sanctions Imposed on Sponsors of Skilled Foreign Worker Visas",
+"type": "source",
+"tags": [
+"list.debarment",
+"issuer.west"
+],
+"collections": [
+"default",
+"debarment"
+],
+"targets": 678,
+"country": "au",
+"official": true,
+"publisher": "ABF",
+"frequency": "daily"
+},
+{
+"name": "au_act_parliament",
+"title": "Australia Capital Territory Legislative Assembly",
+"type": "source",
+"tags": [
+"list.pep"
+],
+"collections": [
+"default",
+"peps"
+],
+"targets": 25,
+"country": "au",
+"official": true,
+"publisher": "ACTLA",
+"frequency": "weekly"
+},
+{
+"name": "au_dfat_sanctions",
+"title": "Australian Sanctions Consolidated List",
+"type": "source",
+"tags": [
+"list.sanction",
+"issuer.west"
+],
+"collections": [
+"default",
+"securities",
+"sanctions"
+],
+"targets": 3898,
+"country": "au",
+"official": true,
+"publisher": "DFAT",
+"frequency": "daily"
+},
+{
+"name": "au_listed_terrorist_orgs",
+"title": "Australia Listed Terrorist Organisations",
+"type": "source",
+"tags": [
+"list.terror"
+],
+"collections": [
+"default",
+"sanctions"
+],
+"targets": 28,
+"country": "au",
+"official": true,
+"publisher": "Department of Home Affairs",
+"frequency": "daily"
+},
+{
+"name": "au_nsw_parliament",
+"title": "Australia State Parliament of New South Wales",
+"type": "source",
+"tags": [
+"list.pep"
+],
+"collections": [
+"default",
+"peps"
+],
+"targets": 134,
+"country": "au",
+"official": true,
+"publisher": "Australia State Parliament of New South Wales",
+"frequency": "monthly"
+},
+{
+"name": "au_nt_parliament",
+"title": "Australia Northern Territory Legislative Assembly",
+"type": "source",
+"tags": [
+"list.pep"
+],
+"collections": [
+"default",
+"peps"
+],
+"targets": 25,
+"country": "au",
+"official": true,
+"publisher": "Northern Territory Legislative Assembly",
+"frequency": "weekly"
+},
+{
+"name": "au_parliament",
+"title": "Australia Members of Parliament",
+"type": "source",
+"tags": [
+"list.pep"
+],
+"collections": [
+"default",
+"peps"
+],
+"targets": 326,
+"country": "au",
+"official": true,
+"publisher": "Parliament of Australia",
+"frequency": "monthly"
+},
+{
+"name": "au_qld_parliament",
+"title": "Australia State Parliament of Queensland",
+"type": "source",
+"tags": [
+"list.pep"
+],
+"collections": [
+"default",
+"peps"
+],
+"targets": 93,
+"country": "au",
+"official": true,
+"publisher": "QLD Parliament",
+"frequency": "weekly"
+},
+{
+"name": "au_sa_parliament",
+"title": "Australia Parliament of South Australia",
+"type": "source",
+"tags": [
+"list.pep"
+],
+"collections": [
+"default",
+"peps"
+],
+"targets": 69,
+"country": "au",
+"official": true,
+"publisher": "SA Parliament",
+"frequency": "weekly"
+},
+{
+"name": "au_tas_parliament",
+"title": "Australia State Parliament of Tasmania",
+"type": "source",
+"tags": [
+"list.pep"
+],
+"collections": [
+"default",
+"peps"
+],
+"targets": 50,
+"country": "au",
+"official": true,
+"publisher": "Parliament of Tasmania",
+"frequency": "monthly"
+},
+{
+"name": "au_vic_parliament",
+"title": "Australia State Parliament of Victoria",
+"type": "source",
+"tags": [
+"list.pep"
+],
+"collections": [
+"default",
+"peps"
+],
+"targets": 127,
+"country": "au",
+"official": true,
+"publisher": "Parliament of Victoria",
+"frequency": "monthly"
+},
+{
+"name": "au_wa_parliament",
+"title": "Australia State Parliament of Western Australia",
+"type": "source",
+"tags": [
+"list.pep"
+],
+"collections": [
+"default",
+"peps"
+],
+"targets": 96,
+"country": "au",
+"official": true,
+"publisher": "Parliament of Western Australia",
+"frequency": "weekly"
+},
+{
+"name": "az_fiu_sanctions",
+"title": "Azerbaijan Domestic List",
+"type": "source",
+"tags": [
+"list.sanction.counter"
+],
+"collections": [
+"default",
+"sanctions"
+],
+"targets": 36,
+"country": "az",
+"official": true,
+"publisher": "FMS",
+"frequency": "daily"
+},
+{
+"name": "az_parliament",
+"title": "Azerbaijan National Assembly (Milli Majlis)",
+"type": "source",
+"tags": [
+"list.pep"
+],
+"collections": [
+"default",
+"peps"
+],
+"targets": 124,
+"country": "az",
+"official": true,
+"publisher": "Azərbaycan Respublikasının Milli Məclisi",
+"frequency": "weekly"
+},
+{
+"name": "ba_parliament",
+"title": "Bosnia and Herzegovina Parliamentary Assembly",
+"type": "source",
+"tags": [
+"list.pep"
+],
+"collections": [
+"default",
+"peps"
+],
+"targets": 58,
+"country": "ba",
+"official": true,
+"publisher": "PSBiH",
+"frequency": "weekly"
+},
+{
+"name": "be_chamber",
+"title": "Belgium Members of the Chamber of Representatives",
+"type": "source",
+"tags": [
+"list.pep"
+],
+"collections": [
+"default",
+"peps"
+],
+"targets": 732,
+"country": "be",
+"official": true,
+"publisher": "Chambre des représentants",
+"frequency": "monthly"
+},
+{
+"name": "be_flemish_parliament",
+"title": "Belgium Flemish Parliament",
+"type": "source",
+"tags": [
+"list.pep"
+],
+"collections": [
+"default",
+"peps"
+],
+"targets": 124,
+"country": "be",
+"official": true,
+"publisher": "Vlaams Parlement",
+"frequency": "monthly"
+},
+{
+"name": "be_fod_sanctions",
+"title": "Belgian Financial Sanctions",
+"type": "source",
+"tags": [
+"list.sanction",
+"juris.eu",
+"issuer.west",
+"sector.maritime"
+],
+"collections": [
+"default",
+"eu_sanctions",
+"maritime",
+"sanctions"
+],
+"targets": 6271,
+"country": "be",
+"official": true,
+"publisher": "FOD",
+"frequency": "daily"
+},
+{
+"name": "be_senate",
+"title": "Belgium Members of the Senate",
+"type": "source",
+"tags": [
+"list.pep"
+],
+"collections": [
+"default",
+"peps"
+],
+"targets": 125,
+"country": "be",
+"official": true,
+"publisher": "Belgische Senaat",
+"frequency": "weekly"
+},
+{
+"name": "be_walloon_parliament",
+"title": "Belgium Parliament of Wallonia",
+"type": "source",
+"tags": [
+"list.pep"
+],
+"collections": [
+"default",
+"peps"
+],
+"targets": 75,
+"country": "be",
+"official": true,
+"publisher": "Parlement de Wallonie",
+"frequency": "monthly"
+},
+{
+"name": "bg_jud_declarations",
+"title": "Bulgaria Judiciary Asset Declarations",
+"type": "source",
+"tags": [
+"list.pep",
+"list.pep.bulk"
+],
+"collections": [
+"default",
+"peps"
+],
+"targets": 5228,
+"country": "bg",
+"official": true,
+"publisher": "ИВСС",
+"frequency": "weekly"
+},
+{
+"name": "bg_mft_national",
+"title": "Bulgaria National Terrorism Financing List",
+"type": "source",
+"tags": [
+"list.sanction"
+],
+"collections": [
+"default",
+"eu_sanctions",
+"sanctions"
+],
+"targets": 19,
+"country": "bg",
+"official": true,
+"publisher": "DANS",
+"frequency": "never"
+},
+{
+"name": "bg_parliament",
+"title": "Bulgaria Members of the National Assembly",
+"type": "source",
+"tags": [
+"list.pep"
+],
+"collections": [
+"default",
+"peps"
+],
+"targets": 672,
+"country": "bg",
+"official": true,
+"publisher": "NA",
+"frequency": "monthly"
+},
+{
+"name": "bh_nuwab",
+"title": "Bahrain Council of Representatives Members",
+"type": "source",
+"tags": [
+"list.pep"
+],
+"collections": [
+"default",
+"peps"
+],
+"targets": 178,
+"country": "bh",
+"official": true,
+"publisher": "COR",
+"frequency": "weekly"
+},
+{
+"name": "bh_shura_council",
+"title": "Bahrain Shura Council Members",
+"type": "source",
+"tags": [
+"list.pep"
+],
+"collections": [
+"default",
+"peps"
+],
+"targets": 104,
+"country": "bh",
+"official": true,
+"publisher": "مجلس الشورى",
+"frequency": "weekly"
+},
+{
+"name": "black_sea_mou_detention",
+"title": "Black Sea MoU Detention List",
+"type": "source",
+"tags": [
+"sector.maritime"
+],
+"collections": [
+"default",
+"maritime"
+],
+"targets": 1242,
+"country": "zz",
+"official": true,
+"publisher": "BSMOU",
+"frequency": "weekly"
+},
+{
+"name": "bo_diputados",
+"title": "Bolivia Members of the Chamber of Deputies",
+"type": "source",
+"tags": [
+"list.pep"
+],
+"collections": [
+"default",
+"peps"
+],
+"targets": 255,
+"country": "bo",
+"official": true,
+"publisher": "Cámara de Diputados de Bolivia",
+"frequency": "monthly"
+},
+{
+"name": "bo_senado",
+"title": "Bolivia Members of the Chamber of Senators",
+"type": "source",
+"tags": [
+"list.pep"
+],
+"collections": [
+"default",
+"peps"
+],
+"targets": 36,
+"country": "bo",
+"official": true,
+"publisher": "Cámara de Senadores de Bolivia",
+"frequency": "monthly"
+},
+{
+"name": "br_bcb_disqualified_persons",
+"title": "Brazil Register of Persons Disqualified from Senior Roles",
+"type": "source",
+"tags": [],
+"collections": [
+"default",
+"crime"
+],
+"targets": 317,
+"country": "br",
+"official": true,
+"publisher": "BCB",
+"frequency": "daily"
+},
+{
+"name": "br_bcb_prohibited",
+"title": "Brazil Entities Prohibited from Offering Auditing Services",
+"type": "source",
+"tags": [],
+"collections": [
+"default",
+"debarment"
+],
+"targets": 2,
+"country": "br",
+"official": true,
+"publisher": "BCB",
+"frequency": "daily"
+},
+{
+"name": "br_ceis",
+"title": "Brazil National Register of Disreputable and Suspended Companies",
+"type": "source",
+"tags": [],
+"collections": [
+"default",
+"debarment"
+],
+"targets": 16895,
+"country": "br",
+"official": true,
+"publisher": "CGU",
+"frequency": "daily"
+},
+{
+"name": "br_chamber_deputies",
+"title": "Brazil Members of the Chamber of Deputies",
+"type": "source",
+"tags": [
+"list.pep"
+],
+"collections": [
+"default",
+"peps"
+],
+"targets": 2042,
+"country": "br",
+"official": true,
+"publisher": "Câmara dos Deputados",
+"frequency": "monthly"
+},
+{
+"name": "br_federal_senate",
+"title": "Brazil Members of the Federal Senate",
+"type": "source",
+"tags": [
+"list.pep"
+],
+"collections": [
+"default",
+"peps"
+],
+"targets": 81,
+"country": "br",
+"official": true,
+"publisher": "Senado Federal",
+"frequency": "monthly"
+},
+{
+"name": "br_pep",
+"title": "Brazil Politically Exposed Persons",
+"type": "source",
+"tags": [
+"list.pep",
+"list.pep.bulk"
+],
+"collections": [
+"default",
+"peps"
+],
+"targets": 106455,
+"country": "br",
+"official": true,
+"publisher": "CGU",
+"frequency": "weekly"
+},
+{
+"name": "br_slavery",
+"title": "Brazil Ministry of Labour and Employment slavery prevention list",
+"type": "source",
+"tags": [
+"risk.slavery"
+],
+"collections": [
+"default",
+"regulatory",
+"crime"
+],
+"targets": 566,
+"country": "",
+"official": true,
+"publisher": "MTE",
+"frequency": "weekly"
+},
+{
+"name": "br_tcu_debarred",
+"title": "Brazil List of Debarred Bidders",
+"type": "source",
+"tags": [],
+"collections": [
+"default",
+"debarment"
+],
+"targets": 87,
+"country": "br",
+"official": true,
+"publisher": "TCU",
+"frequency": "daily"
+},
+{
+"name": "br_tcu_disqualified",
+"title": "Brazil List of Individuals Disqualified from Public Service",
+"type": "source",
+"tags": [],
+"collections": [
+"default",
+"regulatory",
+"crime"
+],
+"targets": 595,
+"country": "br",
+"official": true,
+"publisher": "TCU",
+"frequency": "daily"
+},
+{
+"name": "bt_parliament",
+"title": "Bhutan Parliament",
+"type": "source",
+"tags": [
+"list.pep"
+],
+"collections": [
+"default",
+"peps"
+],
+"targets": 188,
+"country": "bt",
+"official": true,
+"publisher": "Chi Tshog",
+"frequency": "monthly"
+},
+{
+"name": "by_council_republic",
+"title": "Belarus Members of the Council of the Republic",
+"type": "source",
+"tags": [
+"list.pep"
+],
+"collections": [
+"default",
+"peps"
+],
+"targets": 57,
+"country": "by",
+"official": true,
+"publisher": "Council of the Republic of the National Assembly of Belarus",
+"frequency": "monthly"
+},
+{
+"name": "bz_national_assembly",
+"title": "Belize Members of National Assembly",
+"type": "source",
+"tags": [
+"list.pep"
+],
+"collections": [
+"default",
+"peps"
+],
+"targets": 46,
+"country": "bz",
+"official": true,
+"publisher": "National Assembly of Belize",
+"frequency": "monthly"
+},
+{
+"name": "c4ads_xinjiang",
+"title": "C4ADS Long Shadows (Xinjiang)",
+"type": "source",
+"tags": [
+"risk.slavery"
+],
+"collections": [
+"default",
+"special_interest"
+],
+"targets": 2772,
+"country": "",
+"official": false,
+"publisher": "C4ADS",
+"frequency": "monthly"
+},
+{
+"name": "c4ads_xinjiang_mining",
+"title": "C4ADS Fractured Veins (Xinjiang Mining Industry)",
+"type": "source",
+"tags": [
+"risk.slavery",
+"sector.energy"
+],
+"collections": [
+"default",
+"special_interest"
+],
+"targets": 6960,
+"country": "",
+"official": false,
+"publisher": "C4ADS",
+"frequency": "monthly"
+},
+{
+"name": "ca_commons",
+"title": "Canada Members of the House of Commons",
+"type": "source",
+"tags": [
+"list.pep"
+],
+"collections": [
+"default",
+"peps"
+],
+"targets": 338,
+"country": "ca",
+"official": true,
+"publisher": "House of Commons of Canada",
+"frequency": "monthly"
+},
+{
+"name": "ca_dfatd_sema_sanctions",
+"title": "Canadian Consolidated Autonomous Sanctions List",
+"type": "source",
+"tags": [
+"list.sanction",
+"issuer.west",
+"sector.maritime"
+],
+"collections": [
+"default",
+"securities",
+"maritime",
+"sanctions"
+],
+"targets": 5619,
+"country": "ca",
+"official": true,
+"publisher": "Global Affairs Canada",
+"frequency": "daily"
+},
+{
+"name": "ca_facfoa",
+"title": "Canadian Freezing Assets of Corrupt Foreign Officials Act",
+"type": "source",
+"tags": [
+"list.sanction",
+"risk.klepto",
+"issuer.west"
+],
+"collections": [
+"default",
+"sanctions"
+],
+"targets": 8,
+"country": "ca",
+"official": true,
+"publisher": "Government of Canada",
+"frequency": "weekly"
+},
+{
+"name": "ca_foreign_reps",
+"title": "Foreign Representatives in Canada: Heads of Missions",
+"type": "source",
+"tags": [
+"list.pep"
+],
+"collections": [
+"default",
+"peps"
+],
+"targets": 267,
+"country": "ca",
+"official": true,
+"publisher": "Global Affairs Canada",
+"frequency": "weekly"
+},
+{
+"name": "ca_listed_terrorists",
+"title": "Canadian Listed Terrorist Entities",
+"type": "source",
+"tags": [
+"list.sanction",
+"issuer.west"
+],
+"collections": [
+"default",
+"sanctions"
+],
+"targets": 86,
+"country": "ca",
+"official": true,
+"publisher": "Public Safety Canada",
+"frequency": "daily"
+},
+{
+"name": "ca_named_research_orgs",
+"title": "Canadian Named Research Organizations list",
+"type": "source",
+"tags": [
+"list.regulatory",
+"target.ru",
+"target.cn",
+"target.ir",
+"sector.academic",
+"issuer.west"
+],
+"collections": [
+"default",
+"sanctions"
+],
+"targets": 153,
+"country": "ca",
+"official": true,
+"publisher": "Government of Canada",
+"frequency": "daily"
+},
+{
+"name": "ca_sema_sanctions_news",
+"title": "Canadian Consolidated Autonomous Sanctions List on the Russian invasion of Ukraine",
+"type": "source",
+"tags": [
+"list.sanction",
+"issuer.west",
+"sector.maritime"
+],
+"collections": [
+"default",
+"sanctions"
+],
+"targets": 8,
+"country": "ca",
+"official": true,
+"publisher": "Global Affairs Canada",
+"frequency": "daily"
+},
+{
+"name": "ca_senate",
+"title": "Canada Members of the Senate",
+"type": "source",
+"tags": [
+"list.pep"
+],
+"collections": [
+"default",
+"peps"
+],
+"targets": 94,
+"country": "ca",
+"official": true,
+"publisher": "Senate of Canada",
+"frequency": "monthly"
+},
+{
+"name": "cd_national_assembly",
+"title": "DR Congo Members of the National Assembly",
+"type": "source",
+"tags": [
+"list.pep"
+],
+"collections": [
+"default",
+"peps"
+],
+"targets": 560,
+"country": "cd",
+"official": true,
+"publisher": "Assemblée nationale de la République démocratique du Congo",
+"frequency": "monthly"
+},
+{
+"name": "ch_fiaa_freezes",
+"title": "Switzerland Asset Freezes of Foreign Politically Exposed Persons",
+"type": "source",
+"tags": [
+"list.sanction",
+"risk.klepto",
+"issuer.west"
+],
+"collections": [
+"default",
+"sanctions"
+],
+"targets": 55,
+"country": "ch",
+"official": true,
+"publisher": "FDFA",
+"frequency": "never"
+},
+{
+"name": "ch_finma_rulings",
+"title": "Swiss FINMA Final Rulings",
+"type": "source",
+"tags": [],
+"collections": [
+"default",
+"regulatory",
+"crime"
+],
+"targets": 19,
+"country": "ch",
+"official": true,
+"publisher": "FINMA",
+"frequency": "daily"
+},
+{
+"name": "ch_finma_warnings",
+"title": "Swiss FINMA Warning List",
+"type": "source",
+"tags": [],
+"collections": [
+"default",
+"regulatory",
+"crime"
+],
+"targets": 2336,
+"country": "ch",
+"official": true,
+"publisher": "FINMA",
+"frequency": "daily"
+},
+{
+"name": "ch_parlament",
+"title": "Switzerland Members of Federal Assembly",
+"type": "source",
+"tags": [
+"list.pep"
+],
+"collections": [
+"default",
+"peps"
+],
+"targets": 649,
+"country": "ch",
+"official": true,
+"publisher": "Parliamentary Services of the Federal Assembly",
+"frequency": "monthly"
+},
+{
+"name": "ch_seco_sanctions",
+"title": "Swiss SECO Sanctions/Embargoes",
+"type": "source",
+"tags": [
+"list.sanction",
+"issuer.west",
+"sector.maritime"
+],
+"collections": [
+"default",
+"securities",
+"maritime",
+"sanctions"
+],
+"targets": 6738,
+"country": "ch",
+"official": true,
+"publisher": "SECO",
+"frequency": "daily"
+},
+{
+"name": "ci_national_assembly",
+"title": "Côte d'Ivoire Members of the National Assembly",
+"type": "source",
+"tags": [
+"list.pep"
+],
+"collections": [
+"default",
+"peps"
+],
+"targets": 255,
+"country": "ci",
+"official": true,
+"publisher": "AN",
+"frequency": "monthly"
+},
+{
+"name": "ci_senate",
+"title": "Côte d'Ivoire Members of the Senate",
+"type": "source",
+"tags": [
+"list.pep"
+],
+"collections": [
+"default",
+"peps"
+],
+"targets": 99,
+"country": "ci",
+"official": true,
+"publisher": "Sénat de Côte d'Ivoire",
+"frequency": "monthly"
+},
+{
+"name": "cl_chamber_deputies",
+"title": "Chile Members of the Chamber of Deputies",
+"type": "source",
+"tags": [
+"list.pep"
+],
+"collections": [
+"default",
+"peps"
+],
+"targets": 469,
+"country": "cl",
+"official": true,
+"publisher": "Cámara de Diputadas y Diputados",
+"frequency": "monthly"
+},
+{
+"name": "cl_info_probidad",
+"title": "PEPs from Chile Interest and Asset Declarations",
+"type": "source",
+"tags": [
+"list.pep",
+"list.pep.bulk"
+],
+"collections": [
+"default",
+"peps"
+],
+"targets": 7501,
+"country": "cl",
+"official": true,
+"publisher": "CPLT",
+"frequency": "daily"
+},
+{
+"name": "cl_senate",
+"title": "Chile Members of the Senate",
+"type": "source",
+"tags": [
+"list.pep"
+],
+"collections": [
+"default",
+"peps"
+],
+"targets": 125,
+"country": "cl",
+"official": true,
+"publisher": "Senado de la República de Chile",
+"frequency": "monthly"
+},
+{
+"name": "cm_national_assembly",
+"title": "Cameroon Members of the National Assembly",
+"type": "source",
+"tags": [
+"list.pep"
+],
+"collections": [
+"default",
+"peps"
+],
+"targets": 178,
+"country": "cm",
+"official": true,
+"publisher": "Assemblée nationale du Cameroun",
+"frequency": "monthly"
+},
+{
+"name": "cm_senate",
+"title": "Cameroon Members of the Senate",
+"type": "source",
+"tags": [
+"list.pep"
+],
+"collections": [
+"default",
+"peps"
+],
+"targets": 100,
+"country": "cm",
+"official": true,
+"publisher": "Sénat du Cameroun",
+"frequency": "monthly"
+},
+{
+"name": "cn_npc",
+"title": "China Deputies of National People's Congress",
+"type": "source",
+"tags": [
+"list.pep"
+],
+"collections": [
+"default",
+"peps"
+],
+"targets": 2815,
+"country": "cn",
+"official": true,
+"publisher": "NPC",
+"frequency": "monthly"
+},
+{
+"name": "cn_peoples_congress_wikipedia",
+"title": "China National People's Congress on Wikipedia",
+"type": "source",
+"tags": [
+"list.pep"
+],
+"collections": [
+"default",
+"peps"
+],
+"targets": 2982,
+"country": "zz",
+"official": false,
+"publisher": "Wikipedia",
+"frequency": "unknown"
+},
+{
+"name": "cn_sanctions",
+"title": "China Sanctions Research",
+"type": "source",
+"tags": [
+"list.sanction.counter",
+"list.export",
+"target.us",
+"target.jp",
+"target.tw",
+"target.ca",
+"target.gb"
+],
+"collections": [
+"default",
+"sanctions"
+],
+"targets": 432,
+"country": "cn",
+"official": false,
+"publisher": "OpenSanctions",
+"frequency": "never"
+},
+{
+"name": "co_funcion_publica",
+"title": "Colombian PEP Declarations",
+"type": "source",
+"tags": [
+"list.pep",
+"list.pep.bulk"
+],
+"collections": [
+"default",
+"peps"
+],
+"targets": 20361,
+"country": "co",
+"official": true,
+"publisher": "DAFP",
+"frequency": "daily"
+},
+{
+"name": "co_join_dots",
+"title": "Colombian Joining the Dots PEPs",
+"type": "source",
+"tags": [
+"list.pep",
+"list.pep.bulk"
+],
+"collections": [
+"default",
+"peps"
+],
+"targets": 186,
+"country": "co",
+"official": false,
+"publisher": "Directorio Legislativo/EITI",
+"frequency": "daily"
+},
+{
+"name": "cr_legislature",
+"title": "Costa Rica Deputies of the Legislative Assembly",
+"type": "source",
+"tags": [
+"list.pep"
+],
+"collections": [
+"default",
+"peps"
+],
+"targets": 57,
+"country": "cr",
+"official": true,
+"publisher": "AL",
+"frequency": "monthly"
+},
+{
+"name": "crime",
+"title": "Warrants and Criminal Entities",
+"type": "collection",
+"tags": [],
+"collections": [],
+"targets": 251127,
+"country": "",
+"official": false,
+"publisher": "",
+"frequency": "daily"
+},
+{
+"name": "cu_inventario_legislatura",
+"title": "Cuba Members of the Parliament",
+"type": "source",
+"tags": [
+"list.pep"
+],
+"collections": [
+"default",
+"peps"
+],
+"targets": 470,
+"country": "cu",
+"official": false,
+"publisher": "Proyecto Inventario",
+"frequency": "monthly"
+},
+{
+"name": "cy_parliament",
+"title": "Cyprus House of Representatives",
+"type": "source",
+"tags": [
+"list.pep"
+],
+"collections": [
+"default",
+"peps"
+],
+"targets": 56,
+"country": "cy",
+"official": true,
+"publisher": "Cyprus House of Representatives",
+"frequency": "monthly"
+},
+{
+"name": "cz_national_sanctions",
+"title": "Czech Republic National Sanctions",
+"type": "source",
+"tags": [
+"list.sanction",
+"issuer.west"
+],
+"collections": [
+"default",
+"eu_sanctions",
+"sanctions"
+],
+"targets": 14,
+"country": "cz",
+"official": true,
+"publisher": "MZV",
+"frequency": "daily"
+},
+{
+"name": "cz_pep_declarations",
+"title": "Czech Republic PEPs from the Central Register of Declarations",
+"type": "source",
+"tags": [
+"list.pep",
+"list.pep.bulk"
+],
+"collections": [
+"default",
+"peps"
+],
+"targets": 563,
+"country": "cz",
+"official": true,
+"publisher": "Ministerstvo spravedlnosti České republiky",
+"frequency": "monthly"
+},
+{
+"name": "cz_terrorists",
+"title": "Czech National Anti-Terrorism Designations (Government Regulation No. 210/2008)",
+"type": "source",
+"tags": [
+"list.sanction",
+"juris.eu"
+],
+"collections": [
+"default",
+"sanctions"
+],
+"targets": 47,
+"country": "cz",
+"official": true,
+"publisher": "Vláda České republiky",
+"frequency": "monthly"
+},
+{
+"name": "de_abgeordnetenwatch",
+"title": "German Legislators from AbgeordnetenWatch",
+"type": "source",
+"tags": [
+"list.pep"
+],
+"collections": [
+"default",
+"peps"
+],
+"targets": 2513,
+"country": "de",
+"official": false,
+"publisher": "Parlamentwatch e.V.",
+"frequency": "daily"
+},
+{
+"name": "de_bfv_extremism",
+"title": "Germany Banned organizations involved in foreign-related extremism",
+"type": "source",
+"tags": [],
+"collections": [
+"default",
+"eu_sanctions",
+"sanctions"
+],
+"targets": 13,
+"country": "de",
+"official": true,
+"publisher": "BfV",
+"frequency": "weekly"
+},
+{
+"name": "de_bka_wanted",
+"title": "Germany BKA Wanted Fugitives",
+"type": "source",
+"tags": [
+"list.wanted"
+],
+"collections": [
+"default",
+"wanted",
+"crime"
+],
+"targets": 35,
+"country": "de",
+"official": true,
+"publisher": "BKA",
+"frequency": "monthly"
+},
+{
+"name": "de_bundesrat",
+"title": "Germany Members of the Bundesrat",
+"type": "source",
+"tags": [
+"list.pep"
+],
+"collections": [
+"default",
+"peps"
+],
+"targets": 181,
+"country": "de",
+"official": true,
+"publisher": "German Bundesrat",
+"frequency": "monthly"
+},
+{
+"name": "de_bundestag",
+"title": "Germany Members of the Bundestag",
+"type": "source",
+"tags": [
+"list.pep"
+],
+"collections": [
+"default",
+"peps"
+],
+"targets": 1817,
+"country": "de",
+"official": true,
+"publisher": "Deutscher Bundestag",
+"frequency": "monthly"
+},
+{
+"name": "debarment",
+"title": "Debarred Companies and Individuals",
+"type": "collection",
+"tags": [],
+"collections": [],
+"targets": 197960,
+"country": "",
+"official": false,
+"publisher": "",
+"frequency": "daily"
+},
+{
+"name": "dk_pep",
+"title": "Denmark, Faroe Islands and Greenland PEPs",
+"type": "source",
+"tags": [
+"list.pep"
+],
+"collections": [
+"default",
+"peps"
+],
+"targets": 1562,
+"country": "dk",
+"official": true,
+"publisher": "Finanstilsynet",
+"frequency": "weekly"
+},
+{
+"name": "do_congress",
+"title": "Dominican Republic Members of the National Congress",
+"type": "source",
+"tags": [
+"list.pep"
+],
+"collections": [
+"default",
+"peps"
+],
+"targets": 221,
+"country": "do",
+"official": true,
+"publisher": "CD",
+"frequency": "monthly"
+},
+{
+"name": "dz_apn",
+"title": "Algeria Members of the People's National Assembly",
+"type": "source",
+"tags": [
+"list.pep"
+],
+"collections": [
+"default",
+"peps"
+],
+"targets": 405,
+"country": "dz",
+"official": true,
+"publisher": "APN",
+"frequency": "monthly"
+},
+{
+"name": "dz_council_nation",
+"title": "Algeria Members of the Council of the Nation",
+"type": "source",
+"tags": [
+"list.pep"
+],
+"collections": [
+"default",
+"peps"
+],
+"targets": 152,
+"country": "dz",
+"official": true,
+"publisher": "Majlis al-Umma",
+"frequency": "monthly"
+},
+{
+"name": "ebrd_ineligible",
+"title": "EBRD Ineligible Entities",
+"type": "source",
+"tags": [
+"list.debarment",
+"sector.devbank"
+],
+"collections": [
+"default",
+"debarment"
+],
+"targets": 1223,
+"country": "zz",
+"official": true,
+"publisher": "EBRD",
+"frequency": "daily"
+},
+{
+"name": "ee_international_sanctions",
+"title": "Estonia International Sanctions Act List",
+"type": "source",
+"tags": [
+"list.sanction",
+"risk.klepto",
+"juris.eu",
+"issuer.west"
+],
+"collections": [
+"default",
+"eu_sanctions",
+"sanctions"
+],
+"targets": 434,
+"country": "ee",
+"official": true,
+"publisher": "VM",
+"frequency": "daily"
+},
+{
+"name": "ee_riigikogu",
+"title": "Estonia Members of the Riigikogu",
+"type": "source",
+"tags": [
+"list.pep"
+],
+"collections": [
+"default",
+"peps"
+],
+"targets": 405,
+"country": "ee",
+"official": true,
+"publisher": "Riigikogu",
+"frequency": "monthly"
+},
+{
+"name": "eg_house_representatives",
+"title": "Egypt Members of the House of Representatives",
+"type": "source",
+"tags": [
+"list.pep"
+],
+"collections": [
+"default",
+"peps"
+],
+"targets": 595,
+"country": "eg",
+"official": true,
+"publisher": "HoR",
+"frequency": "monthly"
+},
+{
+"name": "eg_terrorists",
+"title": "Egypt Domestic Terrorist List",
+"type": "source",
+"tags": [
+"list.sanction"
+],
+"collections": [
+"default",
+"crime"
+],
+"targets": 3618,
+"country": "eg",
+"official": true,
+"publisher": "وحدة مكافحة غسل الأموال وتمويل الإرهاب المصرية",
+"frequency": "daily"
+},
+{
+"name": "eiti_soe",
+"title": "EITI State-Owned Enterprises Database",
+"type": "source",
+"tags": [
+"sector.energy"
+],
+"collections": [
+"default",
+"special_interest"
+],
+"targets": 0,
+"country": "zz",
+"official": false,
+"publisher": "EITI",
+"frequency": "weekly"
+},
+{
+"name": "enforcement",
+"title": "Enforcement Actions and Regulatory Notices",
+"type": "collection",
+"tags": [],
+"collections": [],
+"targets": 7885,
+"country": "",
+"official": false,
+"publisher": "",
+"frequency": "daily"
+},
+{
+"name": "es_cnp_wanted",
+"title": "Spain National Police Most Wanted List",
+"type": "source",
+"tags": [
+"list.wanted"
+],
+"collections": [
+"default",
+"wanted",
+"crime"
+],
+"targets": 10,
+"country": "es",
+"official": true,
+"publisher": "CNP",
+"frequency": "daily"
+},
+{
+"name": "es_mayors_councillors",
+"title": "Spain Mayors and Councillors",
+"type": "source",
+"tags": [
+"list.pep",
+"list.pep.bulk"
+],
+"collections": [
+"default",
+"peps"
+],
+"targets": 75263,
+"country": "es",
+"official": true,
+"publisher": "MPT",
+"frequency": "weekly"
+},
+{
+"name": "es_parliament",
+"title": "Spain Members of Parliament",
+"type": "source",
+"tags": [
+"list.pep"
+],
+"collections": [
+"default",
+"peps"
+],
+"targets": 599,
+"country": "es",
+"official": true,
+"publisher": "Cortes Generales",
+"frequency": "weekly"
+},
+{
+"name": "et_hopr",
+"title": "Ethiopia Members of the House of Peoples' Representatives",
+"type": "source",
+"tags": [
+"list.pep"
+],
+"collections": [
+"default",
+"peps"
+],
+"targets": 1913,
+"country": "et",
+"official": true,
+"publisher": "HoPR",
+"frequency": "monthly"
+},
+{
+"name": "eu_cor_members",
+"title": "European Commitee of the Regions Members",
+"type": "source",
+"tags": [
+"list.pep"
+],
+"collections": [
+"default",
+"peps"
+],
+"targets": 732,
+"country": "eu",
+"official": true,
+"publisher": "CoR",
+"frequency": "weekly"
+},
+{
+"name": "eu_edes",
+"title": "EU Early Detection and Exclusion System (EDES)",
+"type": "source",
+"tags": [],
+"collections": [
+"default",
+"debarment"
+],
+"targets": 5,
+"country": "eu",
+"official": true,
+"publisher": "EC",
+"frequency": "daily"
+},
+{
+"name": "eu_esma_sanctions",
+"title": "EU ESMA Sanctions",
+"type": "source",
+"tags": [],
+"collections": [
+"default",
+"securities",
+"regulatory",
+"crime"
+],
+"targets": 639,
+"country": "eu",
+"official": true,
+"publisher": "ESMA",
+"frequency": "daily"
+},
+{
+"name": "eu_esma_saris",
+"title": "EU ESMA Suspensions and Removals",
+"type": "source",
+"tags": [
+"list.sanction",
+"sector.financial",
+"sector.securities",
+"issuer.west"
+],
+"collections": [
+"default",
+"securities",
+"enforcement",
+"sanctions"
+],
+"targets": 2093,
+"country": "eu",
+"official": true,
+"publisher": "ESMA",
+"frequency": "daily"
+},
+{
+"name": "eu_europol_wanted",
+"title": "Europe Most Wanted Fugitives",
+"type": "source",
+"tags": [
+"list.wanted"
+],
+"collections": [
+"default",
+"wanted",
+"crime"
+],
+"targets": 47,
+"country": "eu",
+"official": true,
+"publisher": "EUROPOL",
+"frequency": "daily"
+},
+{
+"name": "eu_fsf",
+"title": "EU Financial Sanctions Files (FSF)",
+"type": "source",
+"tags": [
+"list.sanction",
+"juris.eu",
+"issuer.west",
+"sector.maritime"
+],
+"collections": [
+"default",
+"securities",
+"eu_sanctions",
+"maritime",
+"sanctions"
+],
+"targets": 6135,
+"country": "eu",
+"official": true,
+"publisher": "DG FISMA",
+"frequency": "daily"
+},
+{
+"name": "eu_journal_sanctions",
+"title": "EU Council Official Journal Sanctioned Entities",
+"type": "source",
+"tags": [
+"list.sanction",
+"issuer.west",
+"sector.maritime"
+],
+"collections": [
+"default",
+"securities",
+"eu_sanctions",
+"maritime",
+"sanctions"
+],
+"targets": 7984,
+"country": "eu",
+"official": true,
+"publisher": "Council of the European Union",
+"frequency": "daily"
+},
+{
+"name": "eu_meps",
+"title": "European Parliament Members",
+"type": "source",
+"tags": [
+"list.pep"
+],
+"collections": [
+"default",
+"peps"
+],
+"targets": 2712,
+"country": "eu",
+"official": true,
+"publisher": "EP",
+"frequency": "weekly"
+},
+{
+"name": "eu_sanctions_map",
+"title": "EU Sanctions Map",
+"type": "source",
+"tags": [
+"list.sanction",
+"issuer.west",
+"sector.maritime"
+],
+"collections": [
+"default",
+"securities",
+"eu_sanctions",
+"maritime",
+"sanctions"
+],
+"targets": 1413,
+"country": "eu",
+"official": true,
+"publisher": "Council of the European Union",
+"frequency": "daily"
+},
+{
+"name": "eu_travel_bans",
+"title": "EU Consolidated Travel Bans",
+"type": "source",
+"tags": [
+"list.sanction",
+"juris.eu",
+"issuer.west"
+],
+"collections": [
+"default",
+"eu_sanctions",
+"sanctions"
+],
+"targets": 3813,
+"country": "eu",
+"official": true,
+"publisher": "Council of the European Union",
+"frequency": "daily"
+},
+{
+"name": "fi_eduskunta",
+"title": "Finland Members of Parliament",
+"type": "source",
+"tags": [
+"list.pep"
+],
+"collections": [
+"default",
+"peps"
+],
+"targets": 199,
+"country": "fi",
+"official": true,
+"publisher": "Suomen eduskunta",
+"frequency": "monthly"
+},
+{
+"name": "fj_parliament",
+"title": "Fiji Members of Parliament",
+"type": "source",
+"tags": [
+"list.pep"
+],
+"collections": [
+"default",
+"peps"
+],
+"targets": 53,
+"country": "fj",
+"official": true,
+"publisher": "Parliament of the Republic of Fiji",
+"frequency": "monthly"
+},
+{
+"name": "fm_congress",
+"title": "Federated States of Micronesia Members of Congress",
+"type": "source",
+"tags": [
+"list.pep"
+],
+"collections": [
+"default",
+"peps"
+],
+"targets": 14,
+"country": "fm",
+"official": true,
+"publisher": "FSM Congress",
+"frequency": "monthly"
+},
+{
+"name": "fr_amf_regulatory_sanctions",
+"title": "France AMF Regulatory sanctions",
+"type": "source",
+"tags": [
+"list.regulatory",
+"sector.financial"
+],
+"collections": [
+"default",
+"regulatory",
+"crime"
+],
+"targets": 397,
+"country": "fr",
+"official": true,
+"publisher": "AMF",
+"frequency": "daily"
+},
+{
+"name": "fr_assemblee",
+"title": "French National Assembly",
+"type": "source",
+"tags": [
+"list.pep"
+],
+"collections": [
+"default",
+"peps"
+],
+"targets": 3114,
+"country": "fr",
+"official": true,
+"publisher": "National Assembly of France",
+"frequency": "weekly"
+},
+{
+"name": "fr_hatvp_declarations",
+"title": "France HATVP Declarations of Interests and Assessments",
+"type": "source",
+"tags": [
+"list.pep"
+],
+"collections": [
+"default",
+"peps"
+],
+"targets": 3616,
+"country": "fr",
+"official": true,
+"publisher": "HATVP",
+"frequency": "weekly"
+},
+{
+"name": "fr_illegal_financial_services",
+"title": "France AMF Illegal Financial Services list",
+"type": "source",
+"tags": [],
+"collections": [
+"default",
+"regulatory",
+"crime"
+],
+"targets": 3477,
+"country": "fr",
+"official": true,
+"publisher": "AMF",
+"frequency": "daily"
+},
+{
+"name": "fr_maires",
+"title": "French Mayors",
+"type": "source",
+"tags": [
+"list.pep",
+"list.pep.bulk"
+],
+"collections": [
+"default",
+"peps"
+],
+"targets": 34826,
+"country": "fr",
+"official": true,
+"publisher": "MIOM",
+"frequency": "weekly"
+},
+{
+"name": "fr_senat",
+"title": "French Senators",
+"type": "source",
+"tags": [
+"list.pep"
+],
+"collections": [
+"default",
+"peps"
+],
+"targets": 506,
+"country": "fr",
+"official": true,
+"publisher": "Sénat",
+"frequency": "weekly"
+},
+{
+"name": "fr_tresor_gels_avoir",
+"title": "French National Asset Freezing System",
+"type": "source",
+"tags": [
+"list.sanction",
+"juris.eu",
+"issuer.west",
+"sector.maritime"
+],
+"collections": [
+"default",
+"eu_sanctions",
+"maritime",
+"sanctions"
+],
+"targets": 6452,
+"country": "fr",
+"official": true,
+"publisher": "DGT",
+"frequency": "daily"
+},
+{
+"name": "gb_coh_disqualified",
+"title": "UK Companies House Disqualified Directors",
+"type": "source",
+"tags": [],
+"collections": [
+"default",
+"crime"
+],
+"targets": 10209,
+"country": "gb",
+"official": true,
+"publisher": "CoH",
+"frequency": "daily"
+},
+{
+"name": "gb_commons",
+"title": "UK House of Commons",
+"type": "source",
+"tags": [
+"list.pep"
+],
+"collections": [
+"default",
+"peps"
+],
+"targets": 1378,
+"country": "gb",
+"official": true,
+"publisher": "UK Parliament",
+"frequency": "monthly"
+},
+{
+"name": "gb_fcdo_sanctions",
+"title": "UK FCDO Sanctions List",
+"type": "source",
+"tags": [
+"list.sanction",
+"issuer.west",
+"sector.maritime"
+],
+"collections": [
+"default",
+"maritime",
+"sanctions"
+],
+"targets": 6350,
+"country": "gb",
+"official": true,
+"publisher": "FCDO",
+"frequency": "daily"
+},
+{
+"name": "gb_hmt_invbans",
+"title": "UK HMT/OFSI Investment Bans",
+"type": "source",
+"tags": [
+"list.sanction",
+"sector.financial",
+"issuer.west"
+],
+"collections": [
+"default",
+"securities",
+"sanctions"
+],
+"targets": 0,
+"country": "gb",
+"official": true,
+"publisher": "OFSI",
+"frequency": "daily"
+},
+{
+"name": "gb_lords",
+"title": "UK House of Lords",
+"type": "source",
+"tags": [
+"list.pep"
+],
+"collections": [
+"default",
+"peps"
+],
+"targets": 1134,
+"country": "gb",
+"official": true,
+"publisher": "UK Parliament",
+"frequency": "monthly"
+},
+{
+"name": "gb_nca_most_wanted",
+"title": "UK NCA Most Wanted",
+"type": "source",
+"tags": [
+"list.wanted"
+],
+"collections": [
+"default",
+"wanted",
+"crime"
+],
+"targets": 19,
+"country": "gb",
+"official": true,
+"publisher": "NCA",
+"frequency": "daily"
+},
+{
+"name": "gb_nca_press_releases",
+"title": "UK National Crime Agency Press Releases",
+"type": "source",
+"tags": [],
+"collections": [
+"default",
+"crime"
+],
+"targets": 182,
+"country": "gb",
+"official": true,
+"publisher": "NCA",
+"frequency": "weekly"
+},
+{
+"name": "gb_proscribed_orgs",
+"title": "UK Proscribed Terrorist Groups or Organizations",
+"type": "source",
+"tags": [],
+"collections": [
+"default",
+"crime"
+],
+"targets": 94,
+"country": "gb",
+"official": true,
+"publisher": "Home Office",
+"frequency": "daily"
+},
+{
+"name": "ge_declarations",
+"title": "Georgia Public Official Asset Declarations",
+"type": "source",
+"tags": [
+"list.pep",
+"list.pep.bulk"
+],
+"collections": [
+"default",
+"peps"
+],
+"targets": 2117,
+"country": "ge",
+"official": true,
+"publisher": "ACB",
+"frequency": "weekly"
+},
+{
+"name": "ge_ot_list",
+"title": "Georgian Otkhozoria–Tatunashvili List",
+"type": "source",
+"tags": [
+"list.sanction"
+],
+"collections": [
+"default",
+"sanctions"
+],
+"targets": 33,
+"country": "ge",
+"official": true,
+"publisher": "საქართველოს საკანონმდებლო მაცნე",
+"frequency": "weekly"
+},
+{
+"name": "ge_parliament",
+"title": "Georgia Members of Parliament",
+"type": "source",
+"tags": [
+"list.pep"
+],
+"collections": [
+"default",
+"peps"
+],
+"targets": 100,
+"country": "ge",
+"official": true,
+"publisher": "Parliament of Georgia",
+"frequency": "monthly"
+},
+{
+"name": "gg_disqualified_directors",
+"title": "Guernsey FSC Prohibitions and Disqualified Directors",
+"type": "source",
+"tags": [],
+"collections": [
+"default",
+"crime"
+],
+"targets": 34,
+"country": "gg",
+"official": true,
+"publisher": "GFSC",
+"frequency": "daily"
+},
+{
+"name": "gh_parliament",
+"title": "Ghana Members of Parliament",
+"type": "source",
+"tags": [
+"list.pep"
+],
+"collections": [
+"default",
+"peps"
+],
+"targets": 269,
+"country": "gh",
+"official": true,
+"publisher": "Parliament of Ghana",
+"frequency": "monthly"
+},
+{
+"name": "gr_parliament",
+"title": "Hellenic Parliament",
+"type": "source",
+"tags": [
+"list.pep"
+],
+"collections": [
+"default",
+"peps"
+],
+"targets": 360,
+"country": "gr",
+"official": true,
+"publisher": "Βουλή των Ελλήνων",
+"frequency": "monthly"
+},
+{
+"name": "gt_congress",
+"title": "Guatemala Deputies of Congress of the Republic",
+"type": "source",
+"tags": [
+"list.pep"
+],
+"collections": [
+"default",
+"peps"
+],
+"targets": 160,
+"country": "gt",
+"official": true,
+"publisher": "Congreso de la República de Guatemala",
+"frequency": "monthly"
+},
+{
+"name": "hk_icac_wanted",
+"title": "Hong Kong ICAC Wanted Persons",
+"type": "source",
+"tags": [
+"list.wanted"
+],
+"collections": [
+"default",
+"wanted",
+"crime"
+],
+"targets": 57,
+"country": "hk",
+"official": true,
+"publisher": "ICAC",
+"frequency": "daily"
+},
+{
+"name": "hk_legco",
+"title": "Hong Kong Legislative Council Members",
+"type": "source",
+"tags": [
+"list.pep"
+],
+"collections": [
+"default",
+"peps"
+],
+"targets": 89,
+"country": "hk",
+"official": true,
+"publisher": "Hong Kong Legislative Council",
+"frequency": "weekly"
+},
+{
+"name": "hk_principal_officials",
+"title": "Hong Kong Principal Officials",
+"type": "source",
+"tags": [
+"list.pep"
+],
+"collections": [
+"default",
+"peps"
+],
+"targets": 26,
+"country": "hk",
+"official": true,
+"publisher": "GovHK",
+"frequency": "weekly"
+},
+{
+"name": "hn_legislature",
+"title": "Honduras Deputies of National Congress",
+"type": "source",
+"tags": [
+"list.pep"
+],
+"collections": [
+"default",
+"peps"
+],
+"targets": 128,
+"country": "hn",
+"official": true,
+"publisher": "CN",
+"frequency": "monthly"
+},
+{
+"name": "hr_public_officials",
+"title": "Croatia State Registry of Public Officials",
+"type": "source",
+"tags": [
+"list.pep",
+"list.pep.bulk"
+],
+"collections": [
+"default",
+"peps"
+],
+"targets": 2776,
+"country": "hr",
+"official": true,
+"publisher": "Sukobu Interesa",
+"frequency": "weekly"
+},
+{
+"name": "hr_sabor",
+"title": "Croatia Members of the Parliament",
+"type": "source",
+"tags": [
+"list.pep"
+],
+"collections": [
+"default",
+"peps"
+],
+"targets": 149,
+"country": "hr",
+"official": true,
+"publisher": "Hrvatski sabor",
+"frequency": "monthly"
+},
+{
+"name": "hu_national_assembly",
+"title": "Hungary National Assembly",
+"type": "source",
+"tags": [
+"list.pep"
+],
+"collections": [
+"default",
+"peps"
+],
+"targets": 198,
+"country": "hu",
+"official": true,
+"publisher": "Országgyűlés",
+"frequency": "monthly"
+},
+{
+"name": "iadb_sanctions",
+"title": "Inter-American Development Bank Sanctions",
+"type": "source",
+"tags": [
+"list.debarment",
+"sector.devbank"
+],
+"collections": [
+"default",
+"debarment"
+],
+"targets": 1230,
+"country": "zz",
+"official": true,
+"publisher": "IADB",
+"frequency": "unknown"
+},
+{
+"name": "id_dpd",
+"title": "Indonesia Members of the Regional Representative Council (DPD)",
+"type": "source",
+"tags": [
+"list.pep"
+],
+"collections": [
+"default",
+"peps"
+],
+"targets": 501,
+"country": "id",
+"official": true,
+"publisher": "DPD",
+"frequency": "monthly"
+},
+{
+"name": "id_dttot",
+"title": "Indonesian List of Suspected Terrorists and Terrorist Organizations",
+"type": "source",
+"tags": [
+"list.sanction"
+],
+"collections": [
+"default",
+"sanctions"
+],
+"targets": 529,
+"country": "id",
+"official": true,
+"publisher": "PPATK",
+"frequency": "daily"
+},
+{
+"name": "id_regional_2018",
+"title": "Indonesia 2018 Regional Head Election Results",
+"type": "source",
+"tags": [
+"list.pep",
+"list.pep.bulk"
+],
+"collections": [
+"default",
+"peps"
+],
+"targets": 326,
+"country": "id",
+"official": true,
+"publisher": "KPI",
+"frequency": "never"
+},
+{
+"name": "ie_parliament",
+"title": "Ireland Members of Parliament",
+"type": "source",
+"tags": [
+"list.pep"
+],
+"collections": [
+"default",
+"peps"
+],
+"targets": 638,
+"country": "ie",
+"official": true,
+"publisher": "Oireachtas Éireann",
+"frequency": "monthly"
+},
+{
+"name": "ie_unlawful_organizations",
+"title": "Ireland Unlawful Organisation (Suppression) Orders",
+"type": "source",
+"tags": [
+"list.sanction",
+"juris.eu"
+],
+"collections": [
+"default",
+"sanctions"
+],
+"targets": 2,
+"country": "ie",
+"official": true,
+"publisher": "eISB",
+"frequency": "monthly"
+},
+{
+"name": "il_knesset_members",
+"title": "Israel Knesset Members",
+"type": "source",
+"tags": [
+"list.pep"
+],
+"collections": [
+"default",
+"peps"
+],
+"targets": 432,
+"country": "il",
+"official": true,
+"publisher": "Knesset",
+"frequency": "daily"
+},
+{
+"name": "il_mod_crypto",
+"title": "Israel Sanctioned Crypto Wallets List",
+"type": "source",
+"tags": [
+"list.sanction",
+"sector.crypto"
+],
+"collections": [
+"default",
+"sanctions"
+],
+"targets": 1428,
+"country": "il",
+"official": true,
+"publisher": "NBCTF",
+"frequency": "daily"
+},
+{
+"name": "il_mod_terrorists",
+"title": "Israel Terrorists Organizations and Unauthorized Associations lists",
+"type": "source",
+"tags": [
+"list.sanction"
+],
+"collections": [
+"default",
+"sanctions"
+],
+"targets": 802,
+"country": "il",
+"official": true,
+"publisher": "NBCTF",
+"frequency": "daily"
+},
+{
+"name": "il_wmd_sanctions",
+"title": "Israel Prevention of Distribution and Financing of WMDs designations",
+"type": "source",
+"tags": [
+"list.sanction"
+],
+"collections": [
+"default",
+"sanctions"
+],
+"targets": 272,
+"country": "il",
+"official": true,
+"publisher": "Isreali Ministry of Finance",
+"frequency": "daily"
+},
+{
+"name": "im_disqualified_directors",
+"title": "Isle of Man FSA Disqualified Directors",
+"type": "source",
+"tags": [],
+"collections": [
+"default",
+"crime"
+],
+"targets": 14,
+"country": "im",
+"official": true,
+"publisher": "IOMFSA",
+"frequency": "daily"
+},
+{
+"name": "in_mha_banned",
+"title": "Indian Ministry of Home Affairs Banned Organizations",
+"type": "source",
+"tags": [
+"list.sanction"
+],
+"collections": [
+"default",
+"sanctions"
+],
+"targets": 147,
+"country": "in",
+"official": true,
+"publisher": "MHA",
+"frequency": "daily"
+},
+{
+"name": "in_nia_wanted",
+"title": "India NIA Most Wanted",
+"type": "source",
+"tags": [
+"list.wanted"
+],
+"collections": [
+"default",
+"wanted",
+"crime"
+],
+"targets": 496,
+"country": "in",
+"official": true,
+"publisher": "NIA",
+"frequency": "daily"
+},
+{
+"name": "in_nse_debarred",
+"title": "India National Stock Exchange Debarred Entities",
+"type": "source",
+"tags": [],
+"collections": [
+"default",
+"regulatory",
+"crime"
+],
+"targets": 14448,
+"country": "in",
+"official": true,
+"publisher": "NSE",
+"frequency": "daily"
+},
+{
+"name": "in_sansad",
+"title": "India Lok and Rajya Sabha Members",
+"type": "source",
+"tags": [
+"list.pep"
+],
+"collections": [
+"default",
+"peps"
+],
+"targets": 8308,
+"country": "in",
+"official": true,
+"publisher": "Parliament of India",
+"frequency": "monthly"
+},
+{
+"name": "interpol_red_notices",
+"title": "INTERPOL Red Notices",
+"type": "source",
+"tags": [
+"list.wanted"
+],
+"collections": [
+"default",
+"wanted",
+"crime"
+],
+"targets": 6369,
+"country": "zz",
+"official": true,
+"publisher": "INTERPOL",
+"frequency": "daily"
+},
+{
+"name": "iq_aml_list",
+"title": "Iraq Terrorist Fund Freezing Lists",
+"type": "source",
+"tags": [
+"list.sanction"
+],
+"collections": [
+"default",
+"sanctions"
+],
+"targets": 5678,
+"country": "iq",
+"official": true,
+"publisher": "Republic of Iraq Anti-Money Laundering and Countering Financing of Terrorism Office",
+"frequency": "daily"
+},
+{
+"name": "ir_sanctions",
+"title": "Iran Sanctions List",
+"type": "source",
+"tags": [
+"list.sanction.counter",
+"target.us",
+"target.eu",
+"target.gb",
+"target.ca"
+],
+"collections": [
+"default",
+"sanctions"
+],
+"targets": 405,
+"country": "ir",
+"official": true,
+"publisher": "MFA",
+"frequency": "never"
+},
+{
+"name": "ir_uani_business_registry",
+"title": "Iran UANI Business Registry",
+"type": "source",
+"tags": [],
+"collections": [
+"default",
+"special_interest"
+],
+"targets": 2262,
+"country": "us",
+"official": false,
+"publisher": "UANI",
+"frequency": "daily"
+},
+{
+"name": "is_althingi",
+"title": "Iceland parliament",
+"type": "source",
+"tags": [
+"list.pep"
+],
+"collections": [
+"default",
+"peps"
+],
+"targets": 63,
+"country": "is",
+"official": true,
+"publisher": "Alþingi",
+"frequency": "daily"
+},
+{
+"name": "it_deputies",
+"title": "Italy Members of the Chamber of Deputies",
+"type": "source",
+"tags": [
+"list.pep"
+],
+"collections": [
+"default",
+"peps"
+],
+"targets": 903,
+"country": "it",
+"official": true,
+"publisher": "Camera dei deputati",
+"frequency": "monthly"
+},
+{
+"name": "it_senate",
+"title": "Italy Members of the Senate",
+"type": "source",
+"tags": [
+"list.pep"
+],
+"collections": [
+"default",
+"peps"
+],
+"targets": 455,
+"country": "it",
+"official": true,
+"publisher": "Senato della Repubblica",
+"frequency": "monthly"
+},
+{
+"name": "jo_sanctions",
+"title": "Kingdom of Jordan National Sanctions List",
+"type": "source",
+"tags": [
+"list.sanction"
+],
+"collections": [
+"default",
+"sanctions"
+],
+"targets": 46,
+"country": "jo",
+"official": true,
+"publisher": "وحدة مكافحة غسل الأموال وتمويل الإرهاب",
+"frequency": "weekly"
+},
+{
+"name": "jp_meti_eul",
+"title": "Japan METI End User List",
+"type": "source",
+"tags": [
+"list.sanction",
+"list.export",
+"issuer.west",
+"sector.academic"
+],
+"collections": [
+"default",
+"securities",
+"sanctions"
+],
+"targets": 825,
+"country": "jp",
+"official": true,
+"publisher": "METI",
+"frequency": "daily"
+},
+{
+"name": "jp_meti_ru",
+"title": "Japan METI Russian List",
+"type": "source",
+"tags": [
+"list.sanction",
+"list.export",
+"target.ru",
+"issuer.west"
+],
+"collections": [
+"default",
+"securities",
+"sanctions"
+],
+"targets": 613,
+"country": "jp",
+"official": true,
+"publisher": "METI",
+"frequency": "never"
+},
+{
+"name": "jp_mof_sanctions",
+"title": "Japan Economic Sanctions and List of Eligible People",
+"type": "source",
+"tags": [
+"list.sanction",
+"sector.financial",
+"issuer.west"
+],
+"collections": [
+"default",
+"securities",
+"sanctions"
+],
+"targets": 2838,
+"country": "jp",
+"official": true,
+"publisher": "MoF",
+"frequency": "daily"
+},
+{
+"name": "jp_sangiin",
+"title": "Japan Members of House of Councillors (Sangiin)",
+"type": "source",
+"tags": [
+"list.pep"
+],
+"collections": [
+"default",
+"peps"
+],
+"targets": 247,
+"country": "jp",
+"official": true,
+"publisher": "参議院",
+"frequency": "monthly"
+},
+{
+"name": "jp_shugiin",
+"title": "Japanese House of Representatives Members",
+"type": "source",
+"tags": [
+"list.pep"
+],
+"collections": [
+"default",
+"peps"
+],
+"targets": 464,
+"country": "jp",
+"official": true,
+"publisher": "Shūgiin",
+"frequency": "monthly"
+},
+{
+"name": "ke_frc_sanctions",
+"title": "Kenya FRC Domestic Terrorism List",
+"type": "source",
+"tags": [
+"list.sanction"
+],
+"collections": [
+"default",
+"sanctions"
+],
+"targets": 13,
+"country": "ke",
+"official": true,
+"publisher": "FRC",
+"frequency": "daily"
+},
+{
+"name": "ke_judiciary",
+"title": "Kenya Judges of the Superior Courts",
+"type": "source",
+"tags": [
+"list.pep"
+],
+"collections": [
+"default",
+"peps"
+],
+"targets": 241,
+"country": "ke",
+"official": true,
+"publisher": "The Judiciary of Kenya",
+"frequency": "monthly"
+},
+{
+"name": "ke_national_assembly",
+"title": "Kenya Members of the National Assembly",
+"type": "source",
+"tags": [
+"list.pep"
+],
+"collections": [
+"default",
+"peps"
+],
+"targets": 347,
+"country": "ke",
+"official": true,
+"publisher": "Parliament of Kenya",
+"frequency": "monthly"
+},
+{
+"name": "ke_senate",
+"title": "Kenya Members of the Senate",
+"type": "source",
+"tags": [
+"list.pep"
+],
+"collections": [
+"default",
+"peps"
+],
+"targets": 67,
+"country": "ke",
+"official": true,
+"publisher": "Parliament of Kenya",
+"frequency": "monthly"
+},
+{
+"name": "kg_fiu_national",
+"title": "Kyrgyz National List",
+"type": "source",
+"tags": [
+"list.sanction"
+],
+"collections": [
+"default",
+"sanctions"
+],
+"targets": 1244,
+"country": "kg",
+"official": true,
+"publisher": "FIU",
+"frequency": "daily"
+},
+{
+"name": "kg_jogorku_kenesh",
+"title": "Kyrgyzstan Members of the Jogorku Kenesh",
+"type": "source",
+"tags": [
+"list.pep"
+],
+"collections": [
+"default",
+"peps"
+],
+"targets": 90,
+"country": "kg",
+"official": true,
+"publisher": "Жогорку Кеңеш",
+"frequency": "monthly"
+},
+{
+"name": "kh_assembly",
+"title": "Cambodia Members of the National Assembly",
+"type": "source",
+"tags": [
+"list.pep"
+],
+"collections": [
+"default",
+"peps"
+],
+"targets": 242,
+"country": "kh",
+"official": true,
+"publisher": "រដ្ឋសភា",
+"frequency": "monthly"
+},
+{
+"name": "ki_maneaba",
+"title": "Kiribati Members of the Maneaba ni Maungatabu",
+"type": "source",
+"tags": [
+"list.pep"
+],
+"collections": [
+"default",
+"peps"
+],
+"targets": 45,
+"country": "ki",
+"official": true,
+"publisher": "Maneaba ni Maungatabu",
+"frequency": "monthly"
+},
+{
+"name": "kr_assembly",
+"title": "South Korea Members of National Assembly",
+"type": "source",
+"tags": [
+"list.pep"
+],
+"collections": [
+"default",
+"peps"
+],
+"targets": 299,
+"country": "kr",
+"official": true,
+"publisher": "대한민국 국회",
+"frequency": "monthly"
+},
+{
+"name": "ky_judicial",
+"title": "Cayman Islands Senior Judicial Officers",
+"type": "source",
+"tags": [
+"list.pep"
+],
+"collections": [
+"default",
+"peps"
+],
+"targets": 36,
+"country": "ky",
+"official": true,
+"publisher": "Cayman Islands Judicial Administration",
+"frequency": "weekly"
+},
+{
+"name": "ky_parliament",
+"title": "Cayman Islands Members of Parliament",
+"type": "source",
+"tags": [
+"list.pep"
+],
+"collections": [
+"default",
+"peps"
+],
+"targets": 40,
+"country": "ky",
+"official": true,
+"publisher": "Parliament of the Cayman Islands",
+"frequency": "daily"
+},
+{
+"name": "kz_mazhilis",
+"title": "Kazakhstan Members of the Mäjilis",
+"type": "source",
+"tags": [
+"list.pep"
+],
+"collections": [
+"default",
+"peps"
+],
+"targets": 96,
+"country": "kz",
+"official": true,
+"publisher": "Қазақстан Республикасы Парламентінің Мәжілісі",
+"frequency": "monthly"
+},
+{
+"name": "kz_senate",
+"title": "Kazakhstan Members of the Senate",
+"type": "source",
+"tags": [
+"list.pep"
+],
+"collections": [
+"default",
+"peps"
+],
+"targets": 49,
+"country": "kz",
+"official": true,
+"publisher": "Қазақстан Республикасы Парламентінің Сенаты",
+"frequency": "monthly"
+},
+{
+"name": "la_national_assembly",
+"title": "Laos Members of the National Assembly",
+"type": "source",
+"tags": [
+"list.pep"
+],
+"collections": [
+"default",
+"peps"
+],
+"targets": 163,
+"country": "la",
+"official": true,
+"publisher": "National Assembly of the Lao PDR",
+"frequency": "monthly"
+},
+{
+"name": "li_entsg",
+"title": "Liechtenstein Posted Workers Act (EntsG) Sanctions",
+"type": "source",
+"tags": [],
+"collections": [
+"default",
+"debarment"
+],
+"targets": 46,
+"country": "li",
+"official": true,
+"publisher": "AVW",
+"frequency": "weekly"
+},
+{
+"name": "li_landtag",
+"title": "Liechtenstein Members of the Landtag",
+"type": "source",
+"tags": [
+"list.pep"
+],
+"collections": [
+"default",
+"peps"
+],
+"targets": 54,
+"country": "li",
+"official": true,
+"publisher": "Landtag des Fürstentums Liechtenstein",
+"frequency": "monthly"
+},
+{
+"name": "lk_parliament",
+"title": "Sri Lanka Members of Parliament",
+"type": "source",
+"tags": [
+"list.pep"
+],
+"collections": [
+"default",
+"peps"
+],
+"targets": 225,
+"country": "lk",
+"official": true,
+"publisher": "Parliament of Sri Lanka",
+"frequency": "monthly"
+},
+{
+"name": "lt_fiu_freezes",
+"title": "Lithuanian International Sanctions",
+"type": "source",
+"tags": [
+"list.sanction",
+"juris.eu",
+"issuer.west"
+],
+"collections": [
+"default",
+"eu_sanctions",
+"sanctions"
+],
+"targets": 18,
+"country": "lt",
+"official": true,
+"publisher": "FNTT",
+"frequency": "daily"
+},
+{
+"name": "lt_illegal_gambling",
+"title": "Lithuania Illegal Gambling Operators",
+"type": "source",
+"tags": [],
+"collections": [
+"default",
+"regulatory",
+"crime"
+],
+"targets": 168,
+"country": "lt",
+"official": true,
+"publisher": "LPT",
+"frequency": "daily"
+},
+{
+"name": "lt_illegal_websites",
+"title": "Lithuania Illegal Financial Services",
+"type": "source",
+"tags": [],
+"collections": [
+"default",
+"regulatory",
+"crime"
+],
+"targets": 81,
+"country": "lt",
+"official": true,
+"publisher": "LB",
+"frequency": "daily"
+},
+{
+"name": "lt_magnitsky_amendments",
+"title": "Lithuania Designated Persons Under Magnitsky Amendments",
+"type": "source",
+"tags": [
+"list.sanction",
+"risk.klepto",
+"juris.eu",
+"issuer.west"
+],
+"collections": [
+"default",
+"eu_sanctions",
+"sanctions"
+],
+"targets": 285,
+"country": "lt",
+"official": true,
+"publisher": "Migration Department under the Ministry of the Interior of Lithuania",
+"frequency": "daily"
+},
+{
+"name": "lt_seimas",
+"title": "Lithuania Members of the Seimas",
+"type": "source",
+"tags": [
+"list.pep"
+],
+"collections": [
+"default",
+"peps"
+],
+"targets": 485,
+"country": "lt",
+"official": true,
+"publisher": "Lietuvos Respublikos Seimas",
+"frequency": "weekly"
+},
+{
+"name": "lu_administrative_sanctions",
+"title": "Luxembourg CSSF Administrative Sanctions and Measures",
+"type": "source",
+"tags": [],
+"collections": [
+"default",
+"regulatory",
+"crime"
+],
+"targets": 116,
+"country": "lu",
+"official": true,
+"publisher": "CSSF",
+"frequency": "daily"
+},
+{
+"name": "lu_bourgmestres",
+"title": "Luxembourg Municipal Mayors and Aldermen",
+"type": "source",
+"tags": [
+"list.pep",
+"list.pep.bulk"
+],
+"collections": [
+"default",
+"peps"
+],
+"targets": 363,
+"country": "lu",
+"official": true,
+"publisher": "Luxembourg Open Data Platform",
+"frequency": "monthly"
+},
+{
+"name": "lu_chamber",
+"title": "Luxembourg Members of the Chamber of Deputies",
+"type": "source",
+"tags": [
+"list.pep"
+],
+"collections": [
+"default",
+"peps"
+],
+"targets": 60,
+"country": "lu",
+"official": true,
+"publisher": "Chamber vun den Deputéierten",
+"frequency": "monthly"
+},
+{
+"name": "lv_fiu_sanctions",
+"title": "Latvia FIU Sanctions and Asset Freezes",
+"type": "source",
+"tags": [
+"list.sanction",
+"juris.eu",
+"issuer.west"
+],
+"collections": [
+"default",
+"eu_sanctions",
+"sanctions"
+],
+"targets": 26,
+"country": "lv",
+"official": true,
+"publisher": "FID",
+"frequency": "daily"
+},
+{
+"name": "lv_magnitsky_list",
+"title": "Latvia's Magnitsky Law Sanctions List",
+"type": "source",
+"tags": [
+"list.sanction",
+"risk.klepto",
+"target.ru",
+"juris.eu",
+"issuer.west"
+],
+"collections": [
+"default",
+"eu_sanctions",
+"sanctions"
+],
+"targets": 49,
+"country": "lv",
+"official": true,
+"publisher": "Latvijas Vēstnesis",
+"frequency": "daily"
+},
+{
+"name": "lv_saeima",
+"title": "Latvian Saeima",
+"type": "source",
+"tags": [
+"list.pep"
+],
+"collections": [
+"default",
+"peps"
+],
+"targets": 100,
+"country": "lv",
+"official": true,
+"publisher": "Saeima",
+"frequency": "weekly"
+},
+{
+"name": "ma_house_councillors",
+"title": "Morocco Members of the House of Councillors",
+"type": "source",
+"tags": [
+"list.pep"
+],
+"collections": [
+"default",
+"peps"
+],
+"targets": 117,
+"country": "ma",
+"official": true,
+"publisher": "HoC",
+"frequency": "monthly"
+},
+{
+"name": "ma_representatives",
+"title": "Morocco Members of the House of Representatives",
+"type": "source",
+"tags": [
+"list.pep"
+],
+"collections": [
+"default",
+"peps"
+],
+"targets": 394,
+"country": "ma",
+"official": true,
+"publisher": "مجلس النواب",
+"frequency": "monthly"
+},
+{
+"name": "mc_conseil_national",
+"title": "Monaco Members of the National Council",
+"type": "source",
+"tags": [
+"list.pep"
+],
+"collections": [
+"default",
+"peps"
+],
+"targets": 24,
+"country": "mc",
+"official": true,
+"publisher": "Conseil National de Monaco",
+"frequency": "monthly"
+},
+{
+"name": "mc_fund_freezes",
+"title": "Monaco National Fund Freezing List",
+"type": "source",
+"tags": [
+"list.sanction",
+"sector.financial",
+"issuer.west",
+"sector.maritime"
+],
+"collections": [
+"default",
+"maritime",
+"sanctions"
+],
+"targets": 6448,
+"country": "mc",
+"official": true,
+"publisher": "Principauté de Monaco",
+"frequency": "daily"
+},
+{
+"name": "md_interdictie",
+"title": "Moldovan Ban List of Economic Operators",
+"type": "source",
+"tags": [],
+"collections": [
+"default",
+"debarment"
+],
+"targets": 22,
+"country": "md",
+"official": true,
+"publisher": "MF",
+"frequency": "daily"
+},
+{
+"name": "md_parliament",
+"title": "Moldova Members of Parliament",
+"type": "source",
+"tags": [
+"list.pep"
+],
+"collections": [
+"default",
+"peps"
+],
+"targets": 147,
+"country": "md",
+"official": true,
+"publisher": "Parlamentul Republicii Moldova",
+"frequency": "monthly"
+},
+{
+"name": "md_rise_profiles",
+"title": "RISE Moldova People of interest",
+"type": "source",
+"tags": [],
+"collections": [
+"default",
+"special_interest"
+],
+"targets": 448,
+"country": "md",
+"official": false,
+"publisher": "RISE Moldova",
+"frequency": "weekly"
+},
+{
+"name": "md_terror_sanctions",
+"title": "Moldovan Sanctions for Terrorism and Proliferation of WMD",
+"type": "source",
+"tags": [
+"list.sanction"
+],
+"collections": [
+"default",
+"sanctions"
+],
+"targets": 709,
+"country": "md",
+"official": true,
+"publisher": "CAS-SIS",
+"frequency": "daily"
+},
+{
+"name": "me_acp_peps",
+"title": "Montenegro declarations of interests by public officials",
+"type": "source",
+"tags": [
+"list.pep",
+"list.pep.bulk"
+],
+"collections": [
+"default",
+"peps"
+],
+"targets": 10346,
+"country": "me",
+"official": true,
+"publisher": "ACK",
+"frequency": "weekly"
+},
+{
+"name": "me_skupstina",
+"title": "Montenegro Members of Parliament (Skupština)",
+"type": "source",
+"tags": [
+"list.pep"
+],
+"collections": [
+"default",
+"peps"
+],
+"targets": 121,
+"country": "me",
+"official": true,
+"publisher": "Skupština Crne Gore",
+"frequency": "monthly"
+},
+{
+"name": "mh_nitijela",
+"title": "Marshall Islands Members of the Nitijela",
+"type": "source",
+"tags": [
+"list.pep"
+],
+"collections": [
+"default",
+"peps"
+],
+"targets": 33,
+"country": "mh",
+"official": true,
+"publisher": "Nitijeļā",
+"frequency": "monthly"
+},
+{
+"name": "mk_officials",
+"title": "North Macedonia Elected and Appointed Officials",
+"type": "source",
+"tags": [
+"list.pep",
+"list.pep.bulk"
+],
+"collections": [
+"default",
+"peps"
+],
+"targets": 11548,
+"country": "mk",
+"official": true,
+"publisher": "SCPC",
+"frequency": "weekly"
+},
+{
+"name": "mn_parliament",
+"title": "Mongolia Members of the State Great Khural",
+"type": "source",
+"tags": [
+"list.pep"
+],
+"collections": [
+"default",
+"peps"
+],
+"targets": 126,
+"country": "mn",
+"official": true,
+"publisher": "UIH",
+"frequency": "monthly"
+},
+{
+"name": "mo_legislature",
+"title": "Macau Members of Legislative Assembly",
+"type": "source",
+"tags": [
+"list.pep"
+],
+"collections": [
+"default",
+"peps"
+],
+"targets": 33,
+"country": "mo",
+"official": true,
+"publisher": "AL",
+"frequency": "monthly"
+},
+{
+"name": "mt_parlament",
+"title": "Malta Members of Parliament",
+"type": "source",
+"tags": [
+"list.pep"
+],
+"collections": [
+"default",
+"peps"
+],
+"targets": 103,
+"country": "mt",
+"official": true,
+"publisher": "Parliament of Malta",
+"frequency": "monthly"
+},
+{
+"name": "mx_deputies",
+"title": "Mexico Chamber of Deputies",
+"type": "source",
+"tags": [
+"list.pep"
+],
+"collections": [
+"default",
+"peps"
+],
+"targets": 500,
+"country": "mx",
+"official": true,
+"publisher": "Cámara de Diputados",
+"frequency": "weekly"
+},
+{
+"name": "mx_governors",
+"title": "Mexico Governors",
+"type": "source",
+"tags": [
+"list.pep"
+],
+"collections": [
+"default",
+"peps"
+],
+"targets": 176,
+"country": "mx",
+"official": false,
+"publisher": "CONAGO",
+"frequency": "never"
+},
+{
+"name": "mx_senators",
+"title": "Mexico Senate",
+"type": "source",
+"tags": [
+"list.pep"
+],
+"collections": [
+"default",
+"peps"
+],
+"targets": 128,
+"country": "mx",
+"official": true,
+"publisher": "Senado de la República",
+"frequency": "weekly"
+},
+{
+"name": "my_aob_sanctions",
+"title": "Malaysia Securities Commission AOB Enforcements",
+"type": "source",
+"tags": [],
+"collections": [
+"default",
+"regulatory",
+"crime"
+],
+"targets": 77,
+"country": "my",
+"official": true,
+"publisher": "SC",
+"frequency": "daily"
+},
+{
+"name": "my_consumer_alert_list",
+"title": "Malaysia Financial Consumer Alert List",
+"type": "source",
+"tags": [],
+"collections": [
+"default",
+"regulatory",
+"crime"
+],
+"targets": 611,
+"country": "my",
+"official": true,
+"publisher": "BNM",
+"frequency": "daily"
+},
+{
+"name": "my_investor_alert_list",
+"title": "Malaysia Securities Commission Investor Alert List",
+"type": "source",
+"tags": [],
+"collections": [
+"default",
+"regulatory",
+"crime"
+],
+"targets": 1912,
+"country": "my",
+"official": true,
+"publisher": "SC",
+"frequency": "daily"
+},
+{
+"name": "my_moha_sanctions",
+"title": "Malaysia MOHA Sanctions List",
+"type": "source",
+"tags": [
+"list.sanction"
+],
+"collections": [
+"default",
+"sanctions"
+],
+"targets": 79,
+"country": "my",
+"official": true,
+"publisher": "MOHA",
+"frequency": "weekly"
+},
+{
+"name": "my_parliament",
+"title": "Malaysia Members of Parliament",
+"type": "source",
+"tags": [
+"list.pep"
+],
+"collections": [
+"default",
+"peps"
+],
+"targets": 277,
+"country": "my",
+"official": true,
+"publisher": "Parliament of Malaysia",
+"frequency": "monthly"
+},
+{
+"name": "ng_chipper_peps",
+"title": "Nigerian Politically Exposed Persons data by Chipper",
+"type": "source",
+"tags": [
+"list.pep",
+"list.pep.bulk"
+],
+"collections": [
+"default",
+"peps"
+],
+"targets": 25521,
+"country": "ng",
+"official": false,
+"publisher": "Chipper",
+"frequency": "daily"
+},
+{
+"name": "ng_join_dots",
+"title": "Nigeria Joining the Dots PEPs and PEP Relatives",
+"type": "source",
+"tags": [
+"list.pep",
+"list.pep.bulk"
+],
+"collections": [
+"default",
+"peps"
+],
+"targets": 3681,
+"country": "ng",
+"official": false,
+"publisher": "Directorio Legislativo/EITI",
+"frequency": "daily"
+},
+{
+"name": "ng_nigsac_sanctions",
+"title": "Nigeria Sanctions List",
+"type": "source",
+"tags": [
+"list.sanction"
+],
+"collections": [
+"default",
+"sanctions"
+],
+"targets": 69,
+"country": "ng",
+"official": true,
+"publisher": "NigSac",
+"frequency": "daily"
+},
+{
+"name": "ni_legislature",
+"title": "Nicaragua Deputies of National Assembly",
+"type": "source",
+"tags": [
+"list.pep"
+],
+"collections": [
+"default",
+"peps"
+],
+"targets": 90,
+"country": "ni",
+"official": true,
+"publisher": "AN",
+"frequency": "monthly"
+},
+{
+"name": "nl_house_of_representatives",
+"title": "Netherlands House of Representatives",
+"type": "source",
+"tags": [
+"list.pep"
+],
+"collections": [
+"default",
+"peps"
+],
+"targets": 149,
+"country": "nl",
+"official": true,
+"publisher": "Tweede Kamer",
+"frequency": "weekly"
+},
+{
+"name": "nl_most_wanted",
+"title": "Netherlands Police Nationale Opsporingslijst",
+"type": "source",
+"tags": [
+"list.wanted"
+],
+"collections": [
+"default",
+"wanted",
+"crime"
+],
+"targets": 17,
+"country": "nl",
+"official": true,
+"publisher": "Korps Nationale Politie",
+"frequency": "daily"
+},
+{
+"name": "nl_senate",
+"title": "Netherlands Senate",
+"type": "source",
+"tags": [
+"list.pep"
+],
+"collections": [
+"default",
+"peps"
+],
+"targets": 75,
+"country": "nl",
+"official": true,
+"publisher": "Eerste Kamer",
+"frequency": "monthly"
+},
+{
+"name": "nl_terrorism_list",
+"title": "Netherlands National Sanctionlist Terrorism",
+"type": "source",
+"tags": [
+"list.sanction",
+"juris.eu"
+],
+"collections": [
+"default",
+"eu_sanctions",
+"sanctions"
+],
+"targets": 117,
+"country": "nl",
+"official": true,
+"publisher": "MFA",
+"frequency": "daily"
+},
+{
+"name": "no_brreg",
+"title": "Norway State-Owned Enterprises Leadership",
+"type": "source",
+"tags": [],
+"collections": [
+"default",
+"peps"
+],
+"targets": 2294,
+"country": "no",
+"official": true,
+"publisher": "BRREG",
+"frequency": "monthly"
+},
+{
+"name": "no_nbim_exclusions",
+"title": "Norges Bank Investment Management observation and exclusion of companies",
+"type": "source",
+"tags": [
+"sector.energy"
+],
+"collections": [
+"default",
+"securities",
+"regulatory",
+"enforcement",
+"crime"
+],
+"targets": 201,
+"country": "no",
+"official": true,
+"publisher": "NBIM",
+"frequency": "daily"
+},
+{
+"name": "no_storting",
+"title": "Norway Members of the Storting",
+"type": "source",
+"tags": [
+"list.pep"
+],
+"collections": [
+"default",
+"peps"
+],
+"targets": 320,
+"country": "no",
+"official": true,
+"publisher": "Stortinget",
+"frequency": "monthly"
+},
+{
+"name": "np_mha_sanctions",
+"title": "Nepal Prohibited Persons or Groups according per National Strategy and Action Plan (2076-2081)",
+"type": "source",
+"tags": [
+"list.sanction"
+],
+"collections": [
+"default",
+"sanctions"
+],
+"targets": 10,
+"country": "np",
+"official": true,
+"publisher": "MOHA",
+"frequency": "never"
+},
+{
+"name": "np_parliament",
+"title": "Nepal Members of the Federal Parliament",
+"type": "source",
+"tags": [
+"list.pep"
+],
+"collections": [
+"default",
+"peps"
+],
+"targets": 855,
+"country": "np",
+"official": true,
+"publisher": "Federal Parliament of Nepal",
+"frequency": "monthly"
+},
+{
+"name": "nu_assembly",
+"title": "Niue Members of the Assembly (Fono Ekepule)",
+"type": "source",
+"tags": [
+"list.pep"
+],
+"collections": [
+"default",
+"peps"
+],
+"targets": 20,
+"country": "nu",
+"official": true,
+"publisher": "Government of Niue",
+"frequency": "monthly"
+},
+{
+"name": "nz_designated_terrorists",
+"title": "New Zealand Designated Terrorist Entities",
+"type": "source",
+"tags": [
+"list.sanction"
+],
+"collections": [
+"default",
+"sanctions"
+],
+"targets": 21,
+"country": "nz",
+"official": true,
+"publisher": "New Zealand Police",
+"frequency": "daily"
+},
+{
+"name": "nz_parliament",
+"title": "New Zealand Members of Parliament",
+"type": "source",
+"tags": [
+"list.pep"
+],
+"collections": [
+"default",
+"peps"
+],
+"targets": 355,
+"country": "nz",
+"official": true,
+"publisher": "New Zealand Parliament",
+"frequency": "monthly"
+},
+{
+"name": "nz_russia_sanctions",
+"title": "New Zealand Russia Sanctions",
+"type": "source",
+"tags": [
+"list.sanction",
+"target.ru",
+"issuer.west"
+],
+"collections": [
+"default",
+"sanctions"
+],
+"targets": 1902,
+"country": "nz",
+"official": true,
+"publisher": "MFAT",
+"frequency": "daily"
+},
+{
+"name": "om_parliament",
+"title": "Oman Council (Majlis Oman)",
+"type": "source",
+"tags": [
+"list.pep"
+],
+"collections": [
+"default",
+"peps"
+],
+"targets": 366,
+"country": "om",
+"official": true,
+"publisher": "Majlis Oman",
+"frequency": "weekly"
+},
+{
+"name": "pa_asamblea",
+"title": "Panama Deputies of National Assembly",
+"type": "source",
+"tags": [
+"list.pep"
+],
+"collections": [
+"default",
+"peps"
+],
+"targets": 71,
+"country": "pa",
+"official": true,
+"publisher": "AN",
+"frequency": "monthly"
+},
+{
+"name": "paris_mou_banned",
+"title": "Paris MoU Banned List",
+"type": "source",
+"tags": [
+"sector.maritime"
+],
+"collections": [
+"default",
+"maritime"
+],
+"targets": 147,
+"country": "zz",
+"official": true,
+"publisher": "Paris MoU",
+"frequency": "daily"
+},
+{
+"name": "pe_congreso",
+"title": "Peru Members of the Congress of the Republic",
+"type": "source",
+"tags": [
+"list.pep"
+],
+"collections": [
+"default",
+"peps"
+],
+"targets": 591,
+"country": "pe",
+"official": true,
+"publisher": "Congreso de la República del Perú",
+"frequency": "monthly"
+},
+{
+"name": "peps",
+"title": "Politically Exposed Persons Datasets",
+"type": "collection",
+"tags": [],
+"collections": [],
+"targets": 716929,
+"country": "",
+"official": false,
+"publisher": "",
+"frequency": "daily"
+},
+{
+"name": "pg_parliament",
+"title": "Papua New Guinea Members of Parliament",
+"type": "source",
+"tags": [
+"list.pep"
+],
+"collections": [
+"default",
+"peps"
+],
+"targets": 104,
+"country": "pg",
+"official": true,
+"publisher": "National Parliament of Papua New Guinea",
+"frequency": "weekly"
+},
+{
+"name": "ph_amlc_sanctions",
+"title": "Philippines Anti-Money Laundering Council Sanctions",
+"type": "source",
+"tags": [],
+"collections": [
+"default",
+"sanctions"
+],
+"targets": 96,
+"country": "ph",
+"official": true,
+"publisher": "AMLC",
+"frequency": "weekly"
+},
+{
+"name": "ph_gppb_debarred",
+"title": "Philippines GPPB Consolidated Blacklisting Report",
+"type": "source",
+"tags": [
+"list.debarment"
+],
+"collections": [
+"default",
+"debarment"
+],
+"targets": 103,
+"country": "ph",
+"official": true,
+"publisher": "GPPB",
+"frequency": "daily"
+},
+{
+"name": "ph_house_representatives",
+"title": "Philippines House of Representatives",
+"type": "source",
+"tags": [
+"list.pep"
+],
+"collections": [
+"default",
+"peps"
+],
+"targets": 316,
+"country": "ph",
+"official": true,
+"publisher": "HREP",
+"frequency": "monthly"
+},
+{
+"name": "ph_most_wanted",
+"title": "Philippines Top Most Wanted Persons in the Cordillera Regions",
+"type": "source",
+"tags": [
+"list.wanted"
+],
+"collections": [
+"default",
+"wanted",
+"crime"
+],
+"targets": 84,
+"country": "ph",
+"official": true,
+"publisher": "PNP",
+"frequency": "never"
+},
+{
+"name": "ph_sec_advisories",
+"title": "Philippines SEC Advisories",
+"type": "source",
+"tags": [],
+"collections": [
+"default",
+"regulatory",
+"crime"
+],
+"targets": 922,
+"country": "ph",
+"official": true,
+"publisher": "SEC",
+"frequency": "daily"
+},
+{
+"name": "ph_senate",
+"title": "Philippines Senate",
+"type": "source",
+"tags": [
+"list.pep"
+],
+"collections": [
+"default",
+"peps"
+],
+"targets": 34,
+"country": "ph",
+"official": true,
+"publisher": "Senate of the Philippines",
+"frequency": "monthly"
+},
+{
+"name": "pk_na_members",
+"title": "Pakistan Members of National Assembly",
+"type": "source",
+"tags": [
+"list.pep"
+],
+"collections": [
+"default",
+"peps"
+],
+"targets": 331,
+"country": "pk",
+"official": true,
+"publisher": "NA",
+"frequency": "monthly"
+},
+{
+"name": "pk_proscribed_persons",
+"title": "Pakistan NACTA Proscribed Persons",
+"type": "source",
+"tags": [],
+"collections": [
+"default",
+"sanctions"
+],
+"targets": 5189,
+"country": "pk",
+"official": true,
+"publisher": "NACTA",
+"frequency": "never"
+},
+{
+"name": "pk_senate_members",
+"title": "Pakistan Members of the Senate",
+"type": "source",
+"tags": [
+"list.pep"
+],
+"collections": [
+"default",
+"peps"
+],
+"targets": 95,
+"country": "pk",
+"official": true,
+"publisher": "سینیٹ پاکستان",
+"frequency": "monthly"
+},
+{
+"name": "pl_finanse_sanctions",
+"title": "Polish Sanctions Countering Money Laundering and Terror Financing",
+"type": "source",
+"tags": [
+"list.sanction",
+"juris.eu"
+],
+"collections": [
+"default",
+"eu_sanctions",
+"sanctions"
+],
+"targets": 476,
+"country": "pl",
+"official": true,
+"publisher": "GIIF",
+"frequency": "daily"
+},
+{
+"name": "pl_mswia_sanctions",
+"title": "Polish List of Persons and Entities Subject to Sanctions",
+"type": "source",
+"tags": [
+"list.sanction",
+"target.ru",
+"juris.eu",
+"issuer.west"
+],
+"collections": [
+"default",
+"eu_sanctions",
+"sanctions"
+],
+"targets": 554,
+"country": "pl",
+"official": true,
+"publisher": "MSWiA",
+"frequency": "daily"
+},
+{
+"name": "pl_sejm",
+"title": "Poland Members of the Sejm",
+"type": "source",
+"tags": [
+"list.pep"
+],
+"collections": [
+"default",
+"peps"
+],
+"targets": 460,
+"country": "pl",
+"official": true,
+"publisher": "Sejm of the Republic of Poland",
+"frequency": "monthly"
+},
+{
+"name": "pl_senate",
+"title": "Poland Members of the Senate",
+"type": "source",
+"tags": [
+"list.pep"
+],
+"collections": [
+"default",
+"peps"
+],
+"targets": 102,
+"country": "pl",
+"official": true,
+"publisher": "Senate of Poland",
+"frequency": "monthly"
+},
+{
+"name": "pl_wanted",
+"title": "Poland Wanted Persons",
+"type": "source",
+"tags": [
+"list.wanted"
+],
+"collections": [
+"default",
+"wanted",
+"crime"
+],
+"targets": 54151,
+"country": "pl",
+"official": true,
+"publisher": "Policja",
+"frequency": "daily"
+},
+{
+"name": "ps_local_freezing",
+"title": "Palestine Monetary Authority Local Freezing List",
+"type": "source",
+"tags": [
+"list.sanction"
+],
+"collections": [
+"default",
+"sanctions"
+],
+"targets": 5,
+"country": "ps",
+"official": true,
+"publisher": "PMA",
+"frequency": "daily"
+},
+{
+"name": "ps_ohchr_settlement",
+"title": "OHCHR List of Companies Linked to Illegal Settlement in the West Bank",
+"type": "source",
+"tags": [],
+"collections": [
+"default",
+"regulatory",
+"debarment",
+"crime"
+],
+"targets": 212,
+"country": "un",
+"official": true,
+"publisher": "OHCHR",
+"frequency": "weekly"
+},
+{
+"name": "pt_parliament",
+"title": "Portugal Members of the Assembly",
+"type": "source",
+"tags": [
+"list.pep"
+],
+"collections": [
+"default",
+"peps"
+],
+"targets": 1124,
+"country": "pt",
+"official": true,
+"publisher": "Assembleia da República",
+"frequency": "monthly"
+},
+{
+"name": "py_congreso",
+"title": "Paraguay Members of the National Congress",
+"type": "source",
+"tags": [
+"list.pep"
+],
+"collections": [
+"default",
+"peps"
+],
+"targets": 481,
+"country": "py",
+"official": true,
+"publisher": "Congreso de la Nación Paraguaya",
+"frequency": "monthly"
+},
+{
+"name": "qa_nctc_sanctions",
+"title": "Qatar Unified Record of Persons and Entities on Sanction List",
+"type": "source",
+"tags": [
+"list.sanction"
+],
+"collections": [
+"default",
+"sanctions"
+],
+"targets": 852,
+"country": "qa",
+"official": true,
+"publisher": "NCTC",
+"frequency": "daily"
+},
+{
+"name": "qa_shura_council",
+"title": "Qatar Members of the Shura Council",
+"type": "source",
+"tags": [
+"list.pep"
+],
+"collections": [
+"default",
+"peps"
+],
+"targets": 49,
+"country": "qa",
+"official": true,
+"publisher": "Shura Council of Qatar",
+"frequency": "monthly"
+},
+{
+"name": "ransomwhere",
+"title": "ransomwhe.re ransomware addresses",
+"type": "source",
+"tags": [
+"sector.crypto"
+],
+"collections": [
+"default",
+"crime"
+],
+"targets": 11186,
+"country": "us",
+"official": false,
+"publisher": "Jack Cable",
+"frequency": "weekly"
+},
+{
+"name": "regulatory",
+"title": "Regulatory Watchlists",
+"type": "collection",
+"tags": [],
+"collections": [],
+"targets": 163240,
+"country": "",
+"official": false,
+"publisher": "",
+"frequency": "daily"
+},
+{
+"name": "ro_cdep_deputies",
+"title": "Romania Members of Chamber of Deputies",
+"type": "source",
+"tags": [
+"list.pep"
+],
+"collections": [
+"default",
+"peps"
+],
+"targets": 1470,
+"country": "ro",
+"official": true,
+"publisher": "CDEP",
+"frequency": "monthly"
+},
+{
+"name": "ro_fiu_declarations",
+"title": "Romania FIU Public Officials",
+"type": "source",
+"tags": [
+"list.pep",
+"list.pep.bulk"
+],
+"collections": [
+"default",
+"peps"
+],
+"targets": 74,
+"country": "ro",
+"official": true,
+"publisher": "ONPCSB",
+"frequency": "weekly"
+},
+{
+"name": "ro_onpcsb_sanctions",
+"title": "Romania Government Decision No. 1.272/2005: List of Suspected Terrorists",
+"type": "source",
+"tags": [
+"list.sanction"
+],
+"collections": [
+"default",
+"sanctions"
+],
+"targets": 251,
+"country": "ro",
+"official": true,
+"publisher": "ONPCSB",
+"frequency": "never"
+},
+{
+"name": "ro_senate",
+"title": "Romania Senate",
+"type": "source",
+"tags": [
+"list.pep"
+],
+"collections": [
+"default",
+"peps"
+],
+"targets": 231,
+"country": "ro",
+"official": true,
+"publisher": "Senatul României",
+"frequency": "monthly"
+},
+{
+"name": "rs_apml_domestic",
+"title": "Serbian Domestic List of Designated Persons",
+"type": "source",
+"tags": [
+"list.sanction"
+],
+"collections": [
+"default",
+"sanctions"
+],
+"targets": 7,
+"country": "rs",
+"official": true,
+"publisher": "APML",
+"frequency": "monthly"
+},
+{
+"name": "rs_national_assembly",
+"title": "Serbia National Assembly Members",
+"type": "source",
+"tags": [
+"list.pep"
+],
+"collections": [
+"default",
+"peps"
+],
+"targets": 550,
+"country": "rs",
+"official": true,
+"publisher": "Narodna skupština Republike Srbije",
+"frequency": "monthly"
+},
+{
+"name": "ru_acf_bribetakers",
+"title": "ACF List of War Enablers",
+"type": "source",
+"tags": [],
+"collections": [
+"default",
+"special_interest"
+],
+"targets": 8681,
+"country": "ru",
+"official": false,
+"publisher": "ACF",
+"frequency": "daily"
+},
+{
+"name": "ru_cbr_banks",
+"title": "Russia Banking Registry",
+"type": "source",
+"tags": [
+"sector.banking"
+],
+"collections": [
+"default"
+],
+"targets": 0,
+"country": "ru",
+"official": true,
+"publisher": "CBR",
+"frequency": "daily"
+},
+{
+"name": "ru_dossier_center_poi",
+"title": "Russian Persons of Interest published by Dossier Center",
+"type": "source",
+"tags": [],
+"collections": [
+"default",
+"special_interest"
+],
+"targets": 102,
+"country": "ru",
+"official": false,
+"publisher": "Dossier Center",
+"frequency": "daily"
+},
+{
+"name": "ru_duma_deputies",
+"title": "Russia State Duma Deputies",
+"type": "source",
+"tags": [
+"list.pep"
+],
+"collections": [
+"default",
+"peps"
+],
+"targets": 450,
+"country": "ru",
+"official": true,
+"publisher": "Государственная Дума Федерального Собрания Российской Федерации",
+"frequency": "weekly"
+},
+{
+"name": "ru_federation_council",
+"title": "Russia Federation Council Members",
+"type": "source",
+"tags": [
+"list.pep"
+],
+"collections": [
+"default",
+"peps"
+],
+"targets": 173,
+"country": "ru",
+"official": true,
+"publisher": "SF RF",
+"frequency": "weekly"
+},
+{
+"name": "ru_kremlin_persons",
+"title": "Russia Kremlin Catalog of Persons",
+"type": "source",
+"tags": [],
+"collections": [
+"default",
+"peps"
+],
+"targets": 179,
+"country": "ru",
+"official": true,
+"publisher": "Администрация Президента Российской Федерации",
+"frequency": "weekly"
+},
+{
+"name": "ru_mfa_sanctions",
+"title": "Russia Personal Sanctions Targeting US Citizens",
+"type": "source",
+"tags": [
+"list.sanction.counter",
+"target.us"
+],
+"collections": [
+"default",
+"sanctions"
+],
+"targets": 2140,
+"country": "ru",
+"official": true,
+"publisher": "MFA",
+"frequency": "daily"
+},
+{
+"name": "ru_myrotvorets_wagner",
+"title": "Russian PMC Wagner mercenaries (Myrotvorets list)",
+"type": "source",
+"tags": [],
+"collections": [
+"default",
+"special_interest"
+],
+"targets": 3990,
+"country": "ru",
+"official": false,
+"publisher": "Myrotvorets Center",
+"frequency": "never"
+},
+{
+"name": "ru_nsd_isin",
+"title": "Russian National Settlement Depository (NSD, ISIN Assignment)",
+"type": "source",
+"tags": [
+"sector.financial",
+"sector.securities"
+],
+"collections": [
+"default",
+"securities"
+],
+"targets": 17987,
+"country": "ru",
+"official": true,
+"publisher": "NSD",
+"frequency": "daily"
+},
+{
+"name": "rw_parliament",
+"title": "Rwanda Members of Parliament",
+"type": "source",
+"tags": [
+"list.pep"
+],
+"collections": [
+"default",
+"peps"
+],
+"targets": 104,
+"country": "rw",
+"official": true,
+"publisher": "Parliament of Rwanda",
+"frequency": "monthly"
+},
+{
+"name": "sa_pcct_terrorism_list",
+"title": "Saudi Arabia National Terrorism List (UNSCR 1373)",
+"type": "source",
+"tags": [
+"list.sanction"
+],
+"collections": [
+"default",
+"sanctions"
+],
+"targets": 335,
+"country": "sa",
+"official": true,
+"publisher": "PCCT",
+"frequency": "daily"
+},
+{
+"name": "sanctions",
+"title": "Consolidated Sanctions",
+"type": "collection",
+"tags": [],
+"collections": [],
+"targets": 72508,
+"country": "",
+"official": false,
+"publisher": "",
+"frequency": "unknown"
+},
+{
+"name": "sb_parliament",
+"title": "Solomon Islands Members of the National Parliament",
+"type": "source",
+"tags": [
+"list.pep"
+],
+"collections": [
+"default",
+"peps"
+],
+"targets": 49,
+"country": "sb",
+"official": true,
+"publisher": "NPSI",
+"frequency": "monthly"
+},
+{
+"name": "se_riksdag",
+"title": "Sweden Members of Riksdag",
+"type": "source",
+"tags": [
+"list.pep"
+],
+"collections": [
+"default",
+"peps"
+],
+"targets": 506,
+"country": "se",
+"official": true,
+"publisher": "Riksdagen",
+"frequency": "monthly"
+},
+{
+"name": "se_soe",
+"title": "Sweden State-Owned Enterprises Leadership",
+"type": "source",
+"tags": [
+"list.pep"
+],
+"collections": [
+"default",
+"peps"
+],
+"targets": 286,
+"country": "se",
+"official": true,
+"publisher": "Regeringskansliet",
+"frequency": "never"
+},
+{
+"name": "sg_gov_dir",
+"title": "Singapore Government Directory",
+"type": "source",
+"tags": [
+"list.pep",
+"list.pep.bulk"
+],
+"collections": [
+"default",
+"peps"
+],
+"targets": 8034,
+"country": "sg",
+"official": true,
+"publisher": "SGD",
+"frequency": "weekly"
+},
+{
+"name": "sg_mas_enforcement_actions",
+"title": "Singapore MAS Enforcement Actions",
+"type": "source",
+"tags": [],
+"collections": [
+"default",
+"regulatory",
+"enforcement",
+"crime"
+],
+"targets": 0,
+"country": "sg",
+"official": true,
+"publisher": "MAS",
+"frequency": "weekly"
+},
+{
+"name": "sg_parliament",
+"title": "Singapore Members of Parliament",
+"type": "source",
+"tags": [
+"list.pep"
+],
+"collections": [
+"default",
+"peps"
+],
+"targets": 275,
+"country": "sg",
+"official": true,
+"publisher": "Parliament of Singapore",
+"frequency": "monthly"
+},
+{
+"name": "sg_terrorists",
+"title": "Singapore Targeted Financial Sanctions",
+"type": "source",
+"tags": [
+"list.sanction"
+],
+"collections": [
+"default",
+"sanctions"
+],
+"targets": 41,
+"country": "sg",
+"official": true,
+"publisher": "MAS",
+"frequency": "daily"
+},
+{
+"name": "shu_uyghur_companies",
+"title": "Companies Operating in the Uyghur Region",
+"type": "source",
+"tags": [],
+"collections": [
+"default",
+"special_interest"
+],
+"targets": 4069,
+"country": "",
+"official": false,
+"publisher": "SHU",
+"frequency": "monthly"
+},
+{
+"name": "si_conflicts",
+"title": "Slovenia Business Restrictions",
+"type": "source",
+"tags": [],
+"collections": [
+"default",
+"debarment"
+],
+"targets": 6101,
+"country": "si",
+"official": true,
+"publisher": "KPK",
+"frequency": "daily"
+},
+{
+"name": "si_dz_rs",
+"title": "Slovenia Members of the National Assembly",
+"type": "source",
+"tags": [
+"list.pep"
+],
+"collections": [
+"default",
+"peps"
+],
+"targets": 91,
+"country": "si",
+"official": true,
+"publisher": "National Assembly of Slovenia",
+"frequency": "monthly"
+},
+{
+"name": "si_zvezoskop",
+"title": "Slovenian Political Officials from Zvezoskop",
+"type": "source",
+"tags": [
+"list.pep"
+],
+"collections": [
+"default",
+"peps"
+],
+"targets": 160,
+"country": "si",
+"official": false,
+"publisher": "Oštro",
+"frequency": "never"
+},
+{
+"name": "sk_nrsr_poslanci",
+"title": "Slovakia National Council Members",
+"type": "source",
+"tags": [
+"list.pep"
+],
+"collections": [
+"default",
+"peps"
+],
+"targets": 150,
+"country": "sk",
+"official": true,
+"publisher": "NR SR",
+"frequency": "weekly"
+},
+{
+"name": "sk_public_officials",
+"title": "Slovakia Public Officials",
+"type": "source",
+"tags": [
+"list.pep",
+"list.pep.bulk"
+],
+"collections": [
+"default",
+"peps"
+],
+"targets": 1611,
+"country": "sk",
+"official": true,
+"publisher": "NR SR",
+"frequency": "weekly"
+},
+{
+"name": "sm_consiglio",
+"title": "San Marino Members of the Grand and General Council",
+"type": "source",
+"tags": [
+"list.pep"
+],
+"collections": [
+"default",
+"peps"
+],
+"targets": 60,
+"country": "sm",
+"official": true,
+"publisher": "Consiglio Grande e Generale",
+"frequency": "monthly"
+},
+{
+"name": "sn_assembly",
+"title": "Senegal Members of the National Assembly",
+"type": "source",
+"tags": [
+"list.pep"
+],
+"collections": [
+"default",
+"peps"
+],
+"targets": 166,
+"country": "sn",
+"official": false,
+"publisher": "Assemblée nationale du Sénégal",
+"frequency": "monthly"
+},
+{
+"name": "sr_national_assembly",
+"title": "Suriname Members of National Assembly",
+"type": "source",
+"tags": [
+"list.pep"
+],
+"collections": [
+"default",
+"peps"
+],
+"targets": 51,
+"country": "sr",
+"official": true,
+"publisher": "De Nationale Assemblée",
+"frequency": "monthly"
+},
+{
+"name": "sv_legislature",
+"title": "El Salvador Deputies of Legislative Assembly",
+"type": "source",
+"tags": [
+"list.pep"
+],
+"collections": [
+"default",
+"peps"
+],
+"targets": 60,
+"country": "sv",
+"official": true,
+"publisher": "AL",
+"frequency": "monthly"
+},
+{
+"name": "th_cabinet",
+"title": "Thailand Cabinet of Ministers",
+"type": "source",
+"tags": [
+"list.pep"
+],
+"collections": [
+"default",
+"peps"
+],
+"targets": 35,
+"country": "th",
+"official": true,
+"publisher": "SPM",
+"frequency": "daily"
+},
+{
+"name": "th_designated_person",
+"title": "Thailand Designated Persons List",
+"type": "source",
+"tags": [
+"list.sanction"
+],
+"collections": [
+"default",
+"sanctions"
+],
+"targets": 384,
+"country": "th",
+"official": true,
+"publisher": "AMLO",
+"frequency": "daily"
+},
+{
+"name": "th_house_representatives",
+"title": "Thailand Members of the House of Representatives",
+"type": "source",
+"tags": [
+"list.pep"
+],
+"collections": [
+"default",
+"peps"
+],
+"targets": 499,
+"country": "th",
+"official": true,
+"publisher": "สภาผู้แทนราษฎร",
+"frequency": "monthly"
+},
+{
+"name": "th_senate",
+"title": "Thailand Members of the Senate",
+"type": "source",
+"tags": [
+"list.pep"
+],
+"collections": [
+"default",
+"peps"
+],
+"targets": 487,
+"country": "th",
+"official": true,
+"publisher": "สำนักงานเลขาธิการวุฒิสภา",
+"frequency": "monthly"
+},
+{
+"name": "thesentry_atlas",
+"title": "The Sentry Atlas",
+"type": "source",
+"tags": [
+"risk.klepto"
+],
+"collections": [
+"default",
+"special_interest"
+],
+"targets": 81,
+"country": "",
+"official": false,
+"publisher": "The Sentry",
+"frequency": "monthly"
+},
+{
+"name": "tj_majlisi_milli",
+"title": "Tajikistan Members of the Majlisi Milli",
+"type": "source",
+"tags": [
+"list.pep"
+],
+"collections": [
+"default",
+"peps"
+],
+"targets": 31,
+"country": "tj",
+"official": true,
+"publisher": "Маҷлиси миллии Маҷлиси Олии Ҷумҳурии Тоҷикистон",
+"frequency": "monthly"
+},
+{
+"name": "tm_mejlis",
+"title": "Turkmenistan Members of the Mejlis",
+"type": "source",
+"tags": [
+"list.pep"
+],
+"collections": [
+"default",
+"peps"
+],
+"targets": 124,
+"country": "tm",
+"official": true,
+"publisher": "Türkmenistanyň Mejlisi",
+"frequency": "monthly"
+},
+{
+"name": "tn_arp",
+"title": "Tunisia Members of the Assembly of the Representatives of the People",
+"type": "source",
+"tags": [
+"list.pep"
+],
+"collections": [
+"default",
+"peps"
+],
+"targets": 152,
+"country": "tn",
+"official": true,
+"publisher": "ARP",
+"frequency": "monthly"
+},
+{
+"name": "tn_cnlct",
+"title": "Tunisia National Counter-Terrorism List",
+"type": "source",
+"tags": [
+"list.sanction"
+],
+"collections": [
+"default",
+"sanctions"
+],
+"targets": 166,
+"country": "tn",
+"official": true,
+"publisher": "CNLCT",
+"frequency": "weekly"
+},
+{
+"name": "to_legislative_assembly",
+"title": "Tonga Members of the Legislative Assembly (Fale Alea)",
+"type": "source",
+"tags": [
+"list.pep"
+],
+"collections": [
+"default",
+"peps"
+],
+"targets": 26,
+"country": "to",
+"official": true,
+"publisher": "Fale Alea ʻo Tonga",
+"frequency": "monthly"
+},
+{
+"name": "tokyo_mou_detention",
+"title": "Tokyo MoU Detention List",
+"type": "source",
+"tags": [
+"sector.maritime"
+],
+"collections": [
+"default",
+"maritime"
+],
+"targets": 5577,
+"country": "zz",
+"official": true,
+"publisher": "Tokyo MoU",
+"frequency": "weekly"
+},
+{
+"name": "tr_cmb_banned",
+"title": "Türkiye Capital Markets Board Banned List",
+"type": "source",
+"tags": [],
+"collections": [
+"default",
+"regulatory",
+"crime"
+],
+"targets": 227,
+"country": "tr",
+"official": true,
+"publisher": "CMB",
+"frequency": "daily"
+},
+{
+"name": "tr_fcib",
+"title": "Türkiye Asset Freezing Sanctions List (MASAK)",
+"type": "source",
+"tags": [
+"list.sanction.counter",
+"sector.financial"
+],
+"collections": [
+"default",
+"sanctions"
+],
+"targets": 2286,
+"country": "tr",
+"official": true,
+"publisher": "MASAK",
+"frequency": "daily"
+},
+{
+"name": "tr_parliament",
+"title": "Türkiye Grand National Assembly",
+"type": "source",
+"tags": [
+"list.pep"
+],
+"collections": [
+"default",
+"peps"
+],
+"targets": 592,
+"country": "tr",
+"official": true,
+"publisher": "TBMM",
+"frequency": "weekly"
+},
+{
+"name": "tr_wanted",
+"title": "Türkiye Ministry Of Interior Terrorist Wanted List",
+"type": "source",
+"tags": [
+"list.wanted"
+],
+"collections": [
+"default",
+"wanted",
+"crime"
+],
+"targets": 2555,
+"country": "tr",
+"official": true,
+"publisher": "Türkiye Ministry of Interior",
+"frequency": "daily"
+},
+{
+"name": "tt_parliament",
+"title": "Trinidad and Tobago Members of Parliament",
+"type": "source",
+"tags": [
+"list.pep"
+],
+"collections": [
+"default",
+"peps"
+],
+"targets": 443,
+"country": "tt",
+"official": true,
+"publisher": "Parliament of the Republic of Trinidad and Tobago",
+"frequency": "monthly"
+},
+{
+"name": "tw_legislature",
+"title": "Taiwan Members of the Legislative Yuan",
+"type": "source",
+"tags": [
+"list.pep"
+],
+"collections": [
+"default",
+"peps"
+],
+"targets": 471,
+"country": "tw",
+"official": true,
+"publisher": "LY",
+"frequency": "monthly"
+},
+{
+"name": "tw_shtc",
+"title": "Taiwan Strategic High-Tech Commodities Entity List",
+"type": "source",
+"tags": [
+"list.regulatory",
+"list.risk"
+],
+"collections": [
+"default",
+"sanctions"
+],
+"targets": 10158,
+"country": "tw",
+"official": true,
+"publisher": "MOEA",
+"frequency": "daily"
+},
+{
+"name": "tz_bunge",
+"title": "Tanzania Members of the National Assembly",
+"type": "source",
+"tags": [
+"list.pep"
+],
+"collections": [
+"default",
+"peps"
+],
+"targets": 399,
+"country": "tz",
+"official": true,
+"publisher": "Bunge la Tanzania",
+"frequency": "monthly"
+},
+{
+"name": "ua_nsdc_sanctions",
+"title": "Ukraine NSDC State Register of Sanctions",
+"type": "source",
+"tags": [
+"list.sanction",
+"target.ru",
+"sector.academic"
+],
+"collections": [
+"default",
+"sanctions"
+],
+"targets": 22136,
+"country": "ua",
+"official": true,
+"publisher": "NSDC",
+"frequency": "daily"
+},
+{
+"name": "ua_rada",
+"title": "Ukraine Members of Verkhovna Rada",
+"type": "source",
+"tags": [
+"list.pep"
+],
+"collections": [
+"default",
+"peps"
+],
+"targets": 1588,
+"country": "ua",
+"official": true,
+"publisher": "VRU",
+"frequency": "monthly"
+},
+{
+"name": "ua_sfms_blacklist",
+"title": "Ukraine SFMS Blacklist",
+"type": "source",
+"tags": [
+"list.sanction"
+],
+"collections": [
+"default",
+"sanctions"
+],
+"targets": 1008,
+"country": "ua",
+"official": true,
+"publisher": "SFMS",
+"frequency": "daily"
+},
+{
+"name": "ua_war_sanctions",
+"title": "Ukraine War and Sanctions",
+"type": "source",
+"tags": [
+"target.ru",
+"sector.maritime",
+"sector.defense"
+],
+"collections": [
+"default",
+"special_interest",
+"maritime"
+],
+"targets": 5948,
+"country": "ua",
+"official": true,
+"publisher": "GUR",
+"frequency": "daily"
+},
+{
+"name": "ug_parliament",
+"title": "Uganda Members of Parliament",
+"type": "source",
+"tags": [
+"list.pep"
+],
+"collections": [
+"default",
+"peps"
+],
+"targets": 555,
+"country": "ug",
+"official": true,
+"publisher": "Parliament of Uganda",
+"frequency": "monthly"
+},
+{
+"name": "un_1718_vessels",
+"title": "UN Security Council 1718 Designated Vessels List",
+"type": "source",
+"tags": [
+"list.sanction",
+"sector.maritime"
+],
+"collections": [
+"default",
+"maritime",
+"sanctions"
+],
+"targets": 59,
+"country": "un",
+"official": true,
+"publisher": "UNSC",
+"frequency": "never"
+},
+{
+"name": "un_ga_protocol",
+"title": "UN Heads of State, Heads of Government and Ministers for Foreign Affairs",
+"type": "source",
+"tags": [
+"list.pep",
+"list.pep.bulk"
+],
+"collections": [
+"default",
+"peps"
+],
+"targets": 548,
+"country": "un",
+"official": true,
+"publisher": "DGACM",
+"frequency": "monthly"
+},
+{
+"name": "un_sc_sanctions",
+"title": "UN Security Council Consolidated Sanctions",
+"type": "source",
+"tags": [
+"list.sanction"
+],
+"collections": [
+"default",
+"sanctions"
+],
+"targets": 1004,
+"country": "un",
+"official": true,
+"publisher": "UNSC",
+"frequency": "daily"
+},
+{
+"name": "us_ak_med_exclusions",
+"title": "US Alaska Medical Assistance Excluded Provider List",
+"type": "source",
+"tags": [
+"sector.health"
+],
+"collections": [
+"default",
+"debarment"
+],
+"targets": 304,
+"country": "us",
+"official": true,
+"publisher": "AK-DOH",
+"frequency": "unknown"
+},
+{
+"name": "us_al_med_exclusions",
+"title": "US Alabama Medicaid Suspended Providers",
+"type": "source",
+"tags": [
+"sector.health"
+],
+"collections": [
+"default",
+"debarment"
+],
+"targets": 2102,
+"country": "us",
+"official": true,
+"publisher": "Alabama Medicaid",
+"frequency": "unknown"
+},
+{
+"name": "us_ar_med_exclusions",
+"title": "US Arkansas Medicaid Excluded Provider List",
+"type": "source",
+"tags": [
+"sector.health"
+],
+"collections": [
+"default",
+"debarment"
+],
+"targets": 2542,
+"country": "us",
+"official": true,
+"publisher": "DHS",
+"frequency": "unknown"
+},
+{
+"name": "us_az_med_exclusions",
+"title": "US Arizona Medicaid Suspensions and Terminations",
+"type": "source",
+"tags": [
+"sector.health"
+],
+"collections": [
+"default",
+"debarment"
+],
+"targets": 210,
+"country": "us",
+"official": true,
+"publisher": "AHCCCS",
+"frequency": "unknown"
+},
+{
+"name": "us_bis_antiboycott",
+"title": "US BIS Alleged Antiboycott Violations",
+"type": "source",
+"tags": [
+"list.export",
+"juris.us",
+"issuer.west",
+"sector.financial",
+"list.enforcement"
+],
+"collections": [
+"default",
+"regulatory",
+"crime"
+],
+"targets": 100,
+"country": "us",
+"official": true,
+"publisher": "BIS",
+"frequency": "weekly"
+},
+{
+"name": "us_bis_denied",
+"title": "US BIS Denied Persons List",
+"type": "source",
+"tags": [
+"list.sanction",
+"list.export",
+"juris.us",
+"issuer.west"
+],
+"collections": [
+"default",
+"us_sanctions",
+"sanctions"
+],
+"targets": 382,
+"country": "us",
+"official": true,
+"publisher": "BIS",
+"frequency": "daily"
+},
+{
+"name": "us_bis_export",
+"title": "US BIS Export Violations",
+"type": "source",
+"tags": [
+"list.export",
+"juris.us",
+"issuer.west"
+],
+"collections": [
+"default",
+"regulatory",
+"crime"
+],
+"targets": 1179,
+"country": "us",
+"official": true,
+"publisher": "BIS",
+"frequency": "weekly"
+},
+{
+"name": "us_bis_mieu",
+"title": "US BIS Military-Intelligence End Users",
+"type": "source",
+"tags": [
+"list.export",
+"juris.us",
+"issuer.west",
+"sector.defense"
+],
+"collections": [
+"default",
+"sanctions"
+],
+"targets": 13,
+"country": "us",
+"official": true,
+"publisher": "BIS",
+"frequency": "never"
+},
+{
+"name": "us_bis_oac",
+"title": "US Office of Antiboycott Compliance Requester List",
+"type": "source",
+"tags": [
+"list.export",
+"juris.us"
+],
+"collections": [
+"default",
+"regulatory",
+"crime"
+],
+"targets": 208,
+"country": "us",
+"official": true,
+"publisher": "BIS",
+"frequency": "weekly"
+},
+{
+"name": "us_ca_med_exclusions",
+"title": "US California Medicaid Suspended and ineligible providers",
+"type": "source",
+"tags": [
+"sector.health"
+],
+"collections": [
+"default",
+"debarment"
+],
+"targets": 23606,
+"country": "us",
+"official": true,
+"publisher": "DHCS",
+"frequency": "unknown"
+},
+{
+"name": "us_cbp_forced_labor",
+"title": "US CBP Withhold Release Orders and Findings",
+"type": "source",
+"tags": [
+"list.sanction",
+"issuer.west",
+"sector.maritime"
+],
+"collections": [
+"default",
+"maritime",
+"sanctions"
+],
+"targets": 62,
+"country": "us",
+"official": true,
+"publisher": "CBP",
+"frequency": "daily"
+},
+{
+"name": "us_cftc_enforcement_actions",
+"title": "US CFTC Enforcement Actions",
+"type": "source",
+"tags": [
+"issuer.west",
+"sector.financial",
+"list.enforcement"
+],
+"collections": [
+"default",
+"enforcement"
+],
+"targets": 709,
+"country": "us",
+"official": true,
+"publisher": "CFTC",
+"frequency": "weekly"
+},
+{
+"name": "us_cia_world_leaders",
+"title": "US CIA World Leaders",
+"type": "source",
+"tags": [
+"list.pep"
+],
+"collections": [
+"default",
+"peps"
+],
+"targets": 5307,
+"country": "us",
+"official": true,
+"publisher": "CIA",
+"frequency": "daily"
+},
+{
+"name": "us_co_med_exclusions",
+"title": "US Colorado Medicaid Terminated Provider List",
+"type": "source",
+"tags": [
+"sector.health"
+],
+"collections": [
+"default",
+"debarment"
+],
+"targets": 316,
+"country": "us",
+"official": true,
+"publisher": "HCPF",
+"frequency": "unknown"
+},
+{
+"name": "us_congress",
+"title": "US Members of the Congress",
+"type": "source",
+"tags": [
+"list.pep"
+],
+"collections": [
+"default",
+"peps"
+],
+"targets": 1340,
+"country": "us",
+"official": true,
+"publisher": "United States Congress",
+"frequency": "daily"
+},
+{
+"name": "us_cuba_sanctions",
+"title": "US State Department Cuba Sanctions",
+"type": "source",
+"tags": [
+"list.sanction",
+"target.cu",
+"juris.us",
+"issuer.west"
+],
+"collections": [
+"default",
+"securities",
+"us_sanctions",
+"sanctions"
+],
+"targets": 556,
+"country": "us",
+"official": true,
+"publisher": "DOS",
+"frequency": "monthly"
+},
+{
+"name": "us_dc_exclusions",
+"title": "US Washington DC Excluded Parties List",
+"type": "source",
+"tags": [
+"list.debarment",
+"sector.health"
+],
+"collections": [
+"default",
+"debarment"
+],
+"targets": 25,
+"country": "us",
+"official": true,
+"publisher": "OCP",
+"frequency": "unknown"
+},
+{
+"name": "us_ddtc_debarred",
+"title": "US Directorate of Defense Trade Controls AECA Debarments",
+"type": "source",
+"tags": [
+"list.sanction",
+"list.export",
+"juris.us",
+"sector.defense"
+],
+"collections": [
+"default",
+"regulatory",
+"enforcement",
+"debarment",
+"us_sanctions",
+"crime",
+"sanctions"
+],
+"targets": 748,
+"country": "us",
+"official": true,
+"publisher": "DDTC",
+"frequency": "daily"
+},
+{
+"name": "us_ddtc_enforcements",
+"title": "US Directorate of Defense Trade Controls Penalties & Oversight Agreements",
+"type": "source",
+"tags": [
+"list.sanction",
+"list.enforcement",
+"list.export",
+"sector.defense",
+"juris.us"
+],
+"collections": [
+"default",
+"regulatory",
+"enforcement",
+"crime"
+],
+"targets": 71,
+"country": "us",
+"official": true,
+"publisher": "DDTC",
+"frequency": "daily"
+},
+{
+"name": "us_de_med_exclusions",
+"title": "US Delaware Medicaid Sanctioned Providers",
+"type": "source",
+"tags": [
+"sector.health"
+],
+"collections": [
+"default",
+"debarment"
+],
+"targets": 1433,
+"country": "us",
+"official": true,
+"publisher": "DHSS",
+"frequency": "unknown"
+},
+{
+"name": "us_dea_fugitives",
+"title": "US DEA Fugitives",
+"type": "source",
+"tags": [
+"list.wanted"
+],
+"collections": [
+"default",
+"wanted",
+"crime"
+],
+"targets": 515,
+"country": "us",
+"official": true,
+"publisher": "DEA",
+"frequency": "daily"
+},
+{
+"name": "us_dhs_uflpa",
+"title": "US UFLPA Entity List",
+"type": "source",
+"tags": [
+"list.sanction",
+"target.cn",
+"issuer.west"
+],
+"collections": [
+"default",
+"securities",
+"us_sanctions",
+"sanctions"
+],
+"targets": 186,
+"country": "us",
+"official": true,
+"publisher": "DHS",
+"frequency": "daily"
+},
+{
+"name": "us_dod_chinese_milcorps",
+"title": "US DoD Chinese military companies",
+"type": "source",
+"tags": [
+"sector.defense"
+],
+"collections": [
+"default",
+"securities",
+"regulatory",
+"debarment",
+"us_sanctions",
+"crime",
+"sanctions"
+],
+"targets": 207,
+"country": "us",
+"official": true,
+"publisher": "DoD",
+"frequency": "never"
+},
+{
+"name": "us_fbi_lazarus_crypto",
+"title": "US FBI Lazarus Group Crypto Wallets",
+"type": "source",
+"tags": [
+"sector.crypto"
+],
+"collections": [
+"default",
+"crime"
+],
+"targets": 34,
+"country": "us",
+"official": true,
+"publisher": "FBI",
+"frequency": "never"
+},
+{
+"name": "us_fbi_most_wanted",
+"title": "US FBI Most Wanted",
+"type": "source",
+"tags": [
+"list.wanted"
+],
+"collections": [
+"default",
+"wanted",
+"crime"
+],
+"targets": 483,
+"country": "us",
+"official": true,
+"publisher": "FBI",
+"frequency": "daily"
+},
+{
+"name": "us_fcc_covered_list",
+"title": "US FCC Covered List",
+"type": "source",
+"tags": [],
+"collections": [
+"default",
+"regulatory",
+"debarment",
+"crime"
+],
+"targets": 13,
+"country": "us",
+"official": true,
+"publisher": "FCC",
+"frequency": "never"
+},
+{
+"name": "us_fda_restricted",
+"title": "US FDA Clinical Investigator Disqualification Proceedings",
+"type": "source",
+"tags": [],
+"collections": [
+"default",
+"debarment"
+],
+"targets": 181,
+"country": "us",
+"official": true,
+"publisher": "FDA",
+"frequency": "daily"
+},
+{
+"name": "us_fdic_failed_banks",
+"title": "US FDIC Failed Banks",
+"type": "source",
+"tags": [
+"sector.banking"
+],
+"collections": [
+"default",
+"regulatory",
+"enforcement",
+"crime"
+],
+"targets": 577,
+"country": "us",
+"official": true,
+"publisher": "FDIC",
+"frequency": "weekly"
+},
+{
+"name": "us_fed_enforcements",
+"title": "US Federal Reserve Enforcement Actions",
+"type": "source",
+"tags": [
+"sector.banking",
+"list.enforcement"
+],
+"collections": [
+"default",
+"regulatory",
+"enforcement",
+"crime"
+],
+"targets": 1547,
+"country": "us",
+"official": true,
+"publisher": "FRB",
+"frequency": "daily"
+},
+{
+"name": "us_fincen_enforcement",
+"title": "US FinCEN Enforcement Actions",
+"type": "source",
+"tags": [
+"sector.banking",
+"list.enforcement"
+],
+"collections": [
+"default",
+"regulatory",
+"crime"
+],
+"targets": 35,
+"country": "us",
+"official": true,
+"publisher": "FinCEN",
+"frequency": "weekly"
+},
+{
+"name": "us_fincen_special_measures",
+"title": "US FinCEN 311 and 9714 Special Measures",
+"type": "source",
+"tags": [
+"sector.banking",
+"list.sanction",
+"sector.financial",
+"issuer.west"
+],
+"collections": [
+"default",
+"sanctions"
+],
+"targets": 180,
+"country": "us",
+"official": true,
+"publisher": "FinCEN",
+"frequency": "daily"
+},
+{
+"name": "us_finra_actions",
+"title": "US FINRA Enforcement Actions",
+"type": "source",
+"tags": [
+"sector.financial"
+],
+"collections": [
+"default",
+"regulatory",
+"crime"
+],
+"targets": 14646,
+"country": "us",
+"official": true,
+"publisher": "FINRA",
+"frequency": "weekly"
+},
+{
+"name": "us_finra_barred",
+"title": "US FINRA Barred Individuals",
+"type": "source",
+"tags": [
+"sector.financial"
+],
+"collections": [
+"default",
+"regulatory",
+"crime"
+],
+"targets": 9341,
+"country": "us",
+"official": true,
+"publisher": "FINRA",
+"frequency": "weekly"
+},
+{
+"name": "us_ga_med_exclusions",
+"title": "US Georgia Healthcare provider exclusions",
+"type": "source",
+"tags": [
+"sector.health"
+],
+"collections": [
+"default",
+"debarment"
+],
+"targets": 1313,
+"country": "us",
+"official": true,
+"publisher": "DCH",
+"frequency": "unknown"
+},
+{
+"name": "us_hhs_exclusions",
+"title": "US Health and Human Services Inspector General Exclusions",
+"type": "source",
+"tags": [],
+"collections": [
+"default",
+"debarment"
+],
+"targets": 82715,
+"country": "us",
+"official": true,
+"publisher": "OIG",
+"frequency": "daily"
+},
+{
+"name": "us_hi_med_exclusions",
+"title": "US Hawaii Medicaid Exclusions and Reinstatements",
+"type": "source",
+"tags": [
+"sector.health"
+],
+"collections": [
+"default",
+"debarment"
+],
+"targets": 195,
+"country": "us",
+"official": true,
+"publisher": "DHS",
+"frequency": "unknown"
+},
+{
+"name": "us_ia_med_exclusions",
+"title": "US Iowa Medicaid Terminated Provider List",
+"type": "source",
+"tags": [
+"sector.health"
+],
+"collections": [
+"default",
+"debarment"
+],
+"targets": 998,
+"country": "us",
+"official": true,
+"publisher": "HHS",
+"frequency": "unknown"
+},
+{
+"name": "us_ice_wanted",
+"title": "US Immigration and Customs Enforcement Most Wanted Fugitives",
+"type": "source",
+"tags": [
+"list.wanted"
+],
+"collections": [
+"default",
+"wanted",
+"crime"
+],
+"targets": 12,
+"country": "us",
+"official": true,
+"publisher": "ICE",
+"frequency": "daily"
+},
+{
+"name": "us_in_med_exclusions",
+"title": "US Indiana Medicaid Terminated Provider List",
+"type": "source",
+"tags": [
+"sector.health"
+],
+"collections": [
+"default",
+"debarment"
+],
+"targets": 0,
+"country": "us",
+"official": true,
+"publisher": "FSSA",
+"frequency": "unknown"
+},
+{
+"name": "us_klepto_hr_visa",
+"title": "US Anti-Kleptocracy and Human Rights Visa Restrictions",
+"type": "source",
+"tags": [
+"list.sanction",
+"risk.klepto",
+"issuer.west"
+],
+"collections": [
+"default",
+"us_sanctions",
+"sanctions"
+],
+"targets": 526,
+"country": "us",
+"official": true,
+"publisher": "DOS",
+"frequency": "daily"
+},
+{
+"name": "us_ks_med_exclusions",
+"title": "US Kansas Medicaid Terminated Provider List",
+"type": "source",
+"tags": [
+"sector.health"
+],
+"collections": [
+"default",
+"debarment"
+],
+"targets": 205,
+"country": "us",
+"official": true,
+"publisher": "KDHE",
+"frequency": "unknown"
+},
+{
+"name": "us_ky_med_exclusions",
+"title": "US Kentucky Terminated and Excluded Providers",
+"type": "source",
+"tags": [
+"sector.health"
+],
+"collections": [
+"default",
+"debarment"
+],
+"targets": 393,
+"country": "us",
+"official": true,
+"publisher": "DMS",
+"frequency": "unknown"
+},
+{
+"name": "us_la_med_exclusions",
+"title": "US Louisiana Department of Health Adverse Actions List",
+"type": "source",
+"tags": [
+"sector.health"
+],
+"collections": [
+"default",
+"debarment"
+],
+"targets": 3791,
+"country": "us",
+"official": true,
+"publisher": "LDH",
+"frequency": "unknown"
+},
+{
+"name": "us_ma_med_exclusions",
+"title": "US Massachusetts Suspensions and Exclusions from MassHealth",
+"type": "source",
+"tags": [
+"sector.health"
+],
+"collections": [
+"default",
+"debarment"
+],
+"targets": 289,
+"country": "us",
+"official": true,
+"publisher": "MassHealth",
+"frequency": "unknown"
+},
+{
+"name": "us_md_med_exclusions",
+"title": "US Maryland Sanctioned Providers",
+"type": "source",
+"tags": [
+"sector.health"
+],
+"collections": [
+"default",
+"debarment"
+],
+"targets": 1590,
+"country": "us",
+"official": true,
+"publisher": "MDH",
+"frequency": "unknown"
+},
+{
+"name": "us_me_med_exclusions",
+"title": "US Maine Medicaid Excluded Providers",
+"type": "source",
+"tags": [
+"sector.health"
+],
+"collections": [
+"default",
+"debarment"
+],
+"targets": 1108,
+"country": "us",
+"official": true,
+"publisher": "DHHS",
+"frequency": "unknown"
+},
+{
+"name": "us_mi_med_exclusions",
+"title": "US Michigan Medicaid Sanctioned Provider List",
+"type": "source",
+"tags": [
+"sector.health"
+],
+"collections": [
+"default",
+"debarment"
+],
+"targets": 4229,
+"country": "us",
+"official": true,
+"publisher": "MDHHS",
+"frequency": "unknown"
+},
+{
+"name": "us_mn_med_exclusions",
+"title": "US Minnesota Health Care Programs Excluded Providers",
+"type": "source",
+"tags": [
+"sector.health"
+],
+"collections": [
+"default",
+"debarment"
+],
+"targets": 1420,
+"country": "us",
+"official": true,
+"publisher": "MHCP",
+"frequency": "unknown"
+},
+{
+"name": "us_mo_med_exclusions",
+"title": "US Missouri Medicaid Provider Terminations",
+"type": "source",
+"tags": [
+"sector.health"
+],
+"collections": [
+"default",
+"debarment"
+],
+"targets": 262,
+"country": "us",
+"official": true,
+"publisher": "MMAC",
+"frequency": "unknown"
+},
+{
+"name": "us_ms_med_exclusions",
+"title": "US Mississippi Medicaid Terminated Provider List",
+"type": "source",
+"tags": [
+"sector.health"
+],
+"collections": [
+"default",
+"debarment"
+],
+"targets": 208,
+"country": "us",
+"official": true,
+"publisher": "Mississippi Division of Medicaid",
+"frequency": "unknown"
+},
+{
+"name": "us_mt_med_exclusions",
+"title": "US Montana Medicaid Excluded and Terminated Providers",
+"type": "source",
+"tags": [
+"sector.health"
+],
+"collections": [
+"default",
+"debarment"
+],
+"targets": 172,
+"country": "us",
+"official": true,
+"publisher": "DPHHS",
+"frequency": "unknown"
+},
+{
+"name": "us_navy",
+"title": "US Navy Leadership",
+"type": "source",
+"tags": [
+"list.pep",
+"list.pep.bulk"
+],
+"collections": [
+"default",
+"peps"
+],
+"targets": 278,
+"country": "us",
+"official": true,
+"publisher": "USN",
+"frequency": "daily"
+},
+{
+"name": "us_nc_med_exclusions",
+"title": "US North Carolina Excluded Providers List",
+"type": "source",
+"tags": [
+"sector.health"
+],
+"collections": [
+"default",
+"debarment"
+],
+"targets": 163,
+"country": "us",
+"official": true,
+"publisher": "NC Medicaid Division of Health Benefits",
+"frequency": "unknown"
+},
+{
+"name": "us_nd_med_exclusions",
+"title": "US North Dakota Medicaid Terminated Provider List",
+"type": "source",
+"tags": [
+"sector.health"
+],
+"collections": [
+"default",
+"debarment"
+],
+"targets": 188,
+"country": "us",
+"official": true,
+"publisher": "NDHHS",
+"frequency": "unknown"
+},
+{
+"name": "us_ne_med_exclusions",
+"title": "US Nebraska Medicaid Sanctioned Providers",
+"type": "source",
+"tags": [
+"sector.health"
+],
+"collections": [
+"default",
+"debarment"
+],
+"targets": 1421,
+"country": "us",
+"official": true,
+"publisher": "DHHS",
+"frequency": "unknown"
+},
+{
+"name": "us_nfa_enforcement_actions",
+"title": "US NFA Enforcement and Regulatory Actions",
+"type": "source",
+"tags": [
+"list.enforcement",
+"issuer.west",
+"sector.financial"
+],
+"collections": [
+"default",
+"enforcement"
+],
+"targets": 148,
+"country": "us",
+"official": true,
+"publisher": "NFA",
+"frequency": "weekly"
+},
+{
+"name": "us_nh_med_exclusions",
+"title": "US New Hampshire Medicaid Exclusion and Sanction List",
+"type": "source",
+"tags": [
+"sector.health"
+],
+"collections": [
+"default",
+"debarment"
+],
+"targets": 72,
+"country": "us",
+"official": true,
+"publisher": "DHHS",
+"frequency": "unknown"
+},
+{
+"name": "us_nj_med_exclusions",
+"title": "US New Jersey Ineligible Medicaid Providers",
+"type": "source",
+"tags": [
+"sector.health"
+],
+"collections": [
+"default",
+"debarment"
+],
+"targets": 3440,
+"country": "us",
+"official": true,
+"publisher": "OSC",
+"frequency": "unknown"
+},
+{
+"name": "us_nk_jointventures",
+"title": "US Advisory on North Korean Joint Ventures",
+"type": "source",
+"tags": [
+"list.risk",
+"target.kp",
+"issuer.west"
+],
+"collections": [
+"default",
+"us_sanctions",
+"special_interest",
+"sanctions"
+],
+"targets": 229,
+"country": "",
+"official": true,
+"publisher": "CBP",
+"frequency": "never"
+},
+{
+"name": "us_nv_med_exclusions",
+"title": "US Nevada Medicaid Sanctions",
+"type": "source",
+"tags": [
+"sector.health"
+],
+"collections": [
+"default",
+"debarment"
+],
+"targets": 649,
+"country": "us",
+"official": true,
+"publisher": "DHCFP",
+"frequency": "unknown"
+},
+{
+"name": "us_ny_med_exclusions",
+"title": "US New York State Medicaid Exclusions",
+"type": "source",
+"tags": [
+"sector.health"
+],
+"collections": [
+"default",
+"debarment"
+],
+"targets": 9023,
+"country": "us",
+"official": true,
+"publisher": "OMIG",
+"frequency": "unknown"
+},
+{
+"name": "us_occ_enfact",
+"title": "US OCC Enforcement Actions",
+"type": "source",
+"tags": [
+"sector.banking"
+],
+"collections": [
+"default",
+"regulatory",
+"crime"
+],
+"targets": 4100,
+"country": "us",
+"official": true,
+"publisher": "OCC",
+"frequency": "daily"
+},
+{
+"name": "us_ofac_cons",
+"title": "US OFAC Consolidated (non-SDN) List",
+"type": "source",
+"tags": [
+"list.sanction",
+"juris.us",
+"issuer.west",
+"sector.maritime",
+"sector.energy",
+"sector.securities"
+],
+"collections": [
+"default",
+"securities",
+"us_sanctions",
+"maritime",
+"sanctions"
+],
+"targets": 711,
+"country": "us",
+"official": true,
+"publisher": "OFAC",
+"frequency": "daily"
+},
+{
+"name": "us_ofac_enforcement_actions",
+"title": "US OFAC Enforcement Actions",
+"type": "source",
+"tags": [
+"juris.us",
+"issuer.west",
+"list.enforcement"
+],
+"collections": [
+"default",
+"enforcement"
+],
+"targets": 179,
+"country": "us",
+"official": true,
+"publisher": "OFAC",
+"frequency": "weekly"
+},
+{
+"name": "us_ofac_sdn",
+"title": "US OFAC Specially Designated Nationals (SDN) List",
+"type": "source",
+"tags": [
+"list.sanction",
+"juris.us",
+"issuer.west",
+"sector.maritime",
+"sector.crypto",
+"sector.energy",
+"sector.securities"
+],
+"collections": [
+"default",
+"securities",
+"us_sanctions",
+"maritime",
+"sanctions"
+],
+"targets": 20379,
+"country": "us",
+"official": true,
+"publisher": "OFAC",
+"frequency": "daily"
+},
+{
+"name": "us_oh_med_exclusions",
+"title": "US Ohio Medicaid Excluded and Suspended Providers",
+"type": "source",
+"tags": [
+"sector.health"
+],
+"collections": [
+"default",
+"debarment"
+],
+"targets": 2082,
+"country": "us",
+"official": true,
+"publisher": "ODM",
+"frequency": "unknown"
+},
+{
+"name": "us_or_med_exclusions",
+"title": "US Oregon State Medicaid Fraud Convictions",
+"type": "source",
+"tags": [
+"sector.health"
+],
+"collections": [
+"default",
+"debarment"
+],
+"targets": 132,
+"country": "us",
+"official": true,
+"publisher": "PIAU",
+"frequency": "unknown"
+},
+{
+"name": "us_pa_med_exclusions",
+"title": "US Pennsylvania Medicheck list",
+"type": "source",
+"tags": [
+"sector.health"
+],
+"collections": [
+"default",
+"debarment"
+],
+"targets": 5945,
+"country": "us",
+"official": true,
+"publisher": "DHS",
+"frequency": "unknown"
+},
+{
+"name": "us_plum_book",
+"title": "US Periodically Listing Updates to Management (PLUM) Reporting",
+"type": "source",
+"tags": [
+"list.pep",
+"list.pep.bulk"
+],
+"collections": [
+"default",
+"peps"
+],
+"targets": 14131,
+"country": "us",
+"official": true,
+"publisher": "OPM",
+"frequency": "daily"
+},
+{
+"name": "us_plural_legislators",
+"title": "US Legislators by Plural (formerly OpenStates)",
+"type": "source",
+"tags": [
+"list.pep"
+],
+"collections": [
+"default",
+"peps"
+],
+"targets": 11178,
+"country": "us",
+"official": false,
+"publisher": "Plural",
+"frequency": "weekly"
+},
+{
+"name": "us_sam_exclusions",
+"title": "US SAM Procurement Exclusions",
+"type": "source",
+"tags": [],
+"collections": [
+"default",
+"regulatory",
+"debarment",
+"crime"
+],
+"targets": 105968,
+"country": "us",
+"official": true,
+"publisher": "GSA",
+"frequency": "daily"
+},
+{
+"name": "us_sanctions",
+"title": "United States Sanctions",
+"type": "collection",
+"tags": [],
+"collections": [],
+"targets": 27124,
+"country": "",
+"official": false,
+"publisher": "",
+"frequency": "unknown"
+},
+{
+"name": "us_sc_med_exclusions",
+"title": "US South Carolina Excluded Providers",
+"type": "source",
+"tags": [
+"sector.health"
+],
+"collections": [
+"default",
+"debarment"
+],
+"targets": 1340,
+"country": "us",
+"official": true,
+"publisher": "SCDHHS",
+"frequency": "unknown"
+},
+{
+"name": "us_sec_harmed_investors",
+"title": "US SEC Actions Due to Harmed Investors",
+"type": "source",
+"tags": [],
+"collections": [
+"default",
+"regulatory",
+"crime"
+],
+"targets": 869,
+"country": "us",
+"official": true,
+"publisher": "SEC",
+"frequency": "daily"
+},
+{
+"name": "us_sec_pause",
+"title": "US Public Alert: Unregistered Soliciting Entities (PAUSE)",
+"type": "source",
+"tags": [],
+"collections": [
+"default",
+"regulatory",
+"enforcement",
+"crime"
+],
+"targets": 1670,
+"country": "us",
+"official": true,
+"publisher": "SEC",
+"frequency": "daily"
+},
+{
+"name": "us_special_leg",
+"title": "US Special Legislative Exclusions",
+"type": "source",
+"tags": [
+"list.debarment",
+"sector.academic"
+],
+"collections": [
+"default",
+"securities",
+"regulatory",
+"debarment",
+"us_sanctions",
+"crime",
+"sanctions"
+],
+"targets": 193,
+"country": "us",
+"official": true,
+"publisher": "United States Congress",
+"frequency": "never"
+},
+{
+"name": "us_ss_wanted",
+"title": "US Secret Service Most Wanted Fugitives",
+"type": "source",
+"tags": [
+"list.wanted"
+],
+"collections": [
+"default",
+"wanted",
+"crime"
+],
+"targets": 31,
+"country": "us",
+"official": true,
+"publisher": "USSS",
+"frequency": "daily"
+},
+{
+"name": "us_state_dept",
+"title": "US State Department Senior Officials",
+"type": "source",
+"tags": [
+"list.pep",
+"list.pep.bulk"
+],
+"collections": [
+"default",
+"peps"
+],
+"targets": 237,
+"country": "us",
+"official": true,
+"publisher": "DOS",
+"frequency": "weekly"
+},
+{
+"name": "us_state_terrorist_exclusion",
+"title": "US Department of State Terrorist Exclusion",
+"type": "source",
+"tags": [
+"list.sanction",
+"juris.us"
+],
+"collections": [
+"default",
+"us_sanctions",
+"sanctions"
+],
+"targets": 55,
+"country": "us",
+"official": true,
+"publisher": "DOS",
+"frequency": "daily"
+},
+{
+"name": "us_state_terrorist_orgs",
+"title": "US Department of State Foreign Terrorist Organizations",
+"type": "source",
+"tags": [
+"list.sanction",
+"juris.us"
+],
+"collections": [
+"default",
+"sanctions"
+],
+"targets": 97,
+"country": "us",
+"official": true,
+"publisher": "DOS",
+"frequency": "daily"
+},
+{
+"name": "us_tn_med_exclusions",
+"title": "US Tennessee Terminated Providers List",
+"type": "source",
+"tags": [
+"sector.health"
+],
+"collections": [
+"default",
+"debarment"
+],
+"targets": 21,
+"country": "us",
+"official": true,
+"publisher": "OPI",
+"frequency": "unknown"
+},
+{
+"name": "us_trade_csl",
+"title": "US Trade Consolidated Screening List (CSL)",
+"type": "source",
+"tags": [
+"list.sanction",
+"list.export",
+"juris.us",
+"issuer.west",
+"sector.maritime"
+],
+"collections": [
+"default",
+"us_sanctions",
+"maritime",
+"sanctions"
+],
+"targets": 24238,
+"country": "us",
+"official": true,
+"publisher": "ITA",
+"frequency": "daily"
+},
+{
+"name": "us_tx_med_exclusions",
+"title": "US Texas Medicaid Provider Exclusions",
+"type": "source",
+"tags": [
+"sector.health"
+],
+"collections": [
+"default",
+"debarment"
+],
+"targets": 11883,
+"country": "us",
+"official": true,
+"publisher": "OIG",
+"frequency": "unknown"
+},
+{
+"name": "us_wa_med_exclusions",
+"title": "US Washington State Provider Termination and Exclusion List",
+"type": "source",
+"tags": [
+"sector.health"
+],
+"collections": [
+"default",
+"debarment"
+],
+"targets": 233,
+"country": "us",
+"official": true,
+"publisher": "HCA",
+"frequency": "unknown"
+},
+{
+"name": "us_wv_med_exclusions",
+"title": "US West Virginia Medicaid Provider Exclusions and Terminations",
+"type": "source",
+"tags": [
+"sector.medical",
+"sector.usmed.debarment"
+],
+"collections": [
+"default",
+"debarment"
+],
+"targets": 166,
+"country": "us",
+"official": true,
+"publisher": "MMIS",
+"frequency": "unknown"
+},
+{
+"name": "us_wy_med_exclusions",
+"title": "US Wyoming Medicaid Provider Exclusion List",
+"type": "source",
+"tags": [
+"sector.health"
+],
+"collections": [
+"default",
+"debarment"
+],
+"targets": 126,
+"country": "us",
+"official": true,
+"publisher": "WDH",
+"frequency": "unknown"
+},
+{
+"name": "uy_pep",
+"title": "Uruguayan Politically Exposed Persons (PEP)",
+"type": "source",
+"tags": [
+"list.pep",
+"list.pep.bulk"
+],
+"collections": [
+"default",
+"peps"
+],
+"targets": 6013,
+"country": "uy",
+"official": true,
+"publisher": "SENACLAFT",
+"frequency": "weekly"
+},
+{
+"name": "uz_legislative_chamber",
+"title": "Uzbekistan Members of the Legislative Chamber",
+"type": "source",
+"tags": [
+"list.pep"
+],
+"collections": [
+"default",
+"peps"
+],
+"targets": 145,
+"country": "uz",
+"official": true,
+"publisher": "Oʻzbekiston Respublikasi Oliy Majlisi Qonunchilik palatasi",
+"frequency": "monthly"
+},
+{
+"name": "uz_senate",
+"title": "Uzbekistan Members of the Senate",
+"type": "source",
+"tags": [
+"list.pep"
+],
+"collections": [
+"default",
+"peps"
+],
+"targets": 60,
+"country": "uz",
+"official": true,
+"publisher": "Oʻzbekiston Respublikasi Oliy Majlisi Senati",
+"frequency": "monthly"
+},
+{
+"name": "ve_asamblea_nacional",
+"title": "Venezuela Members of the National Assembly",
+"type": "source",
+"tags": [
+"list.pep"
+],
+"collections": [
+"default",
+"peps"
+],
+"targets": 288,
+"country": "ve",
+"official": true,
+"publisher": "Asamblea Nacional de Venezuela",
+"frequency": "weekly"
+},
+{
+"name": "vn_national_assembly",
+"title": "Vietnam National Assembly (Quốc hội)",
+"type": "source",
+"tags": [
+"list.pep"
+],
+"collections": [
+"default",
+"peps"
+],
+"targets": 499,
+"country": "vn",
+"official": true,
+"publisher": "QH",
+"frequency": "weekly"
+},
+{
+"name": "vn_terrorist_orgs",
+"title": "Vietnam MPS List of Terrorist Organizations and Individuals",
+"type": "source",
+"tags": [
+"list.terror"
+],
+"collections": [
+"default",
+"sanctions"
+],
+"targets": 21,
+"country": "vn",
+"official": true,
+"publisher": "MPS",
+"frequency": "daily"
+},
+{
+"name": "vu_parliament",
+"title": "Vanuatu Members of Parliament",
+"type": "source",
+"tags": [
+"list.pep"
+],
+"collections": [
+"default",
+"peps"
+],
+"targets": 206,
+"country": "vu",
+"official": true,
+"publisher": "Parliament of the Republic of Vanuatu",
+"frequency": "monthly"
+},
+{
+"name": "worldbank_debarred",
+"title": "WorldBank Debarred Providers",
+"type": "source",
+"tags": [
+"list.debarment",
+"sector.devbank"
+],
+"collections": [
+"default",
+"debarment"
+],
+"targets": 1394,
+"country": "zz",
+"official": true,
+"publisher": "World Bank",
+"frequency": "daily"
+},
+{
+"name": "xk_assembly",
+"title": "Kosovo Members of Assembly",
+"type": "source",
+"tags": [
+"list.pep"
+],
+"collections": [
+"default",
+"peps"
+],
+"targets": 120,
+"country": "xk",
+"official": true,
+"publisher": "Kuvendi i Republikës së Kosovës",
+"frequency": "monthly"
+},
+{
+"name": "za_fic_sanctions",
+"title": "South Africa Targeted Financial Sanctions",
+"type": "source",
+"tags": [
+"list.sanction",
+"sector.financial"
+],
+"collections": [
+"default",
+"sanctions"
+],
+"targets": 991,
+"country": "za",
+"official": true,
+"publisher": "FIC",
+"frequency": "daily"
+},
+{
+"name": "za_mm_officials",
+"title": "South Africa Municipal Leadership",
+"type": "source",
+"tags": [
+"list.pep",
+"list.pep.bulk"
+],
+"collections": [
+"default",
+"peps"
+],
+"targets": 787,
+"country": "za",
+"official": true,
+"publisher": "NT",
+"frequency": "weekly"
+},
+{
+"name": "za_pmg_legislators",
+"title": "South Africa National and Provincial Legislators",
+"type": "source",
+"tags": [
+"list.pep"
+],
+"collections": [
+"default",
+"peps"
+],
+"targets": 1557,
+"country": "za",
+"official": false,
+"publisher": "PMG",
+"frequency": "daily"
+},
+{
+"name": "za_wanted",
+"title": "South Africa Wanted Persons",
+"type": "source",
+"tags": [
+"list.wanted"
+],
+"collections": [
+"default",
+"wanted",
+"crime"
+],
+"targets": 456,
+"country": "za",
+"official": true,
+"publisher": "SAPS",
+"frequency": "daily"
+}
+]
+}

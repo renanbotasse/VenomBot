@@ -33,3 +33,7 @@ aml-findings.md
 .env.*
 *.pem
 credentials.json
+
+# Screening data and reports (personal data — never commit)
+venombot_data/
+reports/
