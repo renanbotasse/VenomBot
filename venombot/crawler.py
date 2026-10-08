@@ -17,7 +17,7 @@ class MultilingualWebCrawler:
     USER_AGENT = DEFAULT_USER_AGENT
     TIMEOUT = DEFAULT_TIMEOUT
 
-    def __init__(self, db: SnapshotDatabase, use_sample_fallback: bool = True) -> None:
+    def __init__(self, db: SnapshotDatabase, use_sample_fallback: bool = False) -> None:
         self.db = db
         self.use_sample_fallback = use_sample_fallback
         self.sources = AMLSourcesRegistry.get_sources()
