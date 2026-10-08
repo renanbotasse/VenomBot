@@ -30,6 +30,3 @@ venombot = "venombot.cli:main"
 
 [tool.setuptools.packages.find]
 include = ["venombot*"]
-
-[tool.setuptools.package-data]
-"venombot.lists" = ["data/*.json"]

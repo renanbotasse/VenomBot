@@ -9,16 +9,19 @@ Licence: CC BY-NC 4.0 — free for non-commercial use; commercial use needs a
 licence from OpenSanctions. Every source here is tagged ``CC-BY-NC`` and kept
 out of the default "core" group so nobody pulls it in by accident.
 
-The dataset list is a snapshot of the live index stored in
-``data/opensanctions_datasets.json``; refresh it with
-``venombot lists --refresh-opensanctions``.
+The full dataset list (~440 entries) is not committed: it changes daily and
+is cached locally by ``venombot lists --refresh-opensanctions`` (written to
+``$VENOMBOT_DATA/opensanctions_index.json``, default ``venombot_data/``).
+Until that is run, a small built-in seed (the OpenSanctions collections plus
+the GCC lists) is registered so ``update`` works out of the box.
 """
 
 from __future__ import annotations
 
 import json
+import os
 from pathlib import Path
-from typing import Any, Dict, Iterator, List
+from typing import Any, Dict, Iterator, List, Optional
 
 from venombot.countries import to_iso2
 from venombot.dates import parse_dates
@@ -26,7 +29,36 @@ from venombot.entities import Entity, Identifier, Position
 from venombot.lists import ListSource
 
 INDEX_URL = "https://data.opensanctions.org/datasets/latest/index.json"
-DATA_FILE = Path(__file__).parent / "data" / "opensanctions_datasets.json"
+
+def cache_file() -> Path:
+    """Local cache of the live dataset index (never committed)."""
+    return Path(os.environ.get("VENOMBOT_DATA", "venombot_data")) / "opensanctions_index.json"
+
+
+def _row(name, title, kind, tags, targets, country="", official=True, publisher="", frequency="daily"):
+    return {"name": name, "title": title, "type": kind, "tags": tags, "targets": targets,
+            "country": country, "official": official, "publisher": publisher, "frequency": frequency}
+
+
+# Minimal offline seed: the aggregate collections and the GCC/MENA lists.
+SEED = [
+    _row("sanctions", "OpenSanctions Global Sanctions", "collection", [], 72508),
+    _row("us_sanctions", "United States Sanctions", "collection", [], 27124),
+    _row("eu_sanctions", "European Union Sanctions", "collection", [], 9684),
+    _row("peps", "Politically Exposed Persons", "collection", [], 716929),
+    _row("wanted", "Wanted Persons", "collection", [], 65203),
+    _row("crime", "Crime and Organised Crime", "collection", [], 251127),
+    _row("debarment", "Debarment and Exclusion Lists", "collection", [], 197960),
+    _row("enforcement", "Enforcement Actions", "collection", [], 7885),
+    _row("regulatory", "Regulatory Warnings and Actions", "collection", [], 163240),
+    _row("ae_local_terrorists", "United Arab Emirates Local Terrorist List", "source", ["list.sanction"], 308, "ae", publisher="EOCN"),
+    _row("qa_nctc_sanctions", "Qatar Sanction List", "source", ["list.sanction"], 852, "qa", publisher="NCTC"),
+    _row("sa_pcct_terrorism_list", "Saudi Arabia Terrorism List", "source", ["list.sanction"], 335, "sa"),
+    _row("jo_sanctions", "Jordan Sanctions List", "source", ["list.sanction"], 46, "jo"),
+    _row("om_parliament", "Oman Majlis Ash'shura", "source", ["list.pep"], 366, "om", frequency="weekly"),
+    _row("bh_nuwab", "Bahrain Council of Representatives", "source", ["list.pep"], 178, "bh", frequency="weekly"),
+    _row("bh_shura_council", "Bahrain Shura Council", "source", ["list.pep"], 104, "bh", frequency="weekly"),
+]
 _URL = "https://data.opensanctions.org/datasets/latest/{name}/targets.nested.json"
 
 _SCHEMA = {
@@ -225,11 +257,15 @@ _MENA = {"ae", "sa", "qa", "kw", "bh", "om", "jo", "eg", "lb", "iq", "sy", "ye",
 
 def load_sources() -> List[ListSource]:
     """Build one ListSource per dataset in the stored index snapshot."""
-    if not DATA_FILE.exists():
-        return []
-    index = json.loads(DATA_FILE.read_text(encoding="utf-8"))
+    rows = SEED
+    cached = cache_file()
+    if cached.exists():
+        try:
+            rows = json.loads(cached.read_text(encoding="utf-8"))["datasets"] or SEED
+        except (ValueError, KeyError, OSError):
+            rows = SEED
     out: List[ListSource] = []
-    for ds in index.get("datasets", []):
+    for ds in rows:
         lt = _dataset_type(ds)
         kind = _GROUP_BY_TYPE.get(lt, "other")
         groups = ["opensanctions", f"os-{kind}"]
@@ -256,11 +292,13 @@ def load_sources() -> List[ListSource]:
     return out
 
 
-def refresh_index(dest: Path = DATA_FILE) -> int:
-    """Download the live OpenSanctions index and rewrite the dataset snapshot.
+def refresh_index(dest: Optional[Path] = None) -> int:
+    """Download the live OpenSanctions index and cache the dataset list.
 
     @return number of datasets written
     """
+    dest = dest or cache_file()
+    dest.parent.mkdir(parents=True, exist_ok=True)
     import tempfile
 
     from venombot.fetch import download
@@ -281,16 +319,17 @@ def refresh_index(dest: Path = DATA_FILE) -> int:
         if not any(r["name"] == "targets.nested.json" for r in x.get("resources", [])):
             continue
         p = x.get("publisher") or {}
-        rows.append({
-            "name": x["name"], "title": x["title"], "type": x["type"],
-            "tags": x.get("tags", []), "collections": x.get("collections", []),
-            "targets": x.get("target_count", 0), "country": p.get("country") or "",
-            "official": bool(p.get("official")), "publisher": p.get("acronym") or p.get("name") or "",
-            "frequency": (x.get("coverage") or {}).get("frequency", ""),
-        })
+        rows.append(_row(
+            x["name"], x["title"], x["type"], x.get("tags", []), x.get("target_count", 0),
+            p.get("country") or "", bool(p.get("official")), p.get("acronym") or p.get("name") or "",
+            (x.get("coverage") or {}).get("frequency", ""),
+        ))
     rows.sort(key=lambda r: r["name"])
-    dest.write_text(json.dumps({"generated_from": INDEX_URL, "generated_at": index.get("run_time"),
-                                "datasets": rows}, ensure_ascii=False, indent=0), encoding="utf-8")
+    # One dataset per line keeps the cache readable and diff-friendly.
+    lines = ",\n".join(json.dumps(r, ensure_ascii=False) for r in rows)
+    dest.write_text(f'{{"generated_from": "{INDEX_URL}", "generated_at": '
+                    f'{json.dumps(index.get("run_time"))}, "datasets": [\n{lines}\n]}}\n',
+                    encoding="utf-8")
     return len(rows)
 
 

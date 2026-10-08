@@ -30,15 +30,16 @@ python3 -m venombot screen --csv clients.csv -o reports --fail-on-hit
 
 ### Add more coverage
 
-VenomBot registers **441 list sources**: three official feeds plus 438 OpenSanctions datasets (sanctions, terrorism, PEP, wanted, debarment, enforcement and crime lists from 100+ jurisdictions, including the UAE, Qatar and Saudi Arabia local lists).
+VenomBot registers three official feeds plus the OpenSanctions datasets (16 built in; **~440** after `lists --refresh-opensanctions`) (sanctions, terrorism, PEP, wanted, debarment, enforcement and crime lists from 100+ jurisdictions, including the UAE, Qatar and Saudi Arabia local lists).
 
 ```bash
+python3 -m venombot lists --refresh-opensanctions               # once: register all ~440 datasets
 python3 -m venombot lists                       # everything registered + load status
 python3 -m venombot lists --group os-mena       # filter by group, type or jurisdiction
 python3 -m venombot update --group os-sanctions os-pep --accept-noncommercial
 python3 -m venombot update --source OS_AE_LOCAL_TERRORISTS OS_QA_NCTC_SANCTIONS --accept-noncommercial
 python3 -m venombot update --group all --accept-noncommercial   # large: several GB
-python3 -m venombot lists --refresh-opensanctions               # refresh the dataset index
+python3 -m venombot lists --refresh-opensanctions               # fetch the full OpenSanctions dataset index (cached locally)
 ```
 
 Groups: `core`, `sanctions`, `un`, `us`, `mena`, `opensanctions`, `os-sanctions`, `os-pep`, `os-wanted`, `os-debarment`, `os-enforcement`, `os-crime`, `os-mena`, `os-official`, `os-collections`, `all`.
@@ -199,7 +200,7 @@ venombot/
   screening.py    # Subject screening, match class, severity, actions
   dossier.py      # JSON / Markdown / HTML dossier + coverage
   lists/          # One module per list family; auto-registered
-    ofac.py  un.py  opensanctions.py  _util.py  data/
+    ofac.py  un.py  opensanctions.py  _util.py
   fetch.py        # Streaming downloads (no truncation, retries, atomic)
   cli.py          # update | lists | screen | crawl | search | report
   # legacy page crawler
