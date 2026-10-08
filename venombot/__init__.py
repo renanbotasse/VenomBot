@@ -7,7 +7,7 @@ from venombot.sources import AMLSourcesRegistry
 from venombot.storage import SnapshotDatabase
 from venombot.translator import SimpleTranslator
 
-__version__ = "1.0.0"
+__version__ = "2.0.0"
 
 __all__ = [
     "__version__",
