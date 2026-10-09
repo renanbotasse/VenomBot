@@ -1,0 +1,75 @@
+{
+"meta": {
+"currentPage": 1,
+"pageCount": 22,
+"copyright": "LittleSis CC BY-SA 4.0",
+"license": "https://creativecommons.org/licenses/by-sa/4.0/",
+"apiVersion": "2.0"
+},
+"data": [
+{
+"type": "entities",
+"id": 14934,
+"attributes": {
+"id": 14934,
+"name": "David Koch",
+"blurb": "Billionaire industrialist; helped fund vast conservative, libertarian political operation",
+"summary": "With brother Charles, transformed family refining business into America's larges",
+"website": null,
+"parent_id": null,
+"primary_ext": "Person",
+"updated_at": "2026-02-19T22:28:08Z",
+"start_date": "1940-05-03",
+"end_date": "2019-08-23",
+"qid": null,
+"aliases": [
+"David H Koch",
+"David H. Koch",
+"David Hamilton Koch",
+"David Koch",
+"Mr David Hamilton Koch"
+],
+"types": [
+"Person",
+"Political Candidate",
+"Business Person"
+],
+"extensions": {
+"Person": {
+"name_last": "Koch",
+"name_first": "David",
+"name_middle": "Hamilton",
+"name_prefix": null,
+"name_suffix": null,
+"name_nick": null,
+"birthplace": null,
+"gender_id": 2,
+"party_id": null,
+"is_independent": null,
+"net_worth": 19000000000,
+"name_maiden": null,
+"nationality": []
+},
+"BusinessPerson": {
+"sec_cik": null
+},
+"PoliticalCandidate": {
+"is_federal": null,
+"is_state": null,
+"is_local": null,
+"pres_fec_id": null,
+"senate_fec_id": null,
+"house_fec_id": null,
+"crp_id": null
+}
+},
+"tags": [
+"corporate-mapping-project"
+]
+},
+"links": {
+"self": "https://littlesis.org/entities/14934-David_Koch"
+}
+}
+]
+}
