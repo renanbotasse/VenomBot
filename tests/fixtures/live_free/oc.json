@@ -1,0 +1,70 @@
+{
+"result": [
+{
+"id": "/companies/gb/00877859",
+"name": "KUWAIT FINANCE HOUSE PLC",
+"type": [
+{
+"id": "/organization/organization",
+"name": "Organization"
+}
+],
+"score": 44.0,
+"match": false,
+"uri": "https://opencorporates.com/companies/gb/00877859"
+},
+{
+"id": "/companies/bh/48128-2",
+"name": "KUWAIT FINANCE HOUSE (BAHRAIN) B.S.C.( C",
+"type": [
+{
+"id": "/organization/organization",
+"name": "Organization"
+}
+],
+"score": 27.0,
+"match": false,
+"uri": "https://opencorporates.com/companies/bh/48128-2"
+},
+{
+"id": "/companies/my/672174-T",
+"name": "KUWAIT FINANCE HOUSE (MALAYSIA) BERHAD",
+"type": [
+{
+"id": "/organization/organization",
+"name": "Organization"
+}
+],
+"score": 27.0,
+"match": false,
+"uri": "https://opencorporates.com/companies/my/672174-T"
+},
+{
+"id": "/companies/au/127894848",
+"name": "KUWAIT FINANCE HOUSE (AUSTRALIA) PTY LTD",
+"type": [
+{
+"id": "/organization/organization",
+"name": "Organization"
+}
+],
+"score": 7.0,
+"match": false,
+"uri": "https://opencorporates.com/companies/au/127894848"
+},
+{
+"id": "/companies/sg/200720665W",
+"name": "KUWAIT FINANCE HOUSE (SINGAPORE) PTE. LTD.",
+"type": [
+{
+"id": "/organization/organization",
+"name": "Organization"
+}
+],
+"score": 7.0,
+"match": false,
+"uri": "https://opencorporates.com/companies/sg/200720665W"
+}
+],
+"duration": 102.108581
+}
