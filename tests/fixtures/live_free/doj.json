@@ -1,0 +1,31 @@
+{
+"metadata": {
+"responseInfo": {
+"status": 200
+},
+"resultset": {
+"count": "2",
+"pagesize": "25",
+"page": 0
+}
+},
+"results": [
+{
+"date": "1735560000",
+"title": "Jane Q. Testperson Sentenced for Wire Fraud Scheme",
+"topic": [
+{
+"uuid": "x",
+"name": "Financial Fraud"
+}
+],
+"url": "https://www.justice.gov/usao-example/pr/jane-q-testperson-sentenced"
+},
+{
+"date": "1700000000",
+"title": "Local Man Pleads Guilty",
+"topic": [],
+"url": "https://www.justice.gov/usao-example/pr/local-man"
+}
+]
+}
