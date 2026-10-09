@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- generator="Joomla! - Open Source Content Management" -->
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+	<channel>
+		<title>News - National Crime Agency</title>
+		<description><![CDATA[The National Crime Agency leads the UK's fight to cut serious and organised crime.]]></description>
+		<link>https://www.nationalcrimeagency.gov.uk/news</link>
+		<lastBuildDate>Thu, 08 Oct 2026 22:08:53 +0000</lastBuildDate>
+		<generator>Joomla! - Open Source Content Management</generator>
+		<atom:link rel="self" type="application/rss+xml" href="https://www.nationalcrimeagency.gov.uk/news?format=feed&amp;type=rss"/>
+		<language>en-gb</language>
+		<managingEditor>site@mpu.nationalcrimeagency.gov.uk (National Crime Agency)</managingEditor>
+		<item>
+			<title>Operation Venetic: Drugs and firearms suppliers convicted</title>
+			<link>https://www.nationalcrimeagency.gov.uk/news/operation-venetic-drugs-and-firearms-suppliers-convicted</link>
+			<guid isPermaLink="true">https://www.nationalcrimeagency.gov.uk/news/operation-venetic-drugs-and-firearms-suppliers-convicted</guid>
+			<description><![CDATA[<p><img src="https://www.nationalcrimeagency.gov.uk/" alt="Desai and Abdullah"></p><p>Two men who supplied pistols and ammunition to organised crime groups have been convicted and sentenced.</p>
+]]></description>
+			<author>cms23@nca.gov.uk (cms-user23)</author>
+			<category>News</category>
+			<pubDate>Thu, 08 Oct 2026 15:21:52 +0000</pubDate>
+		</item>
+		<item>
+			<title>New website launched for victims and survivors of child sexual abuse and exploitation</title>
+			<link>https://www.nationalcrimeagency.gov.uk/news/new-website-launched-for-victims-and-survivors-of-child-sexual-abuse-and-exploitation</link>
+			<guid isPermaLink="true">https://www.nationalcrimeagency.gov.uk/news/new-website-launched-for-victims-and-survivors-of-child-sexual-abuse-and-exploitation</guid>
+			<description><![CDATA[<p><img src="https://www.nationalcrimeagency.gov.uk/" alt=""></p><p>A new website providing victims and survivors of child sexual abuse and exploitation with information and support, as well as options in relation to requesting a review of a previously closed case, has been launched today.</p>
+]]></description>
+			<author>cms23@nca.gov.uk (cms-user23)</author>
+			<category>News</category>
+			<pubDate>Thu, 08 Oct 2026 09:45:46 +0000</pubDate>
+		</item>
+		<item>
+			<title>Boats destined for people smugglers seized at East Midlands Airport</title>
+			<link>https://www.nationalcrimeagency.gov.uk/news/boats-destined-for-people-smugglers-seized-at-east-midlands-airport</link>
+			<guid isPermaLink="true">https://www.nationalcrimeagency.gov.uk/news/boats-destined-for-people-smugglers-seized-at-east-midlands-airport</guid>
+			<description><![CDATA[<p><img src="https://www.nationalcrimeagency.gov.uk/" alt="black inflated boat in a warehouse"></p><p>NCA and Border Force officers have seized 25 inflatable boats that were destined to be shipped to cross-Channel people smugglers.</p>
+]]></description>
+			<author>cms27@nca.gov.uk (cms-user27)</author>
+			<category>News</category>
+			<pubDate>Tue, 06 Oct 2026 08:44:16 +0000</pubDate>
+		</item>
+	</channel>
+</rss>
