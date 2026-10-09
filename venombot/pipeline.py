@@ -31,10 +31,18 @@ from venombot import dossier
 from venombot.countries import country_name
 from venombot.evidence import Evidence
 from venombot.normalize import ascii_fold
-from venombot.screening import Hit, Subject, overall, screen
+from venombot.screening import Cluster, Hit, Subject, cluster_hits, overall, screen
 from venombot.store import EntityStore
 
 Log = Callable[[str], None]
+
+# Providers that return the same records as another one; skipped unless
+# --all-providers is given (the first of each family is kept).
+REDUNDANT_PROVIDERS = {
+    "COURTLISTENER_SEARCH",       # same dockets as US_COURTLISTENER_SEARCH
+    "WIKIDATA_WBSEARCHENTITIES",  # same search as WIKIDATA_ENTITY_SEARCH
+    "US_SEC_EDGAR_FTS",           # same full-text search as SEC_EDGAR_FULLTEXT
+}
 
 LIVE_KINDS = ["identity", "pep_info", "corporate", "court", "enforcement", "leak", "adverse_media"]
 
@@ -56,6 +64,7 @@ class Options:
     resume: bool = False
     accept_noncommercial: bool = False
     explain: bool = True  # print where each part's information comes from
+    all_providers: bool = False  # include providers that duplicate another one
 
 
 @dataclass
@@ -160,20 +169,60 @@ def iso_now() -> str:
 
 
 def flag_counts(hits: List[Hit], evidence: List[Evidence]) -> Dict[str, Any]:
-    """Counts of every flag the report headlines: classes, severities, topics, kinds."""
-    live = [h for h in hits if h.match_class != "DISCOUNTED"]
+    """Counts of every flag the report headlines.
+
+    List matches are counted per *party* (one person on seven lists is one match);
+    ``list_entries`` keeps the raw number of list records.
+    """
+    clusters = cluster_hits(hits)
+    live = [c for c in clusters if c.best.match_class != "DISCOUNTED"]
     return {
-        "candidates": len(hits),
+        "candidates": len(clusters),
         "relevant_matches": len(live),
-        "by_class": dict(Counter(h.match_class for h in hits)),
-        "by_severity": dict(Counter(h.severity for h in live)),
-        "by_list_type": dict(Counter(h.entity.list_type for h in live)),
-        "by_action": dict(Counter(h.action for h in live)),
+        "list_entries": sum(len(c.hits) for c in live),
+        "authorities": len({s for c in live for s in c.sources}),
+        "by_class": dict(Counter(c.best.match_class for c in clusters)),
+        "by_severity": dict(Counter(c.best.severity for c in live)),
+        "by_list_type": dict(Counter(h.entity.list_type for c in live for h in c.hits)),
+        "by_action": dict(Counter(c.best.action for c in live)),
         "context_items": len(evidence),
         "context_with_adverse_topics": sum(1 for e in evidence if e.topics),
         "by_kind": dict(Counter(e.kind for e in evidence)),
         "by_topic": dict(Counter(tp for e in evidence for tp in e.topics)),
     }
+
+
+_LIFESPAN = re.compile(r"\b(1[89]\d\d)\s*[–-]\s*((?:19|20)\d\d)\b")
+
+
+def deceased_hint(subject: Subject, hits: List[Hit], evidence: List[Evidence]) -> Optional[str]:
+    """A death year seen in identity evidence, only when it plausibly is the listed person.
+
+    Sanctions listings outlive people, and a reviewer should know. The life span
+    ("1951–2022") must start in the subject's birth year or in a listed party's
+    birth year, so a namesake is not reported as dead.
+    """
+    births = set()
+    if subject.dob:
+        births.add(subject.dob[:4])
+    for h in hits:
+        if h.match_class != "DISCOUNTED":
+            births |= {d[:4] for d in h.entity.birth_dates}
+    if not births:
+        return None
+    for e in evidence:
+        if e.kind not in ("identity", "pep_info") or e.name_score < 0.95:
+            continue
+        m = _LIFESPAN.search(e.snippet or "") or _LIFESPAN.search(e.title or "")
+        if m and m.group(1) in births:
+            return f"{m.group(1)}–{m.group(2)} per {e.provider} ({e.url or e.title})"
+    return None
+
+
+def is_weak(e: Evidence) -> bool:
+    """Name matched by the server but no text shown: cannot be checked, so not listed."""
+    basis = str(e.extra.get("match_basis") or "").lower()
+    return (not e.snippet or e.snippet == e.title) and "server" in basis
 
 
 def _fmt_counts(d: Dict[str, int], order: Optional[List[str]] = None) -> str:
@@ -188,7 +237,11 @@ def render_report(subject: Subject, hits: List[Hit], evidence: List[Evidence], l
                   started: str, finished: str) -> str:
     """Single consolidated Markdown report with the headline summary on top."""
     verdict = overall(hits)
+    weak = [e for e in evidence if is_weak(e)]
+    evidence = [e for e in evidence if not is_weak(e)]
     c = flag_counts(hits, evidence)
+    clusters = cluster_hits(hits)
+    death = deceased_hint(subject, hits, evidence)
     ok = [l for l in lookups if l.ok]
     failed = [l for l in lookups if not l.ok and not l.skipped]
     skipped = [l for l in lookups if l.skipped]
@@ -206,18 +259,28 @@ def render_report(subject: Subject, hits: List[Hit], evidence: List[Evidence], l
         lines.append(f"- **Purpose:** {purpose}")
     lines += ["", "## Summary", "",
               f"**Decision: `{verdict['decision']}` · Rating: `{verdict['rating']}`**", ""]
-    headline = (f"Found **{c['relevant_matches']}** relevant list match(es) "
-                f"({c['candidates'] - c['relevant_matches']} discounted) and **{c['context_items']}** context item(s), "
-                f"**{c['context_with_adverse_topics']}** of them with an adverse topic.")
+    headline = (f"Found **{c['relevant_matches']}** relevant person/entity match(es) on "
+                f"**{c['list_entries']}** list entr{'y' if c['list_entries'] == 1 else 'ies'} from "
+                f"**{c['authorities']}** list(s) ({c['candidates'] - c['relevant_matches']} discounted) and "
+                f"**{c['context_items']}** context item(s), **{c['context_with_adverse_topics']}** of them with an "
+                f"adverse topic.")
     lines += [headline, "", "| Flag | Count |", "|---|---|",
-              f"| List matches — by class | {_fmt_counts(c['by_class'], ['CONFIRMED', 'PROBABLE', 'POSSIBLE', 'DISCOUNTED'])} |",
-              f"| List matches — by severity | {_fmt_counts(c['by_severity'], ['CRITICAL', 'HIGH', 'MEDIUM', 'LOW', 'INFO'])} |",
-              f"| List matches — by list type | {_fmt_counts(c['by_list_type'])} |",
+              f"| Matches (persons/entities) — by class | {_fmt_counts(c['by_class'], ['CONFIRMED', 'PROBABLE', 'POSSIBLE', 'DISCOUNTED'])} |",
+              f"| Matches — by severity | {_fmt_counts(c['by_severity'], ['CRITICAL', 'HIGH', 'MEDIUM', 'LOW', 'INFO'])} |",
+              f"| List entries — by list type | {_fmt_counts(c['by_list_type'])} |",
               f"| Recommended actions | {_fmt_counts(c['by_action'])} |",
               f"| Context — by kind | {_fmt_counts(c['by_kind'])} |",
               f"| Context — adverse topics | {_fmt_counts(c['by_topic'])} |",
               f"| Live lookups | {len(ok)} answered, {len(failed)} failed, {len(skipped)} skipped |", ""]
-    lines += [f"- {r}" for r in verdict["reasons"]]
+    live_clusters = [cl for cl in clusters if cl.best.match_class != "DISCOUNTED"]
+    for cl in live_clusters[:10]:
+        lines.append(f"- {cl.best.match_class} {cl.best.entity.list_type} match: **{cl.label}** — listed by "
+                     f"{len(cl.sources)} list(s): {', '.join(cl.sources)}")
+    if len(live_clusters) > 10:
+        lines.append(f"- … {len(live_clusters) - 10} more matches below")
+    if death:
+        lines.append(f"- **Possible death recorded:** {death}. Listings can outlive the person; check whether "
+                     "the designation still applies and whether this is the same individual.")
     problems = [s for s in stages if s.status in ("failed", "skipped", "partial")]
     if problems or failed:
         lines += ["", "**Gaps in this search:**"]
@@ -228,27 +291,34 @@ def render_report(subject: Subject, hits: List[Hit], evidence: List[Evidence], l
                      f"failed last update: {', '.join(cov['lists_failed_last_update']) or '—'}")
 
     lines += ["", "## 1. List matches", ""]
-    live_hits = [h for h in hits if h.match_class != "DISCOUNTED"]
-    if not live_hits:
+    if not live_clusters:
         lines += ["_No candidate above the reporting threshold in the lists searched._", ""]
     else:
-        lines += ["| Class | Severity | Conf. | List | Listed party | Matched name | Action |",
-                  "|---|---|---|---|---|---|---|"]
-        for h in live_hits[:60]:
-            lines.append(f"| {h.match_class} | {h.severity} | {h.confidence:.0f} | {h.entity.source} | "
-                         f"{h.entity.caption} | {h.matched_name} | {h.action} |")
+        lines += ["One row per person/entity; the same party listed by several authorities is grouped.", "",
+                  "| Class | Severity | Conf. | Listed party | Lists | Action |", "|---|---|---|---|---|---|"]
+        for cl in live_clusters[:60]:
+            b = cl.best
+            lines.append(f"| {b.match_class} | {b.severity} | {b.confidence:.0f} | {cl.label} | "
+                         f"{len(cl.sources)}: {', '.join(cl.sources)} | {b.action} |")
         lines.append("")
-        for h in live_hits[:30]:
-            lines.append(f"**{h.entity.caption}** — {h.entity.source} `{h.entity.source_id}`")
-            lines += [f"  - {e}" for e in h.evidence]
-            lines += [f"  - conflict: {x}" for x in h.conflicts]
-            if h.entity.url:
-                lines.append(f"  - {h.entity.url}")
+        for cl in live_clusters[:30]:
+            b = cl.best
+            lines.append(f"**{cl.label}** — {len(cl.hits)} list entr{'y' if len(cl.hits) == 1 else 'ies'}")
+            lines += [f"  - best evidence ({b.entity.source}): {e}" for e in b.evidence]
+            lines += [f"  - conflict: {x}" for x in b.conflicts]
+            for h in sorted(cl.hits, key=lambda h: h.entity.source):
+                names = "; ".join(n.value for n in h.entity.names[:4])
+                bits = [f"{h.entity.source} `{h.entity.source_id}`", names]
+                if h.entity.birth_dates:
+                    bits.append("DOB " + ", ".join(h.entity.birth_dates[:2]))
+                if h.entity.url:
+                    bits.append(h.entity.url)
+                lines.append("  - " + " · ".join(b_ for b_ in bits if b_))
             lines.append("")
-    disc = [h for h in hits if h.match_class == "DISCOUNTED"]
+    disc = [cl for cl in clusters if cl.best.match_class == "DISCOUNTED"]
     if disc:
         lines += [f"Discounted candidates ({len(disc)}): " + "; ".join(
-            f"{h.entity.caption} ({h.entity.source})" for h in disc[:10]), ""]
+            f"{cl.label} ({', '.join(cl.sources)})" for cl in disc[:10]), ""]
 
     adverse = [e for e in evidence if e.topics]
     other = [e for e in evidence if not e.topics]
@@ -272,6 +342,9 @@ def render_report(subject: Subject, hits: List[Hit], evidence: List[Evidence], l
             lines.append(f"_{len(group) - 60} more in the JSON parts._")
         lines.append("")
 
+    if weak:
+        lines += [f"_{len(weak)} weak match(es) omitted: the service matched the name but returned no text to "
+                  "verify (kept in the JSON parts)._", ""]
     lines += ["## 4. Coverage", "",
               f"- Lists searched: {cov['lists_searchable']} ({cov['entities_searchable']:,} entities)",
               f"- Live providers queried (the subject name was sent to each): "
@@ -520,6 +593,8 @@ class Investigation:
         providers = [p for p in select_providers() if p.kind in kinds]
         if self.opts.live_providers:
             providers = [p for p in providers if p.key in self.opts.live_providers]
+        elif not self.opts.all_providers:
+            providers = [p for p in providers if p.key not in REDUNDANT_PROVIDERS]
         if not providers:
             st.status, st.detail = "skipped", "no available providers (keys not set?)"
             return
