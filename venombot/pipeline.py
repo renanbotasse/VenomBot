@@ -218,7 +218,7 @@ def render_report(subject: Subject, hits: List[Hit], evidence: List[Evidence], l
               f"| Context — adverse topics | {_fmt_counts(c['by_topic'])} |",
               f"| Live lookups | {len(ok)} answered, {len(failed)} failed, {len(skipped)} skipped |", ""]
     lines += [f"- {r}" for r in verdict["reasons"]]
-    problems = [s for s in stages if s.status in ("failed", "skipped")]
+    problems = [s for s in stages if s.status in ("failed", "skipped", "partial")]
     if problems or failed:
         lines += ["", "**Gaps in this search:**"]
         lines += [f"- {s.title}: {s.status} — {s.detail}" for s in problems]
@@ -337,7 +337,7 @@ class Investigation:
         if self.hits or any(s.key == "lists" and s.status == "ok" for s in self.stages):
             v = overall(self.hits)
             lines += [f"**List decision:** `{v['decision']}` · rating `{v['rating']}`", ""]
-        icon = {"ok": "✅", "failed": "❌", "skipped": "⏭", "running": "⏳", "pending": "·"}
+        icon = {"ok": "✅", "partial": "⚠️", "failed": "❌", "skipped": "⏭", "running": "⏳", "pending": "·"}
         lines += ["| Part | Status | Time | Detail |", "|---|---|---|---|"]
         for s in self.stages:
             files = ", ".join(Path(f).name for f in s.files)
@@ -541,12 +541,20 @@ class Investigation:
             st.files.append(self._write(f"{name}.json", json.dumps(
                 {"lookups": [r.__dict__ for r in records], "evidence": [e.to_dict() for e in found]},
                 ensure_ascii=False, indent=1)))
-        st.detail = f"{len(found)} item(s) from {len(records) - len(failed)}/{len(records)} providers"
+        answered = sum(1 for r in records if r.ok)
+        st.detail = f"{len(found)} item(s) from {answered}/{len(records)} providers"
+        if records and answered == 0:
+            st.status = "failed"
+            st.detail += " — every provider failed or was skipped, so nothing was actually searched"
+        elif failed:
+            st.status = "partial"
+            st.detail += f" — failed: {', '.join(failed)}"
 
     def _stage_dossier(self, st: StageResult) -> None:
         evidence = dedupe_evidence(self.media_evidence + self.evidence)
         requested_by = self.opts.requested_by or getpass.getuser()
         finished = iso_now()
+        st.status = "ok"  # this report is the stage's output; do not list it as "running" inside itself
         cov = dossier.coverage(self.store)
         report = render_report(self.subject, self.hits, evidence, self.lookups, self.stages, cov,
                                requested_by, self.opts.purpose, self.started, finished)
