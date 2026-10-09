@@ -1,0 +1,89 @@
+{
+"description": "Documents matching '\"Deripaska\"'",
+"count": 6,
+"total_pages": 2,
+"next_page_url": "https://www.federalregister.gov/api/v1/documents?conditions%5Bterm%5D=%22Deripaska%22&fields%5B%5D=title&fields%5B%5D=publication_date&fields%5B%5D=html_url&fields%5B%5D=agencies&fields%5B%5D=type&fields%5B%5D=abstract&format=json&order=newest&page=2&per_page=3",
+"results": [
+{
+"title": "Publication of Ukraine-/Russia-Related Web General Licenses 15K and 15L",
+"publication_date": "2022-05-27",
+"html_url": "https://www.federalregister.gov/documents/2022/05/27/2022-11471/publication-of-ukraine-russia-related-web-general-licenses-15k-and-15l",
+"agencies": [
+{
+"raw_name": "DEPARTMENT OF THE TREASURY",
+"name": "Treasury Department",
+"id": 497,
+"url": "https://www.federalregister.gov/agencies/treasury-department",
+"json_url": "https://www.federalregister.gov/api/v1/agencies/497",
+"parent_id": null,
+"slug": "treasury-department"
+},
+{
+"raw_name": "Office of Foreign Assets Control",
+"name": "Foreign Assets Control Office",
+"id": 203,
+"url": "https://www.federalregister.gov/agencies/foreign-assets-control-office",
+"json_url": "https://www.federalregister.gov/api/v1/agencies/203",
+"parent_id": 497,
+"slug": "foreign-assets-control-office"
+}
+],
+"type": "Rule",
+"abstract": "The Department of the Treasury's Office of Foreign Assets Control (OFAC) is publishing two general licenses (GLs) issued in the Ukraine-/Russia-Related sanctions program: GL 15K, which was previously issued on OFAC's website and is now expired, and GL 15L, which was also previously issued on OFAC's website and had an expiration date of May 25, 2022."
+},
+{
+"title": "Publication of Ukraine-Related Web General License 15 and Subsequent Iterations",
+"publication_date": "2021-07-28",
+"html_url": "https://www.federalregister.gov/documents/2021/07/28/2021-15669/publication-of-ukraine-related-web-general-license-15-and-subsequent-iterations",
+"agencies": [
+{
+"raw_name": "DEPARTMENT OF THE TREASURY",
+"name": "Treasury Department",
+"id": 497,
+"url": "https://www.federalregister.gov/agencies/treasury-department",
+"json_url": "https://www.federalregister.gov/api/v1/agencies/497",
+"parent_id": null,
+"slug": "treasury-department"
+},
+{
+"raw_name": "Office of Foreign Assets Control",
+"name": "Foreign Assets Control Office",
+"id": 203,
+"url": "https://www.federalregister.gov/agencies/foreign-assets-control-office",
+"json_url": "https://www.federalregister.gov/api/v1/agencies/203",
+"parent_id": 497,
+"slug": "foreign-assets-control-office"
+}
+],
+"type": "Rule",
+"abstract": "The Department of the Treasury's Office of Foreign Assets Control (OFAC) is publishing 11 Ukraine-related web general licenses (GLs) in the Federal Register: GL 15, GL 15A, GL 15B, GL 15C, GL 15D, GL 15E, GL 15F, GL 15G, GL 15H, and GL 15I, each of which is now expired and was previously issued on OFAC's website, as well as GL 15J, which was also previously issued on OFAC's website and expires on January 26, 2022."
+},
+{
+"title": "Notice of OFAC Sanctions Actions; Sanctions Actions Pursuant to Executive Order 13661 and Executive Order 13662",
+"publication_date": "2019-02-01",
+"html_url": "https://www.federalregister.gov/documents/2019/02/01/2019-00659/notice-of-ofac-sanctions-actions-sanctions-actions-pursuant-to-executive-order-13661-and-executive",
+"agencies": [
+{
+"raw_name": "DEPARTMENT OF THE TREASURY",
+"name": "Treasury Department",
+"id": 497,
+"url": "https://www.federalregister.gov/agencies/treasury-department",
+"json_url": "https://www.federalregister.gov/api/v1/agencies/497",
+"parent_id": null,
+"slug": "treasury-department"
+},
+{
+"raw_name": "Office of Foreign Assets Control",
+"name": "Foreign Assets Control Office",
+"id": 203,
+"url": "https://www.federalregister.gov/agencies/foreign-assets-control-office",
+"json_url": "https://www.federalregister.gov/api/v1/agencies/203",
+"parent_id": 497,
+"slug": "foreign-assets-control-office"
+}
+],
+"type": "Notice",
+"abstract": "The U.S. Department of the Treasury's Office of Foreign Assets Control (OFAC) is publishing the names of persons who are no longer subject to the prohibitions imposed pursuant to Executive Order 13661 of March 14, 2014, \"Blocking Property of Additional Persons Contributing to the Situation in Ukraine\", and Executive Order 13662 of March 20, 2014, \"Blocking Property of Additional Persons Contributing to the Situation in Ukraine.\""
+}
+]
+}
