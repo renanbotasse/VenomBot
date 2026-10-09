@@ -1,0 +1,30 @@
+[
+{
+"dos_id": "3686701",
+"current_entity_name": "DMHA LLC",
+"initial_dos_filing_date": "2008-06-19T00:00:00.000",
+"county": "New York",
+"jurisdiction": "New York",
+"entity_type": "DOMESTIC LIMITED LIABILITY COMPANY",
+"dos_process_name": "C/O NATIONAL BANK KUWAIT SAK",
+"dos_process_address_1": "ATTN: ROBERT J MCNEILL",
+"dos_process_address_2": "299 PARK AVENUE",
+"dos_process_city": "NEW YORK",
+"dos_process_state": "NY",
+"dos_process_zip": "10171"
+},
+{
+"dos_id": "3013098",
+"current_entity_name": "ICNY LAND OWNER CORPORATION",
+"initial_dos_filing_date": "2004-02-13T00:00:00.000",
+"county": "New York",
+"jurisdiction": "Delaware",
+"entity_type": "FOREIGN NOT-FOR-PROFIT CORPORATION",
+"dos_process_name": "C/O DR. ZIYAD MONAYAIR, PERMANENT MISSION OF THE STATE OF",
+"dos_process_address_1": "KUWAIT TO THE UNITED NATIONS",
+"dos_process_address_2": "319 EAST 44TH STREET",
+"dos_process_city": "NEW YORK",
+"dos_process_state": "NY",
+"dos_process_zip": "10017"
+}
+]
