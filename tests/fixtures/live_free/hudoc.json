@@ -1,0 +1,30 @@
+{
+"resultcount": 40,
+"results": [
+{
+"columns": {
+"conclusion": "No violation of Article 6 - Right to a fair trial (Article 6 - Criminal proceedings;Article 6-1 - Impartial tribunal;Ind",
+"appno": "51111/07;42757/07",
+"itemid": "001-200333",
+"docname": "CASE OF KHODORKOVSKIY AND LEBEDEV v. RUSSIA (No. 2)",
+"doctype": "HEJUD",
+"respondent": "RUS",
+"kpdate": "2020-01-14T00:00:00",
+"rank": "1.0000013"
+}
+},
+{
+"columns": {
+"conclusion": "No violation of Article 6 - Right to a fair trial (Article 6 - Criminal proceedings;Article 6-1 - Impartial tribunal;Ind",
+"appno": "51111/07;42757/07",
+"itemid": "001-200333",
+"docname": "AFFAIRE KHODORKOVSKIY AND LEBEDEV v. RUSSIA (No. 2)",
+"doctype": "HEJUD",
+"respondent": "RUS",
+"kpdate": "2020-01-14T00:00:00",
+"rank": "1.0000013"
+}
+}
+],
+"message": null
+}
