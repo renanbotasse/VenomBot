@@ -1,0 +1,264 @@
+{
+"success": true,
+"result": {
+"include_total": true,
+"limit": 2,
+"q": "Kuwait",
+"records_format": "objects",
+"resource_id": "3fef41bc-b8f4-4b10-8434-ce51c29b1bba",
+"total_estimation_threshold": null,
+"records": [
+{
+"_id": 308091,
+"company_num": 312136,
+"company_name": "KUWAIT DEVELOPMENT PROJECT MANAGEMENT SERVICES LIMITED",
+"company_status_code": 1151,
+"company_status": "Normal ",
+"company_type_code": 1153,
+"company_type": "LTD - Private Company Limited by Shares",
+"company_reg_date": "1999-09-08T00:00:00",
+"last_ar_date": "2025-09-30T00:00:00",
+"company_address_1": "WELLINGTON PLACE",
+"company_address_2": "WELLINGTON STREET",
+"company_address_3": "CLONMEL CO. TIPPERARY",
+"company_address_4": "CLONMEL,TIPPERARY",
+"comp_dissolved_date": null,
+"nard": "2026-09-30T00:00:00",
+"last_accounts_date": "2024-12-31T00:00:00",
+"company_status_date": null,
+"nace_v2_code": null,
+"eircode": null,
+"company_name_eff_date": "2011-12-12T00:00:00",
+"company_type_eff_date": "2016-12-01T00:00:00",
+"princ_object_code": "45.21",
+"rank": 0.057308756
+},
+{
+"_id": 266834,
+"company_num": 270475,
+"company_name": "KUWAIT PETROLEUM (IRELAND) LIMITED",
+"company_status_code": 1158,
+"company_status": "Dissolved",
+"company_type_code": 1153,
+"company_type": "LTD - Private Company Limited by Shares",
+"company_reg_date": "1997-08-09T00:00:00",
+"last_ar_date": "2016-09-06T00:00:00",
+"company_address_1": "DELOITTE",
+"company_address_2": "29 EARLSFORT TERRACE",
+"company_address_3": "DUBLIN 2",
+"company_address_4": null,
+"comp_dissolved_date": "2018-03-22T00:00:00",
+"nard": "2017-10-02T00:00:00",
+"last_accounts_date": "2016-03-31T00:00:00",
+"company_status_date": "2018-03-22T00:00:00",
+"nace_v2_code": null,
+"eircode": null,
+"company_name_eff_date": "1997-08-09T00:00:00",
+"company_type_eff_date": "2016-12-01T00:00:00",
+"princ_object_code": "51.12",
+"rank": 0.057308756
+}
+],
+"fields": [
+{
+"id": "_id",
+"type": "int"
+},
+{
+"id": "company_num",
+"type": "numeric",
+"info": {
+"label": "Company Number",
+"notes": "The Company Number",
+"type_override": ""
+}
+},
+{
+"id": "company_name",
+"type": "text",
+"info": {
+"label": "Company Name",
+"notes": "The Company Name",
+"type_override": ""
+}
+},
+{
+"id": "company_status_code",
+"type": "numeric",
+"info": {
+"label": "Company Status Code",
+"notes": "The Company Status Code",
+"type_override": ""
+}
+},
+{
+"id": "company_status",
+"type": "text",
+"info": {
+"label": "Company Status",
+"notes": "The Company Status",
+"type_override": ""
+}
+},
+{
+"id": "company_type_code",
+"type": "numeric",
+"info": {
+"label": "Company Type Code",
+"notes": "The Company Type Code",
+"type_override": ""
+}
+},
+{
+"id": "company_type",
+"type": "text",
+"info": {
+"label": "Company Type",
+"notes": "The Company Type",
+"type_override": ""
+}
+},
+{
+"id": "company_reg_date",
+"type": "timestamp",
+"info": {
+"label": "Company Registered Date",
+"notes": "The Company Registered Date",
+"type_override": ""
+}
+},
+{
+"id": "last_ar_date",
+"type": "timestamp",
+"info": {
+"label": "Last Annual Return Date",
+"notes": "The Last Annual Return Date",
+"type_override": ""
+}
+},
+{
+"id": "company_address_1",
+"type": "text",
+"info": {
+"label": "Company Address 1",
+"notes": "The Company Address 1",
+"type_override": ""
+}
+},
+{
+"id": "company_address_2",
+"type": "text",
+"info": {
+"label": "Company Address 2",
+"notes": "The Company Address 2",
+"type_override": ""
+}
+},
+{
+"id": "company_address_3",
+"type": "text",
+"info": {
+"label": "Company Address 3",
+"notes": "The Company Address 3",
+"type_override": ""
+}
+},
+{
+"id": "company_address_4",
+"type": "text",
+"info": {
+"label": "Company Address 4",
+"notes": "The Company Address 4",
+"type_override": ""
+}
+},
+{
+"id": "comp_dissolved_date",
+"type": "timestamp",
+"info": {
+"label": "Company Dissolved Date",
+"notes": "The Company Dissolved Date",
+"type_override": ""
+}
+},
+{
+"id": "nard",
+"type": "timestamp",
+"info": {
+"label": "Next Annual Return Date",
+"notes": "The Next Annual Return Date",
+"type_override": ""
+}
+},
+{
+"id": "last_accounts_date",
+"type": "timestamp",
+"info": {
+"label": "Last Accounts Date",
+"notes": "The Last Accounts Date",
+"type_override": ""
+}
+},
+{
+"id": "company_status_date",
+"type": "timestamp",
+"info": {
+"label": "Company Status Date",
+"notes": "The Company Status Date",
+"type_override": ""
+}
+},
+{
+"id": "nace_v2_code",
+"type": "numeric",
+"info": {
+"label": "Nace Version 2 Code",
+"notes": "The Nace Version 2 Code",
+"type_override": ""
+}
+},
+{
+"id": "eircode",
+"type": "text",
+"info": {
+"label": "Eircode",
+"notes": "The Eircode",
+"type_override": ""
+}
+},
+{
+"id": "company_name_eff_date",
+"type": "timestamp",
+"info": {
+"label": "Company Name Effective Date",
+"notes": "The Company Name Effective Date",
+"type_override": ""
+}
+},
+{
+"id": "company_type_eff_date",
+"type": "timestamp",
+"info": {
+"label": "Company Type Effective Date",
+"notes": "The Company Type Effective Date",
+"type_override": ""
+}
+},
+{
+"id": "princ_object_code",
+"type": "text",
+"info": {
+"label": "Principal Object Code",
+"notes": "The Principal Object Code",
+"type_override": ""
+}
+},
+{
+"id": "rank",
+"type": "float"
+}
+],
+"total": 2,
+"total_was_estimated": false
+}
+}
