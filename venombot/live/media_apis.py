@@ -123,7 +123,9 @@ def _iso(date: str) -> str:
 # ---------------------------------------------------------------- GDELT
 
 def _gdelt_json(url: str) -> Dict[str, Any]:
-    body = get_text(url, timeout=45).strip()
+    # retries=0: GDELT's limit is about one request per 5 s per IP, and the generic
+    # retry/backoff would count against that same quota and make a 429 last longer.
+    body = get_text(url, timeout=45, retries=0).strip()
     if not body:
         return {}
     try:
@@ -147,7 +149,20 @@ def search_gdelt(subject: Subject, key: Optional[str] = None) -> List[Evidence]:
         q = f'"{subject.name}" ({GDELT_KEYWORDS}) sourcelang:{lang}'
         params = urlencode({"query": q, "mode": "ArtList", "format": "json", "maxrecords": 75,
                             "timespan": "1y", "sort": "DateDesc"}, quote_via=quote)
-        data = _gdelt_json("https://api.gdeltproject.org/api/v2/doc/doc?" + params)
+        url = "https://api.gdeltproject.org/api/v2/doc/doc?" + params
+        try:
+            data = _gdelt_json(url)
+        except RuntimeError as exc:
+            if "429" not in str(exc):
+                raise
+            _sleep(12.0)  # one patient retry: the limit window is short
+            try:
+                data = _gdelt_json(url)
+            except RuntimeError as exc2:
+                raise RuntimeError(
+                    "GDELT_DOC_API: rate limited (HTTP 429; GDELT allows about one request per 5 s per IP and "
+                    "is stricter when shared). Run again in a few minutes, or use a news API key "
+                    "(NEWSAPI_KEY, GUARDIAN_API_KEY, ...)") from exc2
         for art in data.get("articles", []) or []:
             title = art.get("title") or ""
             ev = make_evidence(
