@@ -1,0 +1,4 @@
+{"total":3,"page":1,"items":[
+{"uid":"synthetic0001","title":"JOHN EXAMPLE TESTPERSON","aliases":["Johnny Test"],"dates_of_birth_used":["March 3, 1980"],"nationality":"Brazilian","place_of_birth":"Testville","poster_classification":"default","person_classification":"Main","subjects":["Cyber's Most Wanted"],"sex":"Male","url":"https://www.fbi.gov/wanted/example/synthetic0001","publication":"2024-05-01T00:00:00","caution":"<p>Synthetic record for tests.</p>","reward_text":"Up to $1,000"},
+{"uid":"synthetic0002","title":"MISSING SAMPLE CHILD","aliases":null,"poster_classification":"missing","person_classification":"Victim","subjects":[]},
+{"uid":"synthetic0003","title":"STOLEN SAMPLE EQUIPMENT","poster_classification":"information","person_classification":"Main","subjects":[]}]}
