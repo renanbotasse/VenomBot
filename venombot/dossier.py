@@ -79,8 +79,14 @@ def coverage(store: EntityStore) -> Dict[str, Any]:
 
 
 def build(store: EntityStore, subject: Subject, hits: List[Hit], *, purpose: str = "",
-          requested_by: str = "") -> Dict[str, Any]:
-    """Assemble the canonical dossier dictionary."""
+          requested_by: str = "", evidence: Optional[List[Any]] = None,
+          lookups: Optional[List[Any]] = None, media_searched: bool = False) -> Dict[str, Any]:
+    """Assemble the canonical dossier dictionary.
+
+    @param evidence context items (articles, court cases, registry records) — never list hits
+    @param lookups audit trail of third-party queries made for this subject
+    @param media_searched whether the local article store was searched
+    """
     cov = coverage(store)
     verdict = overall(hits)
     if verdict["decision"] == "NO_MATCH_IN_SCREENED_LISTS" and (cov["lists_stale"] or cov["lists_failed_last_update"]):
@@ -107,6 +113,11 @@ def build(store: EntityStore, subject: Subject, hits: List[Hit], *, purpose: str
         "verdict": verdict,
         "summary": {"candidates": len(hits), "by_class": by_class},
         "hits": [h.to_dict() for h in hits],
+        "context": {
+            "media_searched": media_searched,
+            "lookups": [l.__dict__ for l in (lookups or [])],
+            "evidence": [e.to_dict() for e in (evidence or [])],
+        },
         "coverage": cov,
         "review": {"reviewer": "", "disposition": "", "notes": "", "reviewed_at": ""},
         "disclaimer": DISCLAIMER,
@@ -143,6 +154,46 @@ def _ent_lines(e: Dict[str, Any]) -> List[str]:
     if e["url"]:
         lines.append(f"  - Source record: {e['url']}")
     return lines
+
+
+def _context_lines(d: Dict[str, Any]) -> List[str]:
+    """Context section: articles, court cases, registries — not list matches."""
+    ctx = d.get("context", {})
+    ev, lookups = ctx.get("evidence", []), ctx.get("lookups", [])
+    out = ["", "## 5. Context (not list matches)", ""]
+    if not ctx.get("media_searched") and not lookups:
+        out.append("_Not searched. Add `--media` (stored news/regulator feeds) and/or `--live` "
+                   "(third-party search APIs; sends the name to those services)._")
+        return out
+    out.append("Articles, court records and registry entries are **context for a reviewer**. "
+               "Allegations are unproven unless a conviction is cited.")
+    if lookups:
+        out += ["", "Live lookups performed (subject name sent to each):", ""]
+        for r in lookups:
+            state = ("skipped: " + r["skipped"]) if r.get("skipped") else \
+                    (f"{r['count']} result(s)" if r.get("ok") else "failed: " + (r.get("error") or ""))
+            out.append(f"- {r['provider']}: {state}")
+    if not ev:
+        out += ["", "_No contextual evidence found in the sources searched._"]
+        return out
+    adverse = [e for e in ev if e.get("topics")]
+    other = [e for e in ev if not e.get("topics")]
+    for title, items in (("Adverse-topic mentions", adverse), ("Other mentions and records", other)):
+        if not items:
+            continue
+        out += ["", f"### {title} ({len(items)})", ""]
+        for e in items[:40]:
+            topics = f" [{', '.join(e['topics'])}]" if e.get("topics") else ""
+            date = f"{e['published'][:10]} · " if e.get("published") else ""
+            out.append(f"- {date}{e['provider']} · {e['kind']}{topics} · name match {e['name_score']:.2f}")
+            out.append(f"  - {e['title'][:200]}")
+            if e.get("snippet") and e["snippet"] != e["title"]:
+                out.append(f"  - “{e['snippet'][:300]}”")
+            if e.get("url"):
+                out.append(f"  - {e['url']}")
+        if len(items) > 40:
+            out.append(f"_{len(items) - 40} more in the JSON report._")
+    return out
 
 
 def to_markdown(d: Dict[str, Any]) -> str:
@@ -194,7 +245,8 @@ def to_markdown(d: Dict[str, Any]) -> str:
         out += ["", "## 4. Discounted candidates", ""]
         for h in disc[:30]:
             out.append(f"- {h['caption']} ({h['source']}): {'; '.join(h['conflicts'])}")
-    out += ["", "## 5. Coverage", ""]
+    out += _context_lines(d)
+    out += ["", "## 6. Coverage", ""]
     out.append(f"- Searchable lists: {cov['lists_searchable']} · entities: {cov['entities_searchable']:,}")
     if cov["lists_failed_last_update"]:
         out.append(f"- Failed last update (older data may be served): {', '.join(cov['lists_failed_last_update'])}")
@@ -207,8 +259,8 @@ def to_markdown(d: Dict[str, Any]) -> str:
         flag = " ⚠ stale" if r["stale"] else ""
         out.append(f"| {r['key']} | {r['list_type']} | {r['jurisdiction']} | {r['entities']:,} | "
                    f"{(r['data_as_of'] or '—')[:10]} | {r['status']}{flag} |")
-    out += ["", "## 6. Review", "", "- Reviewer: ____________  - Disposition: ____________  - Date: ________", "",
-            "## 7. Disclaimer", "", d["disclaimer"], ""]
+    out += ["", "## 7. Review", "", "- Reviewer: ____________  - Disposition: ____________  - Date: ________", "",
+            "## 8. Disclaimer", "", d["disclaimer"], ""]
     return "\n".join(out)
 
 
