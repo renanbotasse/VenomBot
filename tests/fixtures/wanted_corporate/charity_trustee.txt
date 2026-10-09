@@ -1,0 +1,3 @@
+date_of_extract	organisation_number	registered_charity_number	linked_charity_number	trustee_id	trustee_name	trustee_is_chair	individual_or_organisation	trustee_date_of_appointment
+2026-10-01	1000001	200001	0	77	Test Trustee	True	P	2020-01-01
+2026-10-01	1000002	200002	0	78	Ignored Trustee	False	P	
