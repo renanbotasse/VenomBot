@@ -1,0 +1,3 @@
+date_of_extract	organisation_number	registered_charity_number	linked_charity_number	charity_name	charity_type	charity_registration_status	date_of_registration	charity_company_registration_number
+2026-10-01	1000001	200001	0	EXAMPLE RELIEF FUND	Other	Registered	2001-01-01	00000001
+2026-10-01	1000002	200002	0	REMOVED CHARITY	Other	Removed	1990-01-01	
