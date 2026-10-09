@@ -1,0 +1,215 @@
+{
+"took": 98,
+"timed_out": false,
+"_shards": {
+"total": 50,
+"successful": 50,
+"skipped": 0,
+"failed": 0
+},
+"hits": {
+"total": {
+"value": 54,
+"relation": "eq"
+},
+"max_score": 21.183313,
+"hits": [
+{
+"_index": "edgar_file",
+"_id": "0001299933-09-003411:exhibit1.htm",
+"_score": 21.183313,
+"_source": {
+"ciks": [
+"0000074208"
+],
+"period_ending": "2009-08-17",
+"file_num": [
+"001-10524"
+],
+"display_names": [
+"UDR, Inc.  (UDR)  (CIK 0000074208)"
+],
+"xsl": null,
+"sequence": 2,
+"root_forms": [
+"8-K"
+],
+"file_date": "2009-08-18",
+"biz_states": [
+"CO"
+],
+"sics": [
+"6798"
+],
+"form": "8-K",
+"adsh": "0001299933-09-003411",
+"film_num": [
+"091020560"
+],
+"biz_locations": [
+"Highlands Ranch, CO"
+],
+"file_type": "EX-99.1",
+"file_description": "EX-99.1",
+"inc_states": [
+"MD"
+],
+"items": [
+"8.01",
+"9.01"
+]
+}
+},
+{
+"_index": "edgar_file",
+"_id": "0001299933-09-003411:htm_33994.htm",
+"_score": 20.180098,
+"_source": {
+"ciks": [
+"0000074208"
+],
+"period_ending": "2009-08-17",
+"file_num": [
+"001-10524"
+],
+"display_names": [
+"UDR, Inc.  (UDR)  (CIK 0000074208)"
+],
+"xsl": null,
+"sequence": 1,
+"root_forms": [
+"8-K"
+],
+"file_date": "2009-08-18",
+"biz_states": [
+"CO"
+],
+"sics": [
+"6798"
+],
+"form": "8-K",
+"adsh": "0001299933-09-003411",
+"film_num": [
+"091020560"
+],
+"biz_locations": [
+"Highlands Ranch, CO"
+],
+"file_type": "8-K",
+"file_description": "LIVE FILING",
+"inc_states": [
+"MD"
+],
+"items": [
+"8.01",
+"9.01"
+]
+}
+},
+{
+"_index": "edgar_file",
+"_id": "0000950123-09-043243:c90243exv99w1.htm",
+"_score": 18.963804,
+"_source": {
+"ciks": [
+"0000074208"
+],
+"period_ending": "2009-09-15",
+"file_num": [
+"001-10524"
+],
+"display_names": [
+"UDR, Inc.  (UDR)  (CIK 0000074208)"
+],
+"xsl": null,
+"sequence": 2,
+"root_forms": [
+"8-K"
+],
+"file_date": "2009-09-15",
+"biz_states": [
+"CO"
+],
+"sics": [
+"6798"
+],
+"form": "8-K",
+"adsh": "0000950123-09-043243",
+"film_num": [
+"091069398"
+],
+"biz_locations": [
+"Highlands Ranch, CO"
+],
+"file_type": "EX-99.1",
+"file_description": "EXHIBIT 99.1",
+"inc_states": [
+"MD"
+],
+"items": [
+"7.01",
+"9.01"
+]
+}
+}
+]
+},
+"query": {
+"_source": {
+"exclude": [
+"doc_text"
+]
+},
+"query": {
+"bool": {
+"must": [
+{
+"match_phrase": {
+"doc_text": "Kuwait Finance House"
+}
+}
+],
+"must_not": [],
+"should": [],
+"filter": [
+{
+"terms": {
+"root_forms": [
+"8-K",
+"10-K"
+]
+}
+}
+]
+}
+},
+"from": 0,
+"size": 100,
+"aggregations": {
+"form_filter": {
+"terms": {
+"field": "root_forms",
+"size": 30
+}
+},
+"entity_filter": {
+"terms": {
+"field": "display_names.raw",
+"size": 30
+}
+},
+"sic_filter": {
+"terms": {
+"field": "sics",
+"size": 30
+}
+},
+"biz_states_filter": {
+"terms": {
+"field": "biz_states",
+"size": 30
+}
+}
+}
+}
+}
