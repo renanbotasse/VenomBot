@@ -28,25 +28,51 @@ python3 -m venombot screen --name "Jeffrey Epstein" --dob 1953-01-20 --country U
 python3 -m venombot screen --csv clients.csv -o reports --fail-on-hit
 ```
 
-### Add more coverage
+### Coverage
 
-VenomBot registers three official feeds plus the OpenSanctions datasets (16 built in; **~440** after `lists --refresh-opensanctions`) (sanctions, terrorism, PEP, wanted, debarment, enforcement and crime lists from 100+ jurisdictions, including the UAE, Qatar and Saudi Arabia local lists).
+VenomBot registers **139 direct list sources**, 16 built-in OpenSanctions datasets (~440 after `lists --refresh-opensanctions`), **57 live search providers** and **42 news/regulator feeds**. The full, generated table with licences, key requirements and known gaps is in [docs/SOURCES.md](docs/SOURCES.md).
+
+| Family | Examples |
+|---|---|
+| Sanctions (official) | OFAC SDN/Consolidated, UN (EN+AR), EU FSF, UK FCDO, Switzerland SECO, Canada SEMA, Australia DFAT, NZ, Japan, France, Belgium, Monaco, Baltics, Czechia, Poland, US CSL/BIS, Taiwan |
+| Terrorism / domestic lists | Saudi Arabia, Iraq, Israel NBCTF, Tunisia, Turkey MASAK, Egypt, Qatar, Kenya, Indonesia, Malaysia, Ukraine, Netherlands, India MHA, Australia, Singapore, Thailand, Nigeria, US State FTO |
+| Debarment / enforcement | World Bank, ADB, EIB, EU EDES, Brazil CEIS/CNEP/CEPIM/CEAF/TCU, US SAM/LEIE/DDTC/FINRA/OCC/Fed, ASIC, ESMA, FINMA |
+| PEP | UK/EU/US/CA/BR/DE/FR parliaments and governments, CIA World Leaders, Wikidata (GCC, Levant, N. Africa, heads of state, central banks, SOEs) |
+| Wanted / corporate / leaks | FBI, Europol, ICIJ Offshore Leaks, FinCEN Files, GLEIF, UK PSC and Companies House |
 
 ```bash
-python3 -m venombot lists --refresh-opensanctions               # once: register all ~440 datasets
-python3 -m venombot lists                       # everything registered + load status
-python3 -m venombot lists --group os-mena       # filter by group, type or jurisdiction
-python3 -m venombot update --group os-sanctions os-pep --accept-noncommercial
-python3 -m venombot update --source OS_AE_LOCAL_TERRORISTS OS_QA_NCTC_SANCTIONS --accept-noncommercial
-python3 -m venombot update --group all --accept-noncommercial   # large: several GB
-python3 -m venombot lists --refresh-opensanctions               # fetch the full OpenSanctions dataset index (cached locally)
+python3 -m venombot lists                         # everything registered + load status
+python3 -m venombot lists --group mena            # filter by group, list type or jurisdiction
+python3 -m venombot update                        # "core": official sanctions lists (~60k entities, ~1 min)
+python3 -m venombot update --group pep terrorism debarment
+python3 -m venombot update --source SA_PCCT_NATIONAL_TERRORISM_LIST WB_DEBARRED
+python3 -m venombot update --group opensanctions --accept-noncommercial
+python3 -m venombot lists --refresh-opensanctions # fetch the full OpenSanctions dataset index (cached locally)
 ```
 
-Groups: `core`, `sanctions`, `un`, `us`, `mena`, `opensanctions`, `os-sanctions`, `os-pep`, `os-wanted`, `os-debarment`, `os-enforcement`, `os-crime`, `os-mena`, `os-official`, `os-collections`, `all`.
+Groups include `core`, `sanctions`, `terrorism`, `pep`, `debarment`, `enforcement`, `wanted`, `corporate`, `leaks`, `mena`, `gcc`, `eu`, `us`, `uk`, `wikidata`, `html` (fragile page scrapers), `opensanctions` and `all`.
 
-> **Licence:** OpenSanctions data is CC BY-NC 4.0 (non-commercial). Those sources are excluded unless you pass `--accept-noncommercial`; commercial use needs a licence from OpenSanctions.
+> **Licence:** OpenSanctions data is CC BY-NC 4.0 (non-commercial). Those sources are excluded unless you pass `--accept-noncommercial`; commercial use needs a licence from OpenSanctions. Check each source's licence in `docs/SOURCES.md` before commercial use.
 
 Failed updates never wipe data: the last good version keeps being served and is flagged in the report's coverage section.
+
+### Context: news, courts, registries
+
+List hits and context are kept apart. Context is evidence for a reviewer, never a match.
+
+```bash
+python3 -m venombot media update                  # RSS/Atom: regulators, police, Arabic and English news
+python3 -m venombot media update --group enforcement
+python3 -m venombot screen --name "Jane Doe" --media            # search the stored articles (local)
+python3 -m venombot screen --name "Jane Doe" --live             # query third-party search APIs
+python3 -m venombot screen --name "Jane Doe" --live-group court corporate
+```
+
+`--media` searches locally at sentence level (the name and an adverse topic such as money laundering, fraud or sanctions evasion in the same sentence). `--live` **sends the subject's name to third-party services**; it is opt-in and every query is recorded in the dossier. Providers that need a key are skipped until the variable is set, for example `COMPANIES_HOUSE_API_KEY`, `NEWSAPI_KEY`, `GUARDIAN_API_KEY`, `OPENCORPORATES_API_TOKEN` (see each provider's `api_key_env` in `docs/SOURCES.md`). Set `VENOMBOT_CONTACT` to a contact string: SEC and Wikimedia require one in the User-Agent.
+
+### Sensitive and contested lists
+
+Some state lists include opposition figures (Russia's Rosfinmonitoring list, Vietnam's terrorist organisations). They are typed `COUNTER_SANCTIONS`, so they rate LOW and can never produce a `HOLD_FOR_REVIEW` on their own. Several publishers block non-browser User-Agents; those sources set an explicit `headers` override, visible in the source definition.
 
 ### `screen` options
 
@@ -200,9 +226,14 @@ venombot/
   screening.py    # Subject screening, match class, severity, actions
   dossier.py      # JSON / Markdown / HTML dossier + coverage
   lists/          # One module per list family; auto-registered
-    ofac.py  un.py  opensanctions.py  _util.py
+    ofac.py  un.py  opensanctions.py  sanctions_*.py  terror_*.py  debarment_*.py
+    enforcement_regulators.py  pep_*.py  wanted.py  leaks_icij.py  corporate_registries.py
+    _util.py  _tables.py (xlsx/ods)  _html*.py
+  live/           # Per-subject search APIs (registries, courts, news); opt-in
+  feeds/          # RSS/Atom ingest, article store, sentence-level search
+  evidence.py     # Context evidence + adverse-topic taxonomy
   fetch.py        # Streaming downloads (no truncation, retries, atomic)
-  cli.py          # update | lists | screen | crawl | search | report
+  cli.py          # update | lists | screen | media | crawl | search | report
   # legacy page crawler
   catalog.py  samples.py  sources.py  models.py  translator.py
   scoring.py  storage.py  crawler.py  reporter.py
