@@ -93,6 +93,38 @@ python3 -m venombot screen --name "Jane Doe" --live-group court corporate
 
 `--media` searches locally at sentence level (the name and an adverse topic such as money laundering, fraud or sanctions evasion in the same sentence). `--live` **sends the subject's name to third-party services**; it is opt-in and every query is recorded in the dossier. Providers that need a key are skipped until the variable is set, for example `COMPANIES_HOUSE_API_KEY`, `NEWSAPI_KEY`, `GUARDIAN_API_KEY`, `OPENCORPORATES_API_TOKEN` (see each provider's `api_key_env` in `docs/SOURCES.md`). Set `VENOMBOT_CONTACT` to a contact string: SEC and Wikimedia require one in the User-Agent.
 
+### Secrets and environment variables
+
+**None are required** for the list screening, the feeds, or the keyless live lookups (courts, SEC, DOJ, Wikidata, registries, ICIJ). Keys only switch on extra providers: a provider whose variable is not set is skipped and shown as `skipped` in the report. VenomBot reads plain environment variables (it does not load `.env` files; `.env*` is git-ignored if you use a tool such as direnv). Never put keys in the code or in commits.
+
+```bash
+export VENOMBOT_CONTACT="you@example.com"
+export NEWSAPI_KEY="..."
+```
+
+| Variable | Unlocks | Where to get it |
+|---|---|---|
+| `VENOMBOT_CONTACT` | **Recommended.** Contact string put in the User-Agent: the 4 SEC feeds and the SEC / Wikimedia lookups answer 403 without it | any email or URL of yours |
+| `COMPANIES_HOUSE_API_KEY` | UK Companies House: company and officer search, disqualified directors | developer.company-information.service.gov.uk (free) |
+| `FCA_REGISTER_KEY` + `FCA_REGISTER_EMAIL` | UK FCA Register (firms and individuals) | register.fca.org.uk developer portal (free) |
+| `OPENCORPORATES_API_TOKEN` | OpenCorporates API (companies, officers) | opencorporates.com API accounts (free tier is limited) |
+| `ALEPH_API_KEY` | OCCRP Aleph (investigative documents and entities) | aleph.occrp.org (free account) |
+| `PORTAL_TRANSPARENCIA_API_KEY` | Brazil Portal da Transparência: sanctions (CEIS) and PEP lookups by name, CPF/CNPJ | portaldatransparencia.gov.br/api-de-dados (free) |
+| `TRADE_GOV_API_KEY` | US Consolidated Screening List search API | developer.trade.gov (free) |
+| `GOVINFO_API_KEY` | US GovInfo court documents | api.govinfo.gov (free, api.data.gov key) |
+| `CONGRESS_API_KEY` | `US_CONGRESS_GOV_API` PEP list | api.congress.gov/sign-up (free) |
+| `SEC_CONTACT_EMAIL` | `US_SEC_PAUSE` list (SEC rejects requests without a contact) | your email |
+| `NEWSAPI_KEY` | NewsAPI.org news search | newsapi.org (free tier for development only) |
+| `GUARDIAN_API_KEY` | The Guardian Open Platform | open-platform.theguardian.com (free) |
+| `NYT_API_KEY` | New York Times Article Search | developer.nytimes.com (free) |
+| `NEWSDATA_API_KEY`, `GNEWS_API_KEY`, `MEDIASTACK_ACCESS_KEY`, `CURRENTS_API_KEY`, `THENEWSAPI_TOKEN`, `WORLD_NEWS_API_KEY`, `EVENT_REGISTRY_API_KEY`, `MEDIA_CLOUD_API_KEY` | Other news-search APIs (many languages, including Arabic) | each provider's site (free tiers) |
+| `OPENFIGI_API_KEY`, `COURTLISTENER_TOKEN` | **Optional.** Raise the anonymous rate limits of OpenFIGI and CourtListener (without them some calls return HTTP 429) | openfigi.com/api, courtlistener.com/help/api |
+| `VENOMBOT_CA_BUNDLE` | Path to a CA bundle for sites with a private root CA (e.g. Russia's Rosfinmonitoring list). TLS verification is never disabled | your OS / the publisher |
+| `VENOMBOT_DATA` | Where the OpenSanctions index cache lives (default `venombot_data/`) | — |
+| `VENOMBOT_DEBUG` | Print Python tracebacks for failed list updates | — |
+
+Without keys, **no news-API provider runs** — adverse media then comes only from the stored feeds (`media update`) and GDELT (keyless but rate-limited, often HTTP 429). `docs/SOURCES.md` shows which provider needs which variable. Terms and free-tier limits change: check each provider's current terms, and note that some free tiers forbid commercial use.
+
 ### Sensitive and contested lists
 
 Some state lists include opposition figures (Russia's Rosfinmonitoring list, Vietnam's terrorist organisations). They are typed `COUNTER_SANCTIONS`, so they rate LOW and can never produce a `HOLD_FOR_REVIEW` on their own. Several publishers block non-browser User-Agents; those sources set an explicit `headers` override, visible in the source definition.
