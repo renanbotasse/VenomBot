@@ -100,6 +100,31 @@ class InvestigationTests(unittest.TestCase):
         inv.run()
         self.assertTrue(any("resumed" in m for m in logs))
 
+    def test_final_stage_not_listed_as_running_in_report(self) -> None:
+        text = self._run(Path(self.tmp) / "o7").report_path.read_text(encoding="utf-8")
+        self.assertNotIn("running", text)
+
+    def test_all_providers_failing_marks_stage_failed(self) -> None:
+        import venombot.live as live
+        from venombot.live import LiveProvider
+
+        def boom(subject, key):
+            raise RuntimeError("HTTP 429")
+
+        prov = LiveProvider("X_FAIL", "x", "adverse_media", "INT", boom, min_interval=0)
+        orig = live.select_providers
+        live.select_providers = lambda keys=None, groups=None: [prov]
+        try:
+            subject = Subject.build("Jane Doe")
+            inv = Investigation(self.store, subject, Path(self.tmp) / "o8",
+                                Options(media=False, live=True, live_kinds=["adverse_media"], explain=False),
+                                log=lambda m: None, db_path=Path(self.tmp) / "t.db")
+            stages = {s.key: s for s in inv.run()}
+        finally:
+            live.select_providers = orig
+        self.assertEqual(stages["live:adverse_media"].status, "failed")
+        self.assertIn("nothing was actually searched", stages["live:adverse_media"].detail)
+
     def test_terminal_explains_sources(self) -> None:
         logs = []
         subject = Subject.build("Vladimir Putin")
