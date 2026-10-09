@@ -1,0 +1,119 @@
+{
+"data": [
+{
+"type": "autocompletions",
+"attributes": {
+"value": "KUWAIT FINANCE HOUSE PLC",
+"highlighting": "<b>KUWAIT</b> <b>FINANCE</b> <b>HOUSE</b> PLC"
+},
+"relationships": {
+"lei-records": {
+"data": {
+"type": "lei-records",
+"id": "213800F3IFWY8CWYWO07"
+},
+"links": {
+"related": "https://api.gleif.org/api/v1/lei-records/213800F3IFWY8CWYWO07"
+}
+}
+}
+},
+{
+"type": "autocompletions",
+"attributes": {
+"value": "Kuwait Finance House (K.S.C.P.)",
+"highlighting": "<b>Kuwait</b> <b>Finance</b> <b>House</b> (K.S.C.P.)"
+},
+"relationships": {
+"lei-records": {
+"data": {
+"type": "lei-records",
+"id": "2549007KX0N057S9BC98"
+},
+"links": {
+"related": "https://api.gleif.org/api/v1/lei-records/2549007KX0N057S9BC98"
+}
+}
+}
+},
+{
+"type": "autocompletions",
+"attributes": {
+"value": "Kuwait Finance House (Malaysia) Berhad",
+"highlighting": "<b>Kuwait</b> <b>Finance</b> <b>House</b> (Malaysia) Berhad"
+},
+"relationships": {
+"lei-records": {
+"data": {
+"type": "lei-records",
+"id": "254900KXOK4M8ND3M032"
+},
+"links": {
+"related": "https://api.gleif.org/api/v1/lei-records/254900KXOK4M8ND3M032"
+}
+}
+}
+},
+{
+"type": "autocompletions",
+"attributes": {
+"value": "KUWAIT FINANCE HOUSE (BAHRAIN) B.S.C.( CLOSED)",
+"highlighting": "<b>KUWAIT</b> <b>FINANCE</b> <b>HOUSE</b> (BAHRAIN) B.S.C.( CLOSED)"
+},
+"relationships": {
+"lei-records": {
+"data": {
+"type": "lei-records",
+"id": "254900O40ZFV8KVD2F39"
+},
+"links": {
+"related": "https://api.gleif.org/api/v1/lei-records/254900O40ZFV8KVD2F39"
+}
+}
+}
+},
+{
+"type": "autocompletions",
+"attributes": {
+"value": "Kuwait Finance House Building, Ali Fahed Al Dwailah Street",
+"highlighting": "<b>Kuwait</b> <b>Finance</b> <b>House</b> Building, Ali Fahed Al Dwailah Street"
+},
+"relationships": {
+"lei-records": {
+"data": {
+"type": "lei-records",
+"id": "254900SCOM3DT0EV4A40"
+},
+"links": {
+"related": "https://api.gleif.org/api/v1/lei-records/254900SCOM3DT0EV4A40"
+}
+}
+}
+},
+{
+"type": "autocompletions",
+"attributes": {
+"value": "KUWAIT FINANCE HOUSE B.S.C CLOSED",
+"highlighting": "<b>KUWAIT</b> <b>FINANCE</b> <b>HOUSE</b> B.S.C CLOSED"
+}
+},
+{
+"type": "autocompletions",
+"attributes": {
+"value": "KUWAIT FINANCE HOUSE BANK (EGYPT) S.A.E.",
+"highlighting": "<b>KUWAIT</b> <b>FINANCE</b> <b>HOUSE</b> BANK (EGYPT) S.A.E."
+},
+"relationships": {
+"lei-records": {
+"data": {
+"type": "lei-records",
+"id": "54930007LW1U82NUVI07"
+},
+"links": {
+"related": "https://api.gleif.org/api/v1/lei-records/54930007LW1U82NUVI07"
+}
+}
+}
+}
+]
+}
