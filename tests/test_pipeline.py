@@ -9,7 +9,11 @@ from pathlib import Path
 from venombot.evidence import Evidence
 from venombot.lists.ofac import SOURCES as OFAC_SOURCES
 from venombot.lists.ofac import parse_sdn
-from venombot.pipeline import Investigation, Options, dedupe_evidence, flag_counts, slugify
+from venombot.lists.un import SOURCES as UN_SOURCES
+from venombot.lists.un import parse_un
+from venombot.pipeline import (Investigation, Options, REDUNDANT_PROVIDERS, dedupe_evidence, deceased_hint,
+                               flag_counts, is_weak, slugify)
+from venombot.screening import cluster_hits
 from venombot.screening import Subject, screen
 from venombot.store import EntityStore, SourceStatus
 
@@ -32,6 +36,54 @@ class DedupeTests(unittest.TestCase):
 
     def test_title_used_when_no_url(self) -> None:
         self.assertEqual(len(dedupe_evidence([_ev("A", "", "Same Title"), _ev("B", "", "same  title")])), 1)
+
+
+class ClusterTests(unittest.TestCase):
+    @classmethod
+    def setUpClass(cls) -> None:
+        cls.tmp = tempfile.mkdtemp()
+        cls.store = EntityStore(Path(cls.tmp) / "c.db")
+        cls.store.replace_source("US_OFAC_SDN", parse_sdn(
+            {"main": FIX / "ofac_sdn.csv", "alt": FIX / "ofac_alt.csv"}, OFAC_SOURCES[0]))
+        cls.store.replace_source("UN_SC_CONSOLIDATED", parse_un({"main": FIX / "un_consolidated.xml"}, UN_SOURCES[0]))
+
+    @classmethod
+    def tearDownClass(cls) -> None:
+        cls.store.close()
+        shutil.rmtree(cls.tmp, ignore_errors=True)
+
+    def test_same_person_on_two_lists_is_one_cluster(self) -> None:
+        hits = screen(self.store, Subject.build("Ayman al-Zawahiri"))
+        live = [h for h in hits if h.match_class != "DISCOUNTED"]
+        self.assertEqual({h.entity.source for h in live}, {"US_OFAC_SDN", "UN_SC_CONSOLIDATED"})
+        clusters = cluster_hits(live)
+        self.assertEqual(len(clusters), 1)
+        self.assertEqual(clusters[0].sources, ["UN_SC_CONSOLIDATED", "US_OFAC_SDN"])
+        c = flag_counts(live, [])
+        self.assertEqual((c["relevant_matches"], c["list_entries"], c["authorities"]), (1, 2, 2))
+
+    def test_different_people_stay_apart(self) -> None:
+        hits = screen(self.store, Subject.build("Vladimir Putin"))
+        self.assertEqual(len(cluster_hits([h for h in hits if h.match_class != "DISCOUNTED"])), 1)
+        zaw = screen(self.store, Subject.build("Ayman al-Zawahiri"))
+        both = cluster_hits(hits + zaw)
+        self.assertGreaterEqual(len(both), 2)
+
+    def test_deceased_hint_needs_matching_birth_year(self) -> None:
+        subject = Subject.build("Ayman al-Zawahiri", dob="1951")
+        ev = [Evidence(provider="W", kind="identity", title="Ayman al-Zawahiri (Q1)",
+                       snippet="Ayman al-Zawahiri: al-Qaeda leader (1951–2022), surgeon", name_score=1.0)]
+        self.assertIn("1951–2022", deceased_hint(subject, [], ev))
+        namesake = Subject.build("Ayman al-Zawahiri", dob="1980")
+        self.assertIsNone(deceased_hint(namesake, [], ev))
+        self.assertIsNone(deceased_hint(Subject.build("Ayman al-Zawahiri"), [], ev))
+
+    def test_weak_and_redundant(self) -> None:
+        weak = Evidence(provider="FR", kind="enforcement", title="Patriot Day", name_score=0.85,
+                        snippet="Patriot Day", extra={"match_basis": "quoted-phrase match in document text (server side)"})
+        self.assertTrue(is_weak(weak))
+        self.assertFalse(is_weak(Evidence(provider="X", kind="court", title="t", snippet="s")))
+        self.assertIn("COURTLISTENER_SEARCH", REDUNDANT_PROVIDERS)
 
 
 class FlagTests(unittest.TestCase):
@@ -82,7 +134,7 @@ class InvestigationTests(unittest.TestCase):
         self.assertIn("1 CONFIRMED", text)
         self.assertIn("1 CRITICAL", text)
         self.assertIn("HOLD_FOR_REVIEW", text)
-        self.assertRegex(text, r"Found \*\*1\*\* relevant list match")
+        self.assertRegex(text, r"Found \*\*1\*\* relevant person/entity match")
 
     def test_parts_written_and_skipped_stages_reported(self) -> None:
         inv = self._run(Path(self.tmp) / "o3", formats=["md", "json"])
