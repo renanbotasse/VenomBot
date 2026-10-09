@@ -1,0 +1,31 @@
+{
+"count": 2,
+"results": [
+{
+"caseName": "United States v. Testperson",
+"court": "District Court, S.D. New York",
+"court_id": "nysd",
+"dateFiled": "2025-03-01",
+"docketNumber": "1:25-cr-00001",
+"docket_absolute_url": "/docket/1/united-states-v-testperson/",
+"cause": "18:1343 Fraud by wire",
+"suitNature": "",
+"party": [
+"USA",
+"Jane Q. Testperson"
+],
+"dateTerminated": null
+},
+{
+"caseName": "Acme v. Other",
+"court": "District Court, D. Delaware",
+"dateFiled": "2024-01-01",
+"docketNumber": "1:24-cv-1",
+"docket_absolute_url": "/docket/2/acme-v-other/",
+"party": [
+"Acme Inc",
+"Other Corp"
+]
+}
+]
+}
