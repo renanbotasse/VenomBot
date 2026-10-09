@@ -219,6 +219,34 @@ def deceased_hint(subject: Subject, hits: List[Hit], evidence: List[Evidence]) -
     return None
 
 
+# Aggregators that only restate list designations; they add nothing once the same
+# designation was matched in a loaded list (they stay useful when it was not).
+LIST_ECHO_PROVIDERS = {"SANCTIONS_NETWORK_API"}
+
+
+def drop_list_echoes(evidence: List[Evidence], hits: List[Hit]) -> List[Evidence]:
+    """Remove evidence that merely repeats a list match already reported."""
+    if not any(h.match_class != "DISCOUNTED" for h in hits):
+        return evidence
+    return [e for e in evidence if e.provider not in LIST_ECHO_PROVIDERS]
+
+
+def effective_decision(verdict: Dict[str, Any], death: Optional[str]) -> Dict[str, Any]:
+    """Soften a blocking decision when a death is recorded for the listed person.
+
+    A designation outlives the person, and "hold" does not describe that case:
+    the reviewer must first establish whether this is the same, deceased
+    individual and whether the listing still applies. The rating stays, because
+    the listing is still active.
+    """
+    decision = verdict["decision"]
+    if death and decision in ("HOLD_FOR_REVIEW", "ESCALATE"):
+        return {**verdict, "decision": "REVIEW_POSSIBLE_DECEASED",
+                "note": f"The list decision was {decision}; a possible death is recorded, so confirm identity "
+                        "and whether the designation still applies before acting."}
+    return verdict
+
+
 def is_weak(e: Evidence) -> bool:
     """Name matched by the server but no text shown: cannot be checked, so not listed."""
     basis = str(e.extra.get("match_basis") or "").lower()
@@ -236,12 +264,18 @@ def render_report(subject: Subject, hits: List[Hit], evidence: List[Evidence], l
                   stages: List[StageResult], cov: Dict[str, Any], requested_by: str, purpose: str,
                   started: str, finished: str) -> str:
     """Single consolidated Markdown report with the headline summary on top."""
-    verdict = overall(hits)
     weak = [e for e in evidence if is_weak(e)]
     evidence = [e for e in evidence if not is_weak(e)]
+    n_before = len(evidence)
+    evidence = drop_list_echoes(evidence, hits)
+    echoes = n_before - len(evidence)
     c = flag_counts(hits, evidence)
     clusters = cluster_hits(hits)
     death = deceased_hint(subject, hits, evidence)
+    verdict = effective_decision(overall(hits), death)
+    softened = verdict["decision"] == "REVIEW_POSSIBLE_DECEASED"
+    if softened:  # keep the action column consistent with the headline decision
+        c["by_action"] = {"REVIEW_POSSIBLE_DECEASED": c["relevant_matches"]}
     ok = [l for l in lookups if l.ok]
     failed = [l for l in lookups if not l.ok and not l.skipped]
     skipped = [l for l in lookups if l.skipped]
@@ -259,6 +293,8 @@ def render_report(subject: Subject, hits: List[Hit], evidence: List[Evidence], l
         lines.append(f"- **Purpose:** {purpose}")
     lines += ["", "## Summary", "",
               f"**Decision: `{verdict['decision']}` · Rating: `{verdict['rating']}`**", ""]
+    if verdict.get("note"):
+        lines += [f"_{verdict['note']}_", ""]
     headline = (f"Found **{c['relevant_matches']}** relevant person/entity match(es) on "
                 f"**{c['list_entries']}** list entr{'y' if c['list_entries'] == 1 else 'ies'} from "
                 f"**{c['authorities']}** list(s) ({c['candidates'] - c['relevant_matches']} discounted) and "
@@ -299,7 +335,8 @@ def render_report(subject: Subject, hits: List[Hit], evidence: List[Evidence], l
         for cl in live_clusters[:60]:
             b = cl.best
             lines.append(f"| {b.match_class} | {b.severity} | {b.confidence:.0f} | {cl.label} | "
-                         f"{len(cl.sources)}: {', '.join(cl.sources)} | {b.action} |")
+                         f"{len(cl.sources)}: {', '.join(cl.sources)} | "
+                         f"{'REVIEW_POSSIBLE_DECEASED' if softened and b.action in ('HOLD_FOR_REVIEW', 'ESCALATE') else b.action} |")
         lines.append("")
         for cl in live_clusters[:30]:
             b = cl.best
@@ -342,6 +379,8 @@ def render_report(subject: Subject, hits: List[Hit], evidence: List[Evidence], l
             lines.append(f"_{len(group) - 60} more in the JSON parts._")
         lines.append("")
 
+    if echoes:
+        lines += [f"_{echoes} item(s) omitted: they only restate a list match reported above._", ""]
     if weak:
         lines += [f"_{len(weak)} weak match(es) omitted: the service matched the name but returned no text to "
                   "verify (kept in the JSON parts)._", ""]
