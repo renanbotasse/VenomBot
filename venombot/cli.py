@@ -107,6 +107,54 @@ def _subjects_from_args(args: argparse.Namespace):
                           kind=args.type, identifiers=args.id or [], aliases=args.alias or [])]
 
 
+def _gather_context(args: argparse.Namespace, subject):
+    """Collect non-list evidence: stored feed articles and opt-in live lookups."""
+    evidence, lookups = [], []
+    if args.media:
+        from venombot.feeds.search import search_articles
+        from venombot.feeds.store import ArticleStore
+
+        astore = ArticleStore(Path(args.db))
+        evidence += search_articles(astore, subject, days=args.media_days)
+    if args.live is not None:
+        from venombot.live import lookup, select_providers
+
+        providers = select_providers(args.live or None, args.live_group)
+        if not providers:
+            print("  no live providers selected", file=sys.stderr)
+        ev, lookups = lookup(subject, providers)
+        evidence += ev
+    return evidence, lookups
+
+
+def cmd_media(args: argparse.Namespace) -> int:
+    from venombot.feeds import all_feeds, select_feeds
+    from venombot.feeds.store import ArticleStore
+    from venombot.feeds.update import update_feeds
+
+    if args.action == "list":
+        for f in select_feeds(args.source, args.group):
+            print(f"{f.key:34} {f.kind:13} {f.language:3} {f.region:6} {f.name[:60]}")
+        print(f"\n{len(all_feeds())} feeds registered")
+        return 0
+    store = ArticleStore(Path(args.db))
+    if args.action == "status":
+        for row in store.all_status():
+            print(row)
+        print(f"{store.count()} articles stored")
+        return 0
+    if args.action == "purge":
+        print(f"purged {store.purge(days=args.days)} articles older than {args.days} days")
+        return 0
+    feeds = select_feeds(args.source, args.group)
+    result = update_feeds(store, feeds, workers=args.workers)
+    failed = [k for k, v in result.items() if v.get("status") == "failed"]
+    print(f"{len(result) - len(failed)}/{len(result)} feeds ok, {store.count()} articles stored")
+    if failed:
+        print("failed: " + ", ".join(failed), file=sys.stderr)
+    return 0
+
+
 def cmd_screen(args: argparse.Namespace) -> int:
     from venombot import dossier
     from venombot.normalize import ascii_fold
@@ -138,8 +186,13 @@ def cmd_screen(args: argparse.Namespace) -> int:
                   f"{h.entity.caption[:60]}  <- '{h.matched_name[:40]}'")
         if len(hits) > args.show:
             print(f"  … {len(hits) - args.show} more in the report")
+        evidence, lookups = _gather_context(args, subject)
+        if evidence:
+            adverse = sum(1 for e in evidence if e.topics)
+            print(f"  context: {len(evidence)} item(s), {adverse} with adverse topics")
         doc = dossier.build(store, subject, hits, purpose=args.purpose or "",
-                            requested_by=args.requested_by or "")
+                            requested_by=args.requested_by or "", evidence=evidence,
+                            lookups=lookups, media_searched=args.media)
         slug = re.sub(r"[^A-Za-z0-9]+", "-", ascii_fold(subject.name)).strip("-")[:60] or "subject"
         paths = dossier.write(doc, out_dir / f"screening-{slug}", formats)
         print("  report: " + ", ".join(str(p) for p in paths))
@@ -252,9 +305,25 @@ def build_parser() -> argparse.ArgumentParser:
     p_sc.add_argument("--purpose", help="Why this screening is performed (recorded in report)")
     p_sc.add_argument("--requested-by", help="Requester (recorded in report)")
     p_sc.add_argument("--show", type=int, default=10, help="Candidates to print")
+    p_sc.add_argument("--media", action="store_true",
+                      help="Also search stored news/regulator feeds (see 'media update')")
+    p_sc.add_argument("--media-days", type=int, help="Only articles from the last N days")
+    p_sc.add_argument("--live", nargs="*", metavar="PROVIDER",
+                      help="Query third-party search APIs for this subject (sends the name to them); "
+                           "give provider keys or none for all available")
+    p_sc.add_argument("--live-group", nargs="+", help="Live provider groups: media, court, corporate, free, …")
     p_sc.add_argument("--fail-on-hit", action="store_true",
                       help="Exit 3 when any subject rates HIGH or CRITICAL (for pipelines)")
     p_sc.set_defaults(func=cmd_screen)
+
+    p_md = sub.add_parser("media", help="Manage RSS/Atom news and regulator-press feeds")
+    p_md.add_argument("action", choices=["update", "list", "status", "purge"])
+    p_md.add_argument("--source", nargs="+", help="Feed keys")
+    p_md.add_argument("--group", nargs="+", help="Groups, kinds, regions or languages (e.g. enforcement, ar, MENA)")
+    p_md.add_argument("--db", default=DEFAULT_DB)
+    p_md.add_argument("--workers", type=int, default=4)
+    p_md.add_argument("--days", type=int, default=365, help="Retention for 'purge'")
+    p_md.set_defaults(func=cmd_media)
 
     p_crawl = sub.add_parser("crawl", help="(legacy) Snapshot news/context pages")
     p_crawl.add_argument("--db", default="aml_snapshots", help="Snapshot database directory")
