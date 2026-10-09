@@ -1,0 +1,1 @@
+{"items": [{"title": "TESTERMAN HOLDINGS LIMITED", "company_number": "01234567", "company_status": "active", "company_type": "ltd", "date_of_creation": "2010-05-04", "address_snippet": "1 High Street, London", "links": {"self": "/company/01234567"}}, {"title": "UNRELATED LTD", "company_number": "7654321", "company_status": "dissolved", "links": {"self": "/company/7654321"}}]}
