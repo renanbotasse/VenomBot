@@ -47,6 +47,8 @@ Output in `reports/<name>/`:
 | `<name>_<ISO-time>.json/.html` | Same report as data / printable page (`--format md json html`) |
 | `state.json` | Stage results; `--resume` skips finished stages |
 
+While it runs, the terminal explains where each part's information comes from: the loaded lists grouped by issuing authority (with entity counts and data date), which registered lists are **not** loaded, and for live parts which external services receive the subject's name (`--quiet` hides this).
+
 Options: `--refresh` (update missing/stale lists first; `--refresh-groups core pep …`), `--refresh-media`, `--no-media`, `--no-live`, `--kinds court corporate`, `--providers KEY …`, `--csv file` (batch), `--resume`. A failing stage or provider never stops the run; it appears under "Gaps in this search".
 
 ### Coverage
