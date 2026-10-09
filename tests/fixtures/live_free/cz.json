@@ -1,0 +1,27 @@
+{
+"pocetCelkem": 2,
+"ekonomickeSubjekty": [
+{
+"ico": "24188581",
+"obchodniJmeno": "Nadace AGROFERT",
+"sidlo": {
+"kodStatu": "CZ",
+"nazevStatu": "Česká republika",
+"textovaAdresa": "Pyšelská 2327/2, Chodov, 14900 Praha 4"
+},
+"pravniForma": "117",
+"datumVzniku": "2011-12-05"
+},
+{
+"ico": "26185610",
+"obchodniJmeno": "AGROFERT, a.s.",
+"sidlo": {
+"kodStatu": "CZ",
+"nazevStatu": "Česká republika",
+"textovaAdresa": "Pyšelská 2327/2, Chodov, 14900 Praha 4"
+},
+"pravniForma": "121",
+"datumVzniku": "2000-07-01"
+}
+]
+}
