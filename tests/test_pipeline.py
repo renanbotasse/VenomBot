@@ -11,7 +11,7 @@ from venombot.lists.ofac import SOURCES as OFAC_SOURCES
 from venombot.lists.ofac import parse_sdn
 from venombot.pipeline import Investigation, Options, dedupe_evidence, flag_counts, slugify
 from venombot.screening import Subject, screen
-from venombot.store import EntityStore
+from venombot.store import EntityStore, SourceStatus
 
 FIX = Path(__file__).parent / "fixtures"
 
@@ -51,6 +51,10 @@ class InvestigationTests(unittest.TestCase):
         cls.store = EntityStore(Path(cls.tmp) / "t.db")
         cls.store.replace_source("US_OFAC_SDN", parse_sdn(
             {"main": FIX / "ofac_sdn.csv", "alt": FIX / "ofac_alt.csv"}, OFAC_SOURCES[0]))
+        cls.store.set_status(SourceStatus(
+            key="US_OFAC_SDN", name="OFAC SDN (test)", jurisdiction="US", list_type="SANCTIONS",
+            entity_count=cls.store.count("US_OFAC_SDN"), status="ok", complete=True,
+            fetched_at="2026-10-09T00:00:00+00:00", source_updated="2026-10-09T00:00:00+00:00"))
 
     @classmethod
     def tearDownClass(cls) -> None:
@@ -95,6 +99,24 @@ class InvestigationTests(unittest.TestCase):
                             log=logs.append, db_path=Path(self.tmp) / "t.db")
         inv.run()
         self.assertTrue(any("resumed" in m for m in logs))
+
+    def test_terminal_explains_sources(self) -> None:
+        logs = []
+        subject = Subject.build("Vladimir Putin")
+        inv = Investigation(self.store, subject, Path(self.tmp) / "o5", Options(media=False, live=False),
+                            log=logs.append, db_path=Path(self.tmp) / "t.db")
+        inv.run()
+        text = "\n".join(logs)
+        self.assertIn("Searching 1 loaded list(s)", text)
+        self.assertIn("United States", text)
+        self.assertIn("NOT searched", text)
+
+    def test_quiet_hides_explanations(self) -> None:
+        logs = []
+        subject = Subject.build("Vladimir Putin")
+        Investigation(self.store, subject, Path(self.tmp) / "o6", Options(media=False, live=False, explain=False),
+                      log=logs.append, db_path=Path(self.tmp) / "t.db").run()
+        self.assertNotIn("Searching", "\n".join(logs))
 
     def test_slug(self) -> None:
         self.assertEqual(slugify("José  Müller-Ñandú"), "jose-muller-nandu")
