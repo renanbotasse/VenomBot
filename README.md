@@ -28,6 +28,27 @@ python3 -m venombot screen --name "Jeffrey Epstein" --dob 1953-01-20 --country U
 python3 -m venombot screen --csv clients.csv -o reports --fail-on-hit
 ```
 
+### One command: `investigate`
+
+`investigate` runs everything in order — list matches, stored media, then live lookups by kind — and writes each part as soon as it finishes, so you can read the list hits while slow lookups are still running.
+
+```bash
+python3 -m venombot investigate --name "Nome Completo" --dob 1970-05-14 --country BR --type person \
+    --purpose "KYC onboarding" --requested-by "seu-nome" --refresh --refresh-media
+```
+
+Output in `reports/<name>/`:
+
+| File | Content |
+|---|---|
+| `<name>_<ISO-time>.md` | **The report.** Header with requester, subject and the search time (ISO-8601 UTC). A summary on top: decision, rating, and counts per flag — matches by class (CONFIRMED/PROBABLE/POSSIBLE), by severity and list type, context items by kind and by adverse topic, lookups answered/failed/skipped — then gaps, list matches, adverse and other context, coverage, review block |
+| `00-summary.md` | Progress checklist, rewritten after every stage |
+| `01-lists.*`, `02-media.*`, `03-live-<kind>.*` | The parts, written as each stage ends (kinds: identity, corporate, court, enforcement, leak, adverse_media) |
+| `<name>_<ISO-time>.json/.html` | Same report as data / printable page (`--format md json html`) |
+| `state.json` | Stage results; `--resume` skips finished stages |
+
+Options: `--refresh` (update missing/stale lists first; `--refresh-groups core pep …`), `--refresh-media`, `--no-media`, `--no-live`, `--kinds court corporate`, `--providers KEY …`, `--csv file` (batch), `--resume`. A failing stage or provider never stops the run; it appears under "Gaps in this search".
+
 ### Coverage
 
 VenomBot registers **139 direct list sources**, 16 built-in OpenSanctions datasets (~440 after `lists --refresh-opensanctions`), **57 live search providers** and **42 news/regulator feeds**. The full, generated table with licences, key requirements and known gaps is in [docs/SOURCES.md](docs/SOURCES.md).
@@ -233,7 +254,8 @@ venombot/
   feeds/          # RSS/Atom ingest, article store, sentence-level search
   evidence.py     # Context evidence + adverse-topic taxonomy
   fetch.py        # Streaming downloads (no truncation, retries, atomic)
-  cli.py          # update | lists | screen | media | crawl | search | report
+  pipeline.py     # investigate: staged run, parts, timestamped report
+  cli.py          # update | lists | screen | investigate | media | crawl | search | report
   # legacy page crawler
   catalog.py  samples.py  sources.py  models.py  translator.py
   scoring.py  storage.py  crawler.py  reporter.py
