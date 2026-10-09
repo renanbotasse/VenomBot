@@ -1,0 +1,6 @@
+person,personLabel,dob,dod,position,positionLabel,country,countryLabel,start,end
+http://www.wikidata.org/entity/Q152905,Jean-Claude Trichet,1942-12-20T00:00:00Z,,http://www.wikidata.org/entity/Q605440,President of the European Central Bank,,,2003-11-01T00:00:00Z,2011-10-31T00:00:00Z
+http://www.wikidata.org/entity/Q159844,Wim Duisenberg,1935-07-09T00:00:00Z,2005-07-31T00:00:00Z,http://www.wikidata.org/entity/Q605440,President of the European Central Bank,,,1998-06-01T00:00:00Z,2003-10-31T00:00:00Z
+http://www.wikidata.org/entity/Q192533,Mark Carney,1965-03-16T00:00:00Z,,http://www.wikidata.org/entity/Q2579905,Governor of the Bank of England,http://www.wikidata.org/entity/Q145,United Kingdom,2013-07-01T00:00:00Z,2020-03-15T00:00:00Z
+http://www.wikidata.org/entity/Q287608,"Cameron Cobbold, 1st Baron Cobbold",1904-09-14T00:00:00Z,1987-11-01T00:00:00Z,http://www.wikidata.org/entity/Q2579905,Governor of the Bank of England,http://www.wikidata.org/entity/Q145,United Kingdom,1949-01-01T00:00:00Z,1961-01-01T00:00:00Z
+http://www.wikidata.org/entity/Q294460,Mario Draghi,1947-09-03T00:00:00Z,,http://www.wikidata.org/entity/Q605440,President of the European Central Bank,,,2011-11-01T00:00:00Z,2019-10-31T00:00:00Z
