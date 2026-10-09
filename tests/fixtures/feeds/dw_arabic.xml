@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:georss="http://www.georss.org/georss" xmlns:atom="http://www.w3.org/2005/Atom">
+ <channel>
+  <title>Deutsche Welle: DW-WORLD.DE</title>
+  <link>https://www.dw.com/arabic/?maca=ara-rss-ar-all-1125-xml-mrss</link>
+  <description>Deutsche Welle: DW-WORLD.DE</description>
+  <language>ar</language>
+  <copyright>2026 DW</copyright>
+  <pubDate>Thu, 8 Oct 2026 22:07:36 GMT</pubDate>
+  <lastBuildDate>Thu, 8 Oct 2026 22:07:36 GMT</lastBuildDate>
+  <atom:link href="https://rss.dw.com/xml/rss-ar-all" rel="self"/>
+  <image>
+   <url>https://rss.dw.com/images/DW-L-RGB_whitebg.png</url>
+   <title>Deutsche Welle: DW-WORLD.DE</title>
+   <link>https://www.dw.com/arabic/?maca=ara-rss-ar-all-1125-xml-mrss</link>
+   <description>News, Analysis and Service from Germany and Europe - in 30 Languages</description>
+   <width>98</width>
+   <height>64</height>
+  </image>
+  <ttl>10</ttl>
+  <item>
+   <guid isPermaLink="false">79598263</guid>
+   <pubDate>Thu, 8 Oct 2026 21:29:00 GMT</pubDate>
+   <title>العراق: بعد ارتفاع صرف الدولار &quot;رابطة السمان&quot;  تطالب بتوفير اللحوم</title>
+   <link>https://www.dw.com/ar/العراق-بعد-ارتفاع-صرف-الدولار-رابطة-السمان-تطالب-بتوفير-اللحوم/a-79598263?maca=ara-rss-ar-all-1125-xml-mrss</link>
+   <description>حتى في ظل الغلاء، لا تغيب خفة الظل عن العراقيين. فبعد قرار البنك المركزي رفع سعر الدولار، نشرت &quot;رابطة السمان&quot; غير الرسمية فيديو طريفاً بالزي التقليدي، رأى فيه معلقون رسالة واضحة: اهتموا بالفقير، فاللحم بات حلماً.</description>
+   <category>منوعات</category>
+  </item>
+  <item>
+   <guid isPermaLink="false">79605789</guid>
+   <pubDate>Thu, 8 Oct 2026 21:02:00 GMT</pubDate>
+   <title>محاكمة مارادونا: الادعاء يطلب أحكاما بالسجن تصل إلى 12 عاما</title>
+   <link>https://www.dw.com/ar/محاكمة-مارادونا-الادعاء-يطلب-أحكاما-بالسجن-تصل-إلى-12-عاما/a-79605789?maca=ara-rss-ar-all-1125-xml-mrss</link>
+   <description>الادعاء الأرجنتيني يطلب أحكاما بالسجن تصل إلى 12 عاما بحق أفراد الطاقم الطبي لمارادونا، متهما إياهم بالإهمال الذي أفضى إلى وفاته.</description>
+   <category>رياضة</category>
+  </item>
+  <item>
+   <guid isPermaLink="false">79571623</guid>
+   <pubDate>Thu, 8 Oct 2026 20:03:00 GMT</pubDate>
+   <title>هل يتعارض تجريم إنكار حق إسرائيل في الوجود مع الدستور الألماني؟</title>
+   <link>https://www.dw.com/ar/هل-يتعارض-تجريم-إنكار-حق-إسرائيل-في-الوجود-مع-الدستور-الألماني؟/a-79571623?maca=ara-rss-ar-all-1125-xml-mrss</link>
+   <description>يدفع مجلس الولايات الاتحادية الألماني (البوندسرات) والمجلس المركزي لليهود نحو فرض حظر قانوني لحماية إسرائيل من معاداة السامية؛ بينما توجد تحفظات لدى الحكومة الاتحادية. والقرار الآن بيد البرلمان الاتحادي (البوندستاغ).</description>
+   <category>سياسة واقتصاد</category>
+  </item>
+ </channel>
+</rss>
