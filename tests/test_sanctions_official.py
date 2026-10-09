@@ -52,7 +52,7 @@ class RegistryTests(unittest.TestCase):
         self.assertEqual(
             core,
             {"EU_FSF_XML_1_1", "UK_FCDO_SANCTIONS_XML", "CH_SECO", "UN_SC_CONSOLIDATED_AR", "CA_SEMA_JVCFOR",
-             "AU_DFAT_CONSOLIDATED_XLSX", "NZ_MFAT_RUSSIA_REGISTER", "JP_MOF_ASSET_FREEZE_CSV", "US_CSL_DOWNLOAD"},
+             "AU_DFAT_CONSOLIDATED_XLSX", "NZ_MFAT_RUSSIA_REGISTER", "US_CSL_DOWNLOAD"},
         )
 
     def test_no_overlap_with_ofac_keys(self) -> None:
