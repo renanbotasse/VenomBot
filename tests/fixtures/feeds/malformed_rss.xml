@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="iso-8859-1"?>
+<rss version="2.0"><channel><title>Synthetic Regulator Press</title><language>en</language>
+<item><title>Jane Doe Example charged with fraud</title><link>https://example.org/a1</link><guid>a1</guid>
+<pubDate>Wed, 07 Oct 2026 10:00:00 GMT</pubDate>
+<description><![CDATA[<p>Jane Doe Example was charged with fraud&nbsp;on Tuesday &amp; released.</p><p>Officials declined comment.</p>]]></description></item>
+<item><title>Council meeting &nbsp;notes</title><link>https://example.org/a2</link>
+<pubDate>Tue, 06 Oct 2026 09:00:00 +0200</pubDate>
+<description>Jane Smith opened the session. Later, Tom Doe presented the budget &ndash; no incidents. Café menu discussed.</description></item>
+<item><title>Bank fined for money laundering failures</title><link>https://example.org/a3</link>
+<description>Acme Holdings Ltd was fined &pound;2m for money laundering failures.</description>
+</item>
+</channel></rss>
