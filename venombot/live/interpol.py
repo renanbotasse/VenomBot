@@ -36,7 +36,18 @@ def search_interpol(subject: Subject, key: Optional[str] = None) -> List[Evidenc
     if len(parts) < 2:
         raise RuntimeError("INTERPOL_RED needs at least a forename and a surname")
     params = {"name": parts[-1], "forename": " ".join(parts[:-1]), "resultPerPage": 20, "page": 1}
-    raw = get_text(_BASE + "?" + urlencode(params, quote_via=quote), headers={"Accept": "application/json"})
+    try:
+        raw = get_text(_BASE + "?" + urlencode(params, quote_via=quote), headers={"Accept": "application/json"},
+                       retries=0)
+    except RuntimeError as exc:
+        if "403" in str(exc):
+            # Akamai blocks automated clients on many networks. Working around it by
+            # impersonating a browser would defeat Interpol's access control, so say what to do instead.
+            raise RuntimeError(
+                "INTERPOL_RED: blocked by Interpol (HTTP 403, bot protection) on this network. Use the daily "
+                "red-notice list instead: `venombot update --source OS_INTERPOL_RED_NOTICES "
+                "--accept-noncommercial` (OpenSanctions mirror, CC BY-NC)") from exc
+        raise
     try:
         data = json.loads(raw)
     except ValueError as exc:
