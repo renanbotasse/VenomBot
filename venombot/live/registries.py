@@ -326,8 +326,10 @@ def _plain(name: str) -> str:
 
 def _rarest_word(name: str) -> str:
     """data.gov.sg ranks multi-word q as OR, flooding results; query one long word, filter locally."""
-    words = _plain(name).split()
-    return max(words, key=len) if words else name
+    # ACRA answers HTTP 409 to punctuation ("al-Zawahiri"), so keep letters and digits only.
+    words = [re.sub(r"[^A-Za-z0-9]", "", w) for w in _plain(name).split()]
+    words = [w for w in words if w]
+    return max(words, key=len) if words else re.sub(r"[^A-Za-z0-9]", "", name) or "a"
 
 
 def _first_words(name: str, n: int) -> str:
