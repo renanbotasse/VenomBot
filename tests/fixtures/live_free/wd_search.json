@@ -1,0 +1,33 @@
+{
+"searchinfo": {
+"search": "Mishal Al-Ahmad"
+},
+"search": [
+{
+"id": "Q12243161",
+"title": "Q12243161",
+"pageid": 13456752,
+"concepturi": "http://www.wikidata.org/entity/Q12243161",
+"repository": "wikidata",
+"url": "//www.wikidata.org/wiki/Q12243161",
+"display": {
+"label": {
+"value": "Mishal Al-Ahmad Al-Jaber Al-Sabah",
+"language": "en"
+},
+"description": {
+"value": "Emir of Kuwait since 2023",
+"language": "en"
+}
+},
+"label": "Mishal Al-Ahmad Al-Jaber Al-Sabah",
+"description": "Emir of Kuwait since 2023",
+"match": {
+"type": "label",
+"language": "en",
+"text": "Mishal Al-Ahmad Al-Jaber Al-Sabah"
+}
+}
+],
+"success": 1
+}
