@@ -1,0 +1,19 @@
+{
+"success": true,
+"result": {
+"resources": [
+{
+"datastore_active": true,
+"format": "PDF",
+"id": "9430b6b2-b28c-4b1a-a58a-a88b54912853",
+"name": "Company Dataset - Help File"
+},
+{
+"datastore_active": true,
+"format": "CSV",
+"id": "5c3914e6-413e-4a2c-b890-bf8efe3eabf2",
+"name": "Company Dataset - Current"
+}
+]
+}
+}
