@@ -150,6 +150,7 @@ def cmd_investigate(args: argparse.Namespace) -> int:
         min_score=args.min_score, formats=args.format or ["md", "json"], purpose=args.purpose or "",
         requested_by=args.requested_by or "", resume=args.resume,
         accept_noncommercial=args.accept_noncommercial, explain=not args.quiet,
+        all_providers=args.all_providers,
     )
     worst_failed = 0
     for subject in _subjects_from_args(args):
@@ -370,6 +371,8 @@ def build_parser() -> argparse.ArgumentParser:
     p_in.add_argument("--providers", nargs="+", help="Restrict live lookups to these provider keys")
     p_in.add_argument("--media-days", type=int, help="Only articles from the last N days")
     p_in.add_argument("--min-score", type=float, help="Name-score floor (default 0.80)")
+    p_in.add_argument("--all-providers", action="store_true",
+                      help="Also run live providers that duplicate another one")
     p_in.add_argument("--quiet", action="store_true", help="Do not explain each part's sources in the terminal")
     p_in.add_argument("--resume", action="store_true", help="Skip stages already finished in a previous run")
     p_in.add_argument("--accept-noncommercial", action="store_true", help="Allow CC BY-NC lists when refreshing")
