@@ -12,7 +12,7 @@ from venombot.lists.ofac import parse_sdn
 from venombot.lists.un import SOURCES as UN_SOURCES
 from venombot.lists.un import parse_un
 from venombot.pipeline import (Investigation, Options, REDUNDANT_PROVIDERS, dedupe_evidence, deceased_hint,
-                               flag_counts, is_weak, slugify)
+                               flag_counts, is_weak, slugify, drop_list_echoes, effective_decision)
 from venombot.screening import cluster_hits
 from venombot.screening import Subject, screen
 from venombot.store import EntityStore, SourceStatus
@@ -77,6 +77,36 @@ class ClusterTests(unittest.TestCase):
         namesake = Subject.build("Ayman al-Zawahiri", dob="1980")
         self.assertIsNone(deceased_hint(namesake, [], ev))
         self.assertIsNone(deceased_hint(Subject.build("Ayman al-Zawahiri"), [], ev))
+
+    def test_list_echo_dropped_only_when_list_matched(self) -> None:
+        echo = Evidence(provider="SANCTIONS_NETWORK_API", kind="enforcement", title="OFAC designation", name_score=1.0)
+        other = Evidence(provider="X", kind="court", title="t", name_score=1.0)
+        hits = screen(self.store, Subject.build("Ayman al-Zawahiri"))
+        self.assertEqual([e.provider for e in drop_list_echoes([echo, other], hits)], ["X"])
+        self.assertEqual(len(drop_list_echoes([echo, other], [])), 2)
+
+    def test_decision_softened_when_death_recorded(self) -> None:
+        v = {"decision": "HOLD_FOR_REVIEW", "rating": "CRITICAL", "reasons": []}
+        out = effective_decision(v, "1951–2022 per WIKIDATA")
+        self.assertEqual(out["decision"], "REVIEW_POSSIBLE_DECEASED")
+        self.assertEqual(out["rating"], "CRITICAL")
+        self.assertIn("HOLD_FOR_REVIEW", out["note"])
+        self.assertEqual(effective_decision(v, None)["decision"], "HOLD_FOR_REVIEW")
+        self.assertEqual(effective_decision({"decision": "REVIEW", "rating": "LOW", "reasons": []}, "x")["decision"], "REVIEW")
+
+    def test_report_actions_follow_softened_decision(self) -> None:
+        from venombot.pipeline import render_report
+        from venombot.dossier import coverage
+
+        subject = Subject.build("Ayman al-Zawahiri", dob="1951")
+        hits = screen(self.store, subject)
+        ev = [Evidence(provider="W", kind="identity", title="Ayman al-Zawahiri (Q1)",
+                       snippet="Ayman al-Zawahiri: al-Qaeda leader (1951–2022)", name_score=1.0)]
+        text = render_report(subject, hits, ev, [], [], coverage(self.store), "T", "", "2026-01-01T00:00:00Z",
+                             "2026-01-01T00:00:01Z")
+        self.assertIn("`REVIEW_POSSIBLE_DECEASED`", text)
+        self.assertNotIn("HOLD_FOR_REVIEW |", text)
+        self.assertIn("1 REVIEW_POSSIBLE_DECEASED", text)
 
     def test_weak_and_redundant(self) -> None:
         weak = Evidence(provider="FR", kind="enforcement", title="Patriot Day", name_score=0.85,
