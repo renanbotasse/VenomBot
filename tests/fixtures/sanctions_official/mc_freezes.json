@@ -1,0 +1,71 @@
+[
+  {
+    "mesureId": 99473,
+    "nature": "Personne morale",
+    "nom": "KHATIBA JAMA`AT AL-TAWHID WAL-JIHAD (KTJ)",
+    "state": "update",
+    "mesureDetails": {
+      "autoriteMesure": "__ue_authority_label__",
+      "prenom": "",
+      "sexe": "",
+      "adresse": "",
+      "alias": "JANNAT OSHIKLARI; Jama`at al-Tawhid wal-Jihad; Katiba al-Tawhid wal-Jihad",
+      "dateNaissance": "",
+      "regimeSanction": null,
+      "motifs": "Khatiba al-Tawhid wal-Jihad (anciennement Jannat Oshiklari) est une organisation terroriste opérant sous l’égide de l’organisation terroriste internationale Front el-Nosra pour le peuple du Levant. Le groupe opère principalement dans les provinces de Hama, Edleb et Lattaquié, en République arabe syrienne, et mène également des opérations en Turquie, au Kirghizistan, en Ouzbékistan, dans la Fédération de Russie, au Tadjikistan, au Kazakhstan, en Égypte, en Afghanistan et en Ukraine. KTJ compte environ 500 combattants. Il coopère également avec des organisations terroristes comme Khatiba Imam al-Bukhari et le groupe du Djihad islamique.",
+      "lieuNaissance": "",
+      "nationalite": "",
+      "fondementJuridique": "Décision du comité des sanctions des Nations Unies du 07/03/2022; Règlement (UE) 2022/413 du 10/03/2022; Décision du comité des sanctions des Nations Unies du 28/09/2026; (UE) 2026/2287 du 08/10/2026",
+      "titre": "",
+      "passeport": "",
+      "autresInfos": "",
+      "dateExpiration": ""
+    }
+  },
+  {
+    "mesureId": 107056,
+    "nature": "Personne physique",
+    "nom": "BELYAVTSEVA",
+    "state": "update",
+    "mesureDetails": {
+      "autoriteMesure": "__ue_authority_label__",
+      "prenom": "Olga Alekseevna",
+      "sexe": "Féminin",
+      "adresse": "",
+      "alias": "",
+      "dateNaissance": "25/10/1969",
+      "regimeSanction": null,
+      "motifs": "Olga Alekseevna Belyavtseva est une femme d'affaires russe, une entrepreneuse et la propriétaire des entreprises Agronom Sad, Biplast,Assol, Everest et Evermount\r\nCapital Group. Ses entreprises sont actives dans les secteurs de l'agriculture, de l'industrie manufacturière, de la finance, du conseil, de la construction et de\r\nl'immobilier. Selon ses propres dires, sa société Agronom-Sad occupe une position de premier plan dans le secteur agricole en Russie et a reçu des subventions du\r\ngouvernement russe.\r\nOlga Alekseevna Belyavtseva est donc une femme d'affaires influente exerçant des activités en Russie ainsi qu'une femme d'affaires ayant une activité dans des secteurs économiques qui fournissent une source substantielle de revenus au gouvernement de la Fédération de Russie, qui est responsable de l'annexion de la Crimée et de la déstabilisation de l'Ukraine.",
+      "lieuNaissance": "Lipetsk : RUSSIE",
+      "nationalite": "RUSSIE",
+      "fondementJuridique": "(UE) 2024/3188 du 16/12/2024; (UE) 2026/2257 du 08/10/2026; (UE) 2026/2263 du 08/10/2026",
+      "titre": "femme d'affaires, entrepreneuse, propriétaire des entreprises Agronom-Sad, Biplast, Assol, Everest, Evermount Capital Group",
+      "passeport": "768613166 (Fédération de Russie)",
+      "autresInfos": "",
+      "dateExpiration": ""
+    }
+  },
+  {
+    "mesureId": 104346,
+    "nature": "Personne physique",
+    "nom": "PADKAVYRAVA",
+    "state": "withdrawal",
+    "mesureDetails": {
+      "autoriteMesure": "__ue_authority_label__",
+      "prenom": "Iryna Uladzimirauna",
+      "sexe": "Féminin",
+      "adresse": "",
+      "alias": "Irina Vladimirovna PODKOVYROVA; Iryna Vladimirovna PADKAVYRAVA",
+      "dateNaissance": "22/09/1972",
+      "regimeSanction": null,
+      "motifs": "Iryna Padkavyrava est un procureur biélorusse. Elle est associée aux autorités chargées des poursuites depuis au moins 2009, époque où elle a exercé la fonction de procureur principal dans la région de Gomel. En 2022, elle a exercé la fonction de procureur dans le procès d’une journaliste indépendante travaillant pour TVP et Belsat TV. À l’époque, elle avait demandé une peine de quatre ans d’emprisonnement pour la journaliste. Elle a également pris part à l’examen des recours contre les condamnations prononcées pour avoir publié, sur les réseaux sociaux biélorusses, des billets défavorables au gouvernement et à ses fonctionnaires. En tant que procureur, elle a soutenu ces sanctions et les a jugées adéquates et équitables.\r\nElle est donc responsable de graves violations des droits de l’homme ou de la répression de la société civile et de l’opposition démocratique en Biélorussie.",
+      "lieuNaissance": "",
+      "nationalite": "BIÉLORUSSIE",
+      "fondementJuridique": "(UE) 2023/1591 du 03/08/2023; (UE) 2024/2113 du 26/07/2024",
+      "titre": "Procureure",
+      "passeport": "",
+      "autresInfos": "",
+      "dateExpiration": ""
+    }
+  }
+]
