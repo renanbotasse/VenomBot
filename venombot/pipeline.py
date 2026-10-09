@@ -55,6 +55,7 @@ class Options:
     requested_by: str = ""
     resume: bool = False
     accept_noncommercial: bool = False
+    explain: bool = True  # print where each part's information comes from
 
 
 @dataclass
@@ -385,6 +386,64 @@ class Investigation:
 
                 self.lookups = [LookupRecord(**l) for l in self._prior.get("lookups", [])]
 
+    # -- terminal explanations -----------------------------------------------
+
+    def _say(self, lines: List[str]) -> None:
+        if self.opts.explain:
+            for line in lines:
+                self.log("      " + line)
+
+    def _explain_lists(self) -> List[str]:
+        """Which lists are searched, grouped by issuing jurisdiction, and what is missing."""
+        from venombot.lists import all_list_sources
+
+        rows = [s for s in self.store.status() if s.entity_count > 0]
+        total = sum(s.entity_count for s in rows)
+        by_jur: Dict[str, list] = {}
+        for s in rows:
+            by_jur.setdefault(s.jurisdiction or "?", []).append(s)
+        lines = [f"Searching {len(rows)} loaded list(s), {total:,} entities, by issuing authority:"]
+        for jur in sorted(by_jur):
+            label = {"UN": "United Nations", "EU": "European Union", "GLOBAL": "Global"}.get(jur, country_name(jur.lower()) or jur)
+            for s in sorted(by_jur[jur], key=lambda x: x.key):
+                when = (s.source_updated or s.fetched_at or "")[:10]
+                lines.append(f"{label[:16]:16} {s.list_type.lower():10} {s.entity_count:>7,}  {s.name[:58]}"
+                             f"  (data {when})")
+        reg = all_list_sources()
+        loaded = {s.key for s in rows}
+        missing: Dict[str, int] = {}
+        for k, src in reg.items():
+            if k not in loaded:
+                missing[src.list_type.lower()] = missing.get(src.list_type.lower(), 0) + 1
+        keep = ["sanctions", "terrorism", "pep", "debarment", "enforcement", "wanted", "crime"]
+        gaps = [f"{missing[k]} {k}" for k in keep if k in missing]
+        if gaps:
+            lines.append("NOT searched (registered but not loaded): " + ", ".join(gaps)
+                         + "  → venombot update --group pep terrorism debarment enforcement wanted")
+        return lines
+
+    def _explain_media(self, n_articles: int) -> List[str]:
+        from venombot.feeds import all_feeds
+
+        feeds = all_feeds()
+        kinds = Counter(f.kind for f in feeds.values())
+        return [f"Searching {n_articles:,} stored articles from up to {len(feeds)} feeds "
+                f"({', '.join(f'{v} {k}' for k, v in sorted(kinds.items()))}); matching is sentence-level, "
+                "not full-text."]
+
+    def _explain_live(self, kind: str, providers: List[Any]) -> List[str]:
+        what = {"identity": "identity and PEP facts (who the name could be)",
+                "corporate": "company registries, LEI and ownership records",
+                "court": "court opinions and case law",
+                "enforcement": "regulator actions and government press releases",
+                "leak": "leaked-document databases (context only)",
+                "adverse_media": "news (negative-news search)"}.get(kind, kind)
+        lines = [f"Contacting {len(providers)} external service(s) for {what}.",
+                 "The subject's NAME is sent to each of them:"]
+        for p in providers:
+            lines.append(f"{p.jurisdiction[:6]:6} {p.key[:34]:34} {(p.notes or p.name)[:60]}")
+        return lines
+
     # -- stages --------------------------------------------------------------
 
     def _stage_refresh(self, st: StageResult) -> None:
@@ -412,6 +471,7 @@ class Investigation:
         st.detail = f"{ok}/{len(results)} lists updated"
 
     def _stage_lists(self, st: StageResult) -> None:
+        self._say(self._explain_lists())
         self.hits = screen(self.store, self.subject, min_name_score=self.opts.min_score)
         verdict = overall(self.hits)
         files = [self._write("01-lists.md", _hits_md(self.subject, self.hits, verdict))]
@@ -441,6 +501,7 @@ class Investigation:
             self._write("02-media.md", _evidence_md("Media and regulator feeds", [],
                                                     "_No articles are stored yet, so nothing was searched._"))
             return
+        self._say(self._explain_media(astore.count()))
         self.media_searched = True
         self.media_evidence = dedupe_evidence(search_articles(astore, self.subject, days=self.opts.media_days))
         st.files = [self._write("02-media.md", _evidence_md(
@@ -462,11 +523,15 @@ class Investigation:
         if not providers:
             st.status, st.detail = "skipped", "no available providers (keys not set?)"
             return
+        self._say(self._explain_live(kind, providers))
         found, records = lookup(self.subject, providers)
         found = dedupe_evidence(found)
         self.evidence += found
         self.lookups += records
         failed = [r.provider for r in records if not r.ok and not r.skipped]
+        self._say([f"Result: {r.provider}: " + ("skipped (" + r.skipped + ")" if r.skipped else
+                   ("FAILED " + r.error[:70] if not r.ok else f"{r.count} result(s)"))
+                   for r in records if r.skipped or not r.ok or r.count])
         note = (f"Queried {len(records)} provider(s) (the subject name was sent to each): "
                 + ", ".join(f"{r.provider}={'skip' if r.skipped else ('fail' if not r.ok else r.count)}"
                             for r in records))
