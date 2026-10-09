@@ -1,0 +1,214 @@
+{
+ "Publications": {
+  "DatePublication": "2026-10-08T18:01:49.6685594+02:00",
+  "PublicationDetail": [
+   {
+    "IdRegistre": 4240,
+    "Nature": "Personne physique",
+    "Nom": "SHILKIN",
+    "RegistreDetail": [
+     {
+      "TypeChamp": "PRENOM",
+      "Valeur": [
+       {
+        "Prenom": "Grigory Vladimirovich"
+       }
+      ]
+     },
+     {
+      "TypeChamp": "ALIAS",
+      "Valeur": [
+       {
+        "Alias": "Григорий Владимирович ШИЛКИН",
+        "Commentaire": ""
+       }
+      ]
+     },
+     {
+      "TypeChamp": "SEXE",
+      "Valeur": [
+       {
+        "Sexe": "Masculin"
+       }
+      ]
+     },
+     {
+      "TypeChamp": "DATE_DE_NAISSANCE",
+      "Valeur": [
+       {
+        "Jour": "20",
+        "Mois": "10",
+        "Annee": "1976",
+        "Commentaire": ""
+       }
+      ]
+     },
+     {
+      "TypeChamp": "MOTIFS",
+      "Valeur": [
+       {
+        "Motifs": "Ancien membre de la Douma d’État ayant ratifié les décisions du gouvernement sur le “traité d’amitié, de coopération et d’assistance mutuelle entre la Fédération de Russie et la République populaire de Donetsk” et le “traité d’amitié, de coopération et d’assistance mutuelle entre la Fédération de Russie et la République populaire de Louhansk”."
+       }
+      ]
+     },
+     {
+      "TypeChamp": "FONDEMENT_JURIDIQUE",
+      "Valeur": [
+       {
+        "FondementJuridique": 2329,
+        "FondementJuridiqueLabel": "(UE) 2022/332 du 25/02/2022 (UE Ukraine intégrité territoriale - R (UE) 269/2014)"
+       },
+       {
+        "FondementJuridique": 3994,
+        "FondementJuridiqueLabel": "(UE) 2025/1894 du 12/09/2025 (UE Ukraine intégrité territoriale - R (UE) 269/2014)"
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "IdRegistre": 7805,
+    "Nature": "Personne morale",
+    "Nom": "JSC Gruppa Kremniy El",
+    "RegistreDetail": [
+     {
+      "TypeChamp": "ALIAS",
+      "Valeur": [
+       {
+        "Alias": "АО Группа Кремний Эл",
+        "Commentaire": "En russe"
+       }
+      ]
+     },
+     {
+      "TypeChamp": "IDENTIFICATION",
+      "Valeur": [
+       {
+        "Identification": "/",
+        "Commentaire": "Type d’entité: société par actions  - Principal établissement: Fédération de Russie"
+       },
+       {
+        "Identification": "1023202741781",
+        "Commentaire": "Numéro d’enregistrement"
+       },
+       {
+        "Identification": "3234043140",
+        "Commentaire": "Numéro d’identification fiscale"
+       }
+      ]
+     },
+     {
+      "TypeChamp": "ADRESSE_PM",
+      "Valeur": [
+       {
+        "Adresse": "Krasnoarmeyskaya Str. 103, 241050 Bryansk, Bryanskaya Oblast, Fédération de Russie",
+        "Pays": "RUSSIE"
+       }
+      ]
+     },
+     {
+      "TypeChamp": "TELEPHONE",
+      "Valeur": [
+       {
+        "Telephone": "+ 7 (4832) 41-43-11"
+       },
+       {
+        "Telephone": "+ 7 (4832)  41-42-34"
+       }
+      ]
+     },
+     {
+      "TypeChamp": "SITE_INTERNET",
+      "Valeur": [
+       {
+        "SiteInternet": "https://group-kremny.ru/"
+       }
+      ]
+     },
+     {
+      "TypeChamp": "COURRIEL",
+      "Valeur": [
+       {
+        "Courriel": "group@kremny.032.ru"
+       }
+      ]
+     },
+     {
+      "TypeChamp": "MOTIFS",
+      "Valeur": [
+       {
+        "Motifs": "JSC Gruppa Kremniy El est le deuxième plus grand fabricant de microélectronique en Russie et, en particulier, un fabricant de micropuces. Les micropuces produites par JSC Gruppa Kremniy El dans son usine sont utilisées par l'armée russe à plusieurs fins, y compris dans les missiles balistiques Iskander. La société fait également partie du programme fédéral russe “Alternative”, qui vise à développer de nouveaux radars basés sur des réseaux actifs en phase, destinés à la défense aérienne et à être installés sur des aéronefs et des navires. Par conséquent, JSC Gruppa Kremniy El est responsable d'apporter un soutien, matériel ou financier, à des actions qui compromettent ou menacent l'intégrité territoriale, la souveraineté et l'indépendance de l'Ukraine."
+       }
+      ]
+     },
+     {
+      "TypeChamp": "FONDEMENT_JURIDIQUE",
+      "Valeur": [
+       {
+        "FondementJuridique": 3855,
+        "FondementJuridiqueLabel": "(UE) 2024/3183 du 16/12/2024 (UE Ukraine intégrité territoriale - R (UE) 269/2014)"
+       }
+      ]
+     },
+     {
+      "TypeChamp": "REFERENCE_UE",
+      "Valeur": [
+       {
+        "ReferenceUe": "EU.12598.59"
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "IdRegistre": 2218,
+    "Nature": "Navire",
+    "Nom": "Ocean Maritime Management Company, Limited - navire HUI CHON",
+    "RegistreDetail": [
+     {
+      "TypeChamp": "ALIAS",
+      "Valeur": [
+       {
+        "Alias": "HWANG GUM SAN 2",
+        "Commentaire": ""
+       }
+      ]
+     },
+     {
+      "TypeChamp": "NUMERO_OMI",
+      "Valeur": [
+       {
+        "NumeroOMI": "8405270"
+       }
+      ]
+     },
+     {
+      "TypeChamp": "MOTIFS",
+      "Valeur": [
+       {
+        "Motifs": "Navire appartenant à Ocean Maritime Management Company (OMM)"
+       }
+      ]
+     },
+     {
+      "TypeChamp": "FONDEMENT_JURIDIQUE",
+      "Valeur": [
+       {
+        "FondementJuridique": 364,
+        "FondementJuridiqueLabel": "Décision du comité de sanction des Nations unies du 02/03/2016 (ONU Corée du Nord - RCSNU 1718 (2006) et R (UE) 2017/1509)"
+       },
+       {
+        "FondementJuridique": 421,
+        "FondementJuridiqueLabel": "(UE) 2017/1509 du 30/08/2017 (ONU Corée du Nord - RCSNU 1718 (2006) et R (UE) 2017/1509)"
+       },
+       {
+        "FondementJuridique": 2433,
+        "FondementJuridiqueLabel": "(UE) 2022/1503 du 09/09/2022 (ONU Corée du Nord - RCSNU 1718 (2006) et R (UE) 2017/1509)"
+       }
+      ]
+     }
+    ]
+   }
+  ]
+ }
+}
