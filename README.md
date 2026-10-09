@@ -21,7 +21,7 @@ Or run without installing: `python3 -m venombot --help`
 python3 -m venombot update
 
 # 2. Screen a subject and write a dossier
-python3 -m venombot screen --name "Vladimir Putin" --dob 1952-10-07 --country RU \
+python3 -m venombot screen --name "Jeffrey Epstein" --dob 1953-01-20 --country US \
     --format json md html -o reports
 
 # 3. Batch screening from CSV (columns: name,dob,country,type,id,aliases)
