@@ -1,0 +1,2 @@
+node_id,name,original_name,former_name,jurisdiction,jurisdiction_description,company_type,address,internal_id,incorporation_date,inactivation_date,struck_off_date,dorm_date,status,service_provider,ibcRUC,country_codes,countries,sourceID,valid_until,note
+10000001,"SAMPLE OFFSHORE HOLDINGS LTD.",,,SAM,Samoa,,,25221,23-MAR-2006,,,,Active,Mossack Fonseca,25221,HKG,Hong Kong,Panama Papers,The Panama Papers data is current through 2015,
