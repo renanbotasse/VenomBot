@@ -4,7 +4,7 @@ Multilingual AML/KYC screening for people and organisations. VenomBot downloads 
 
 **Requirements:** Python 3.9+ — standard library only (no third-party packages).
 
-> VenomBot supports a compliance review; it never makes the decision. The strongest outcome is `HOLD_FOR_REVIEW`, and a listed match is a *potential* match until a qualified reviewer confirms it. "No match" only covers the lists that were loaded, as stated in each report's coverage section.
+> VenomBot supports a compliance review; it never makes the decision. The strongest outcome is `HOLD_FOR_REVIEW` (or `REVIEW_POSSIBLE_DECEASED` when a death is recorded for the listed person), and a listed match is a *potential* match until a qualified reviewer confirms it. "No match" only covers the lists that were loaded, as stated in each report's coverage section.
 
 ## Install
 
@@ -17,7 +17,8 @@ Or run without installing: `python3 -m venombot --help`
 ## Quick start
 
 ```bash
-# 1. Load the official lists (OFAC SDN + Consolidated, UN Security Council)
+# 1. Load the core lists: 11 official sanctions lists (OFAC, UN EN+AR, EU, UK, Switzerland, Canada,
+#    Australia, New Zealand, US CSL), ~58k entities, about a minute
 python3 -m venombot update
 
 # 2. Screen a subject and write a dossier
@@ -41,7 +42,7 @@ Output in `reports/<name>/`:
 
 | File | Content |
 |---|---|
-| `<name>_<ISO-time>.md` | **The report.** Header with requester, subject and the search time (ISO-8601 UTC). A summary on top: decision, rating, and counts per flag — matches by class (CONFIRMED/PROBABLE/POSSIBLE), by severity and list type, context items by kind and by adverse topic, lookups answered/failed/skipped — then gaps, list matches, adverse and other context, coverage, review block |
+| `<name>_<ISO-time>.md` | **The report.** Header with requester, subject and the search time (ISO-8601 UTC). A summary on top: decision, rating, and counts per flag — matches by class (CONFIRMED/PROBABLE/POSSIBLE), by severity and list type, context items by kind and by adverse topic, lookups answered/failed/skipped — then gaps, list matches, adverse and other context, coverage, review block. The same person listed by several authorities is **one match** ("1 match on 7 list entries from 7 lists") |
 | `00-summary.md` | Progress checklist, rewritten after every stage |
 | `01-lists.*`, `02-media.*`, `03-live-<kind>.*` | The parts, written as each stage ends (kinds: identity, corporate, court, enforcement, leak, adverse_media) |
 | `<name>_<ISO-time>.json/.html` | Same report as data / printable page (`--format md json html`) |
@@ -49,11 +50,17 @@ Output in `reports/<name>/`:
 
 While it runs, the terminal explains where each part's information comes from: the loaded lists grouped by issuing authority (with entity counts and data date), which registered lists are **not** loaded, and for live parts which external services receive the subject's name (`--quiet` hides this).
 
-Options: `--refresh` (update missing/stale lists first; `--refresh-groups core pep …`), `--refresh-media`, `--no-media`, `--no-live`, `--kinds court corporate`, `--providers KEY …`, `--csv file` (batch), `--resume`. A failing stage or provider never stops the run; it appears under "Gaps in this search".
+Options: `--refresh` (update missing/stale lists first; `--refresh-groups core pep …`), `--refresh-media`, `--no-media`, `--no-live`, `--kinds court corporate`, `--providers KEY …`, `--all-providers` (also run providers that duplicate another one; by default three are skipped), `--quiet`, `--csv file` (batch), `--resume`. A failing stage or provider never stops the run; it appears under "Gaps in this search" (a live part where every provider failed is marked `failed`, not `ok`).
+
+The report also does some cleaning so the numbers mean what they say:
+
+- **Possible death.** If identity data (Wikidata) gives a life span such as `1951–2022` that starts in the subject's or the listed party's birth year, the summary says so and a blocking decision becomes `REVIEW_POSSIBLE_DECEASED` (rating unchanged: the listing is still active). A namesake with another birth year is not flagged.
+- **Omitted items.** Results where the service matched the name but returned no text to verify, and aggregator items that only restate a list match already reported, are left out of the report (the weak ones stay in the JSON parts) and counted in a note.
+- **Give a date of birth.** Without one, matches stay `PROBABLE`/`POSSIBLE`; with an exact date that agrees they become `CONFIRMED`, and a conflicting date makes them `DISCOUNTED`.
 
 ### Coverage
 
-VenomBot registers **139 direct list sources**, 16 built-in OpenSanctions datasets (~440 after `lists --refresh-opensanctions`), **57 live search providers** and **42 news/regulator feeds**. The full, generated table with licences, key requirements and known gaps is in [docs/SOURCES.md](docs/SOURCES.md).
+VenomBot registers **139 direct list sources**, 17 built-in OpenSanctions datasets (~440 after `lists --refresh-opensanctions`), **57 live search providers** and **42 news/regulator feeds**. The full, generated table with licences, key requirements and known gaps is in [docs/SOURCES.md](docs/SOURCES.md).
 
 | Family | Examples |
 |---|---|
@@ -105,18 +112,18 @@ export NEWSAPI_KEY="..."
 | Variable | Unlocks | Where to get it |
 |---|---|---|
 | `VENOMBOT_CONTACT` | **Recommended.** Contact string put in the User-Agent: the 4 SEC feeds and the SEC / Wikimedia lookups answer 403 without it | any email or URL of yours |
-| `COMPANIES_HOUSE_API_KEY` | UK Companies House: company and officer search, disqualified directors | developer.company-information.service.gov.uk  |
+| `COMPANIES_HOUSE_API_KEY` | UK Companies House: company and officer search, disqualified directors | developer.company-information.service.gov.uk |
 | `FCA_REGISTER_KEY` + `FCA_REGISTER_EMAIL` | UK FCA Register (firms and individuals) | register.fca.org.uk/Developer |
 | `OPENCORPORATES_API_TOKEN` | OpenCorporates API (companies, officers) | opencorporates.com/info/our-data (API access; plans and limits change) |
 | `ALEPH_API_KEY` | OCCRP Aleph (investigative documents and entities) | aleph.occrp.org (account) |
-| `PORTAL_TRANSPARENCIA_API_KEY` | Brazil Portal da Transparência: sanctions (CEIS) and PEP lookups by name, CPF/CNPJ | portaldatransparencia.gov.br/api-de-dados  |
-| `TRADE_GOV_API_KEY` | US Consolidated Screening List search API | developer.trade.gov  |
+| `PORTAL_TRANSPARENCIA_API_KEY` | Brazil Portal da Transparência: sanctions (CEIS) and PEP lookups by name, CPF/CNPJ | portaldatransparencia.gov.br/api-de-dados |
+| `TRADE_GOV_API_KEY` | US Consolidated Screening List search API | developer.trade.gov |
 | `GOVINFO_API_KEY` | US GovInfo court documents | api.govinfo.gov (api.data.gov key) |
-| `CONGRESS_API_KEY` | `US_CONGRESS_GOV_API` PEP list | api.congress.gov/sign-up  |
+| `CONGRESS_API_KEY` | `US_CONGRESS_GOV_API` PEP list | api.congress.gov/sign-up |
 | `SEC_CONTACT_EMAIL` | `US_SEC_PAUSE` list (SEC rejects requests without a contact) | your email |
 | `NEWSAPI_KEY` | NewsAPI.org news search | newsapi.org (check the free tier's terms) |
-| `GUARDIAN_API_KEY` | The Guardian Open Platform | open-platform.theguardian.com  |
-| `NYT_API_KEY` | New York Times Article Search | developer.nytimes.com  |
+| `GUARDIAN_API_KEY` | The Guardian Open Platform | open-platform.theguardian.com |
+| `NYT_API_KEY` | New York Times Article Search | developer.nytimes.com |
 | `NEWSDATA_API_KEY`, `GNEWS_API_KEY`, `MEDIASTACK_ACCESS_KEY`, `CURRENTS_API_KEY`, `THENEWSAPI_TOKEN`, `WORLD_NEWS_API_KEY`, `EVENT_REGISTRY_API_KEY`, `MEDIA_CLOUD_API_KEY` | Other news-search APIs (many languages, including Arabic) | each provider's site (check each tier's terms) |
 | `OPENFIGI_API_KEY`, `COURTLISTENER_TOKEN` | **Optional.** Raise the anonymous rate limits of OpenFIGI and CourtListener (without them some calls return HTTP 429) | openfigi.com/api/overview, wiki.free.law/c/courtlistener/help/api |
 | `VENOMBOT_CA_BUNDLE` | Path to a CA bundle for sites with a private root CA (e.g. Russia's Rosfinmonitoring list). TLS verification is never disabled | your OS / the publisher |
@@ -157,6 +164,8 @@ Some state lists include opposition figures (Russia's Rosfinmonitoring list, Vie
 | `--source KEY …` | Restrict to specific lists |
 | `--format json md html` | Dossier formats (default json, md) |
 | `--purpose`, `--requested-by` | Recorded in the report for the audit trail |
+| `--media`, `--media-days N` | Also search the stored news/regulator feeds (see `media update`) |
+| `--live [KEY …]`, `--live-group G …` | Also query third-party search APIs (sends the name to them) |
 | `--fail-on-hit` | Exit code 3 when a subject rates HIGH/CRITICAL (CI use) |
 
 ## How matching and scoring work
@@ -167,19 +176,20 @@ Some state lists include opposition figures (Russia's Rosfinmonitoring list, Vie
 4. **Two separate axes.**
    - *Match class:* `CONFIRMED` (name + exact DOB or identifier), `PROBABLE`, `POSSIBLE`, `DISCOUNTED` (DOB conflict). Very common names without DOB never exceed `POSSIBLE`.
    - *Severity:* from the list type, never from keywords — sanctions/terrorism `CRITICAL`; wanted/crime `HIGH`; PEP/debarment/enforcement `MEDIUM`.
-5. **Action.** `HOLD_FOR_REVIEW`, `ESCALATE`, `ENHANCED_DUE_DILIGENCE`, `REVIEW`, `NO_ACTION` or `NO_MATCH_IN_SCREENED_LISTS`. Thresholds and weights live in `venombot/screening.py` (`SCORING`, versioned and stamped into every report).
+5. **Action.** `HOLD_FOR_REVIEW`, `ESCALATE`, `ENHANCED_DUE_DILIGENCE`, `REVIEW`, `NO_ACTION` or `NO_MATCH_IN_SCREENED_LISTS` (`investigate` adds `REVIEW_POSSIBLE_DECEASED`). Matches are grouped per party: the same person on several lists is one match. Thresholds and weights live in `venombot/screening.py` (`SCORING`, versioned and stamped into every report).
 
 ## The dossier
 
-Each screening writes `screening-<name>.json` (canonical), `.md` and `.html` with:
+Each `screen` run writes `screening-<name>.json` (canonical), `.md` and `.html` with:
 
 1. Subject and inputs (and a warning when no DOB was given)
 2. Verdict with reasons
 3. Candidate matches with the evidence behind each score
 4. Discounted candidates and why
-5. **Coverage** — every list searched, entity counts, data age, stale or failed lists
-6. Reviewer sign-off block
-7. Disclaimer (no sole automated decisions — GDPR Art. 22 / LGPD Art. 20)
+5. **Context (not list matches)** — articles, court records and registry entries from `--media` / `--live`, and which third parties received the name
+6. **Coverage** — every list searched, entity counts, data age, stale or failed lists
+7. Reviewer sign-off block
+8. Disclaimer (no sole automated decisions — GDPR Art. 22 / LGPD Art. 20)
 
 Reports contain personal data: `venombot_data/` and `reports/` are git-ignored. Keep retention short and record the `--purpose`.
 
@@ -200,7 +210,7 @@ It does plain-text search over raw pages, so use it for adverse-media context on
 python3 -m unittest discover -s tests
 ```
 
-Tests are offline and use real-format fixtures (OFAC and UN records are public domain; the OpenSanctions fixture is synthetic).
+Tests (about 280) are offline and use real-format fixtures (OFAC and UN records are public domain; the OpenSanctions fixture is synthetic).
 
 ## Legacy catalog: page and feed URLs
 
