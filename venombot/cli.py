@@ -127,6 +127,40 @@ def _gather_context(args: argparse.Namespace, subject):
     return evidence, lookups
 
 
+def cmd_investigate(args: argparse.Namespace) -> int:
+    from venombot.pipeline import LIVE_KINDS, Investigation, Options
+    from venombot.store import EntityStore
+
+    if not args.name and not args.csv:
+        print("error: give --name or --csv", file=sys.stderr)
+        return 2
+    db = Path(args.db)
+    if not db.exists() and not args.refresh:
+        print(f"No list database at {db}. Run 'venombot update' first, or add --refresh.", file=sys.stderr)
+        return 1
+    store = EntityStore(db)
+    if store.count() == 0 and not args.refresh:
+        print("List database is empty. Run 'venombot update' first, or add --refresh.", file=sys.stderr)
+        return 1
+    kinds = args.kinds or LIVE_KINDS
+    opts = Options(
+        refresh=args.refresh, refresh_groups=args.refresh_groups or ["core"],
+        refresh_media=args.refresh_media, media=not args.no_media, live=not args.no_live,
+        live_kinds=kinds, live_providers=args.providers, media_days=args.media_days,
+        min_score=args.min_score, formats=args.format or ["md", "json"], purpose=args.purpose or "",
+        requested_by=args.requested_by or "", resume=args.resume,
+        accept_noncommercial=args.accept_noncommercial,
+    )
+    worst_failed = 0
+    for subject in _subjects_from_args(args):
+        print(f"\n=== {subject.name} ===")
+        inv = Investigation(store, subject, Path(args.output), opts, db_path=db)
+        stages = inv.run()
+        print(f"\nReport: {inv.report_path}\nParts:  {inv.dir}/ (00-summary.md lists them)")
+        worst_failed += sum(1 for s in stages if s.status == "failed")
+    return 1 if worst_failed else 0
+
+
 def cmd_media(args: argparse.Namespace) -> int:
     from venombot.feeds import all_feeds, select_feeds
     from venombot.feeds.store import ArticleStore
@@ -315,6 +349,35 @@ def build_parser() -> argparse.ArgumentParser:
     p_sc.add_argument("--fail-on-hit", action="store_true",
                       help="Exit 3 when any subject rates HIGH or CRITICAL (for pipelines)")
     p_sc.set_defaults(func=cmd_screen)
+
+    p_in = sub.add_parser(
+        "investigate",
+        help="One command: lists + stored media + live lookups, delivered part by part",
+    )
+    p_in.add_argument("--name", help='Full name, quoted: --name "Jeffrey Epstein"')
+    p_in.add_argument("--alias", nargs="+", help="Other known names")
+    p_in.add_argument("--dob", help="Date of birth (any format; year-only accepted)")
+    p_in.add_argument("--country", help="Nationality / country")
+    p_in.add_argument("--type", choices=["person", "org", "any"], default="any")
+    p_in.add_argument("--id", nargs="+", help="Passport / ID / registration numbers")
+    p_in.add_argument("--csv", help="Batch file with columns name,dob,country,type,id,aliases")
+    p_in.add_argument("--refresh", action="store_true", help="First update missing/stale lists")
+    p_in.add_argument("--refresh-groups", nargs="+", help="Groups to refresh (default: core)")
+    p_in.add_argument("--refresh-media", action="store_true", help="First update all news/regulator feeds")
+    p_in.add_argument("--no-media", action="store_true", help="Skip the stored-feed search")
+    p_in.add_argument("--no-live", action="store_true", help="Do not contact third-party search APIs")
+    p_in.add_argument("--kinds", nargs="+", help="Live parts to run (identity corporate court enforcement leak adverse_media)")
+    p_in.add_argument("--providers", nargs="+", help="Restrict live lookups to these provider keys")
+    p_in.add_argument("--media-days", type=int, help="Only articles from the last N days")
+    p_in.add_argument("--min-score", type=float, help="Name-score floor (default 0.80)")
+    p_in.add_argument("--resume", action="store_true", help="Skip stages already finished in a previous run")
+    p_in.add_argument("--accept-noncommercial", action="store_true", help="Allow CC BY-NC lists when refreshing")
+    p_in.add_argument("--format", nargs="+", choices=["json", "md", "html"], help="Dossier formats (default md json)")
+    p_in.add_argument("--purpose", help="Why this investigation is performed (recorded in the report)")
+    p_in.add_argument("--requested-by", help="Requester (recorded in the report)")
+    p_in.add_argument("--db", default=DEFAULT_DB)
+    p_in.add_argument("-o", "--output", default="reports", help="Output directory")
+    p_in.set_defaults(func=cmd_investigate)
 
     p_md = sub.add_parser("media", help="Manage RSS/Atom news and regulator-press feeds")
     p_md.add_argument("action", choices=["update", "list", "status", "purge"])
