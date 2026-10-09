@@ -1,0 +1,48 @@
+{
+"head": {
+"link": [],
+"vars": [
+"work",
+"title",
+"date"
+]
+},
+"results": {
+"distinct": false,
+"ordered": true,
+"bindings": [
+{
+"work": {
+"type": "uri",
+"value": "http://publications.europa.eu/resource/cellar/a3b39bb7-b6ed-11e6-9e3c-01aa75ed71a1"
+},
+"title": {
+"type": "literal",
+"xml:lang": "en",
+"value": "Judgment of the General Court (Ninth Chamber) of 30 November 2016.#Arkady Romanovich Rotenberg v Council of the European Union.#Common foreign and security policy — Restrictive measures having regard to actions compromising or threatening Ukraine — Freezing of funds — Restrictions on admission to territory of the Member States — Natural person actively supporting of implementing actions compromising of threatening Ukraine — Physical person benefiting from the Russian decision-makers responsible for the annexation of Crimea — Rights of defence — Obligation to state reasons — Manifest errors of assessment — Right to property — Freedom to conduct a business — Right to respect for private life — Proportionality.#Case T-720/14."
+},
+"date": {
+"type": "literal",
+"datatype": "http://www.w3.org/2001/XMLSchema#date",
+"value": "2016-11-30"
+}
+},
+{
+"work": {
+"type": "uri",
+"value": "http://publications.europa.eu/resource/cellar/a6f55938-b6ed-11e6-9e3c-01aa75ed71a1"
+},
+"title": {
+"type": "literal",
+"xml:lang": "en",
+"value": "Judgment of the General Court (Ninth Chamber) of 30 November 2016.#Arkady Romanovich Rotenberg v Council of the European Union.#Common foreign and security policy — Restrictive measures in respect of actions undermining or threatening Ukraine — Freezing of funds — Restrictions on admission to the territories of the Member States — Natural person actively supporting or implementing actions undermining or threatening Ukraine — Natural person benefiting from Russian decision-makers responsible for the annexation of Crimea — Rights of defence — Obligation to state reasons — Manifest errors of assessment — Right to property — Freedom to conduct a business — Right to respect for private life — Proportionality.#Case T-720/14."
+},
+"date": {
+"type": "literal",
+"datatype": "http://www.w3.org/2001/XMLSchema#date",
+"value": "2016-11-30"
+}
+}
+]
+}
+}
