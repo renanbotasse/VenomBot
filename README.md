@@ -6,18 +6,70 @@ Multilingual AML/KYC screening for people and organisations. VenomBot downloads 
 
 > VenomBot supports a compliance review; it never makes the decision. The strongest outcome is `HOLD_FOR_REVIEW` (or `REVIEW_POSSIBLE_DECEASED` when a death is recorded for the listed person), and a listed match is a *potential* match until a qualified reviewer confirms it. "No match" only covers the lists that were loaded, as stated in each report's coverage section.
 
-## Install
+## Getting started: step by step
+
+Everything below is copy-paste. You need **Python 3.9+** and **git**; nothing else to install.
+
+**1. Get the code**
 
 ```bash
-pip install -e .
+git clone https://github.com/renanbotasse/VenomBot.git
+cd VenomBot
+python3 -m venombot --help        # should list: update, lists, screen, investigate, media, ...
 ```
 
-Or run without installing: `python3 -m venombot --help`
-
-## Quick start
+**2. Set your contact** (one line, required for the SEC and Wikimedia sources, which reject anonymous clients):
 
 ```bash
-# 1. Load the core lists: 11 official sanctions lists (OFAC, UN EN+AR, EU, UK, Switzerland, Canada,
+export VENOMBOT_CONTACT="you@example.com"
+```
+
+**3. Add API keys (optional, but this is what makes news and registries work).** Without any key everything still runs; those providers are just skipped. The two worth getting first:
+
+```bash
+export GUARDIAN_API_KEY="..."          # news search (or NEWSAPI_KEY)
+export COMPANIES_HOUSE_API_KEY="..."   # UK companies and officers
+```
+
+The full list of keys, what each unlocks and where to get it is in [Secrets and environment variables](#secrets-and-environment-variables). Set them in the same terminal before running (they are not read from a file).
+
+**4. Download the data** (one time, then repeat to refresh; the first run is the slow one):
+
+```bash
+python3 -m venombot update                                        # 11 official sanctions lists, ~1 min
+python3 -m venombot update --group pep terrorism debarment enforcement wanted   # PEP, terrorism, debarment, regulators
+python3 -m venombot media update                                  # news and regulator feeds (needed for the media part)
+```
+
+Optional, for the non-commercial OpenSanctions lists (more countries, plus the Interpol red notices):
+
+```bash
+python3 -m venombot lists --refresh-opensanctions
+python3 -m venombot update --source OS_INTERPOL_RED_NOTICES --accept-noncommercial
+python3 -m venombot update --group os-sanctions os-pep os-wanted --accept-noncommercial
+```
+
+Check what is loaded with `python3 -m venombot lists --loaded`.
+
+**5. Investigate someone**
+
+```bash
+python3 -m venombot investigate --name "Full Name" --dob 1970-05-14 --country BR \
+    --requested-by "your-name" --purpose "KYC"
+```
+
+Add `--dob` whenever you have it: it separates the right person from namesakes. The terminal explains where each part comes from, and the result is `reports/<name>/<name>_<time>.md` (summary on top).
+
+**6. Keep it fresh.** Re-run step 4 when you want newer data, or let `investigate --refresh --refresh-media` update stale lists and feeds before searching.
+
+**If something fails:** the report lists it under "Gaps in this search" with the reason (a missing key shows as `skipped`; GDELT and Interpol limits are explained in [Interpol and GDELT: known limits](#interpol-and-gdelt-known-limits)). The data lives in `venombot_data/` and the reports in `reports/`; both contain personal data and are git-ignored.
+
+Optional install as a command (`venombot ...` instead of `python3 -m venombot ...`): `pip install -e .`
+
+## Quick reference
+
+```bash
+# 1. Load the core lists (see Getting started for the full setup): 11 official sanctions lists (OFAC, UN EN+AR, EU, UK, Switzerland, Canada,
 #    Australia, New Zealand, US CSL), ~58k entities, about a minute
 python3 -m venombot update
 
