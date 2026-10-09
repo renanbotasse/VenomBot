@@ -1,0 +1,125 @@
+{
+"took": 10,
+"timed_out": false,
+"_shards": {
+"total": 1,
+"successful": 1,
+"skipped": 0,
+"failed": 0
+},
+"hits": {
+"total": {
+"value": 5,
+"relation": "eq"
+},
+"max_score": 27.19653,
+"hits": [
+{
+"_index": "edgar_entity_20261009_040207",
+"_id": "1443029",
+"_score": 27.19653,
+"_source": {
+"entity": "TCBY OF KUWAIT, INC.",
+"entity_words": "TCBY OF KUWAIT, INC.",
+"rank": 919707
+}
+},
+{
+"_index": "edgar_entity_20261009_040207",
+"_id": "1098000",
+"_score": 24.972633,
+"_source": {
+"entity": "KUWAIT PETROLEUM CORP",
+"entity_words": "KUWAIT PETROLEUM CORP",
+"rank": 15600
+}
+},
+{
+"_index": "edgar_entity_20261009_040207",
+"_id": "1456931",
+"_score": 24.47235,
+"_source": {
+"entity": "KUWAIT GATEWAY FUND LTD",
+"entity_words": "KUWAIT GATEWAY FUND LTD",
+"rank": 69
+}
+},
+{
+"_index": "edgar_entity_20261009_040207",
+"_id": "933491",
+"_score": 23.736227,
+"_source": {
+"entity": "KUWAIT INVESTMENT AUTHORITY ON BEHALF OF THE GOVT OF KUWAIT",
+"entity_words": "KUWAIT INVESTMENT AUTHORITY ON BEHALF OF THE GOVT OF KUWAIT",
+"rank": 44259
+}
+},
+{
+"_index": "edgar_entity_20261009_040207",
+"_id": "1677528",
+"_score": 23.529598,
+"_source": {
+"entity": "Kuwait Investment Office",
+"entity_words": "Kuwait Investment Office",
+"rank": 1266
+}
+}
+]
+},
+"query": {
+"query": {
+"bool": {
+"should": [
+{
+"match": {
+"entity": {
+"query": "kuwait",
+"operator": "and"
+}
+}
+},
+{
+"match": {
+"tickers": {
+"query": "kuwait",
+"operator": "and",
+"boost": 100
+}
+}
+},
+{
+"exists": {
+"field": "tickers",
+"boost": 10
+}
+}
+],
+"must": [
+{
+"bool": {
+"should": [
+{
+"match": {
+"entity": {
+"query": "kuwait",
+"operator": "and"
+}
+}
+},
+{
+"match": {
+"_id": {
+"query": "kuwait"
+}
+}
+}
+]
+}
+}
+]
+}
+},
+"from": 0,
+"size": 10
+}
+}
