@@ -1,0 +1,100 @@
+{
+"data": [
+{
+"figi": "BBG01BB1NJ93",
+"name": "KUWAIT FINANCE HOUSE",
+"ticker": "KFHKWD",
+"exchCode": "XH",
+"compositeFIGI": "BBG01BB1NJ57",
+"securityType": "Common Stock",
+"marketSector": "Equity",
+"shareClassFIGI": "BBG001S8S9M5",
+"securityType2": "Common Stock",
+"securityDescription": "KFHKWD"
+},
+{
+"figi": "BBG01BB1NJS2",
+"name": "KUWAIT FINANCE HOUSE",
+"ticker": "KFHKWD",
+"exchCode": "XA",
+"compositeFIGI": "BBG01BB1NJ57",
+"securityType": "Common Stock",
+"marketSector": "Equity",
+"shareClassFIGI": "BBG001S8S9M5",
+"securityType2": "Common Stock",
+"securityDescription": "KFHKWD"
+},
+{
+"figi": "BBG01BB1NJZ4",
+"name": "KUWAIT FINANCE HOUSE",
+"ticker": "KFHKWD",
+"exchCode": "XY",
+"compositeFIGI": "BBG01BB1NJ57",
+"securityType": "Common Stock",
+"marketSector": "Equity",
+"shareClassFIGI": "BBG001S8S9M5",
+"securityType2": "Common Stock",
+"securityDescription": "KFHKWD"
+},
+{
+"figi": "BBG01BB1NKJ9",
+"name": "KUWAIT FINANCE HOUSE",
+"ticker": "KFHKWD",
+"exchCode": "EU",
+"compositeFIGI": "BBG01BB1NKH1",
+"securityType": "Common Stock",
+"marketSector": "Equity",
+"shareClassFIGI": "BBG001S8S9M5",
+"securityType2": "Common Stock",
+"securityDescription": "KFHKWD"
+},
+{
+"figi": "BBG01NHHDJC3",
+"name": "KUWAIT FINANCE HOUSE",
+"ticker": "KFHMK",
+"exchCode": null,
+"compositeFIGI": null,
+"securityType": "MURABAHA",
+"marketSector": "M-Mkt",
+"shareClassFIGI": null,
+"securityType2": "TD",
+"securityDescription": "KFHMK MRBH"
+},
+{
+"figi": "BBG01BB1NJJ2",
+"name": "KUWAIT FINANCE HOUSE",
+"ticker": "KFHKWD",
+"exchCode": "XJ",
+"compositeFIGI": "BBG01BB1NJ57",
+"securityType": "Common Stock",
+"marketSector": "Equity",
+"shareClassFIGI": "BBG001S8S9M5",
+"securityType2": "Common Stock",
+"securityDescription": "KFHKWD"
+},
+{
+"figi": "BBG00DY31C72",
+"name": "KUWAIT FINANCE HOUSE",
+"ticker": "KFINKK",
+"exchCode": null,
+"compositeFIGI": null,
+"securityType": "DOMESTC TIME DEP",
+"marketSector": "M-Mkt",
+"shareClassFIGI": null,
+"securityType2": "TD",
+"securityDescription": "KFINKK DTD"
+},
+{
+"figi": "BBG000G8NHQ3",
+"name": "KUWAIT FINANCE HOUSE",
+"ticker": "KFH",
+"exchCode": "KK",
+"compositeFIGI": "BBG000G8NH56",
+"securityType": "Common Stock",
+"marketSector": "Equity",
+"shareClassFIGI": "BBG001S8S9M5",
+"securityType2": "Common Stock",
+"securityDescription": "KFH"
+}
+]
+}
