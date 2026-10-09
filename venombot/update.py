@@ -37,7 +37,8 @@ def fetch_source(src: ListSource, workdir: Path) -> Dict[str, Path]:
     paths: Dict[str, Path] = {}
     for name, url in src.urls.items():
         url = url.replace("{api_key}", key)
-        res = download(url, workdir / f"{src.key}.{name}", headers=headers, timeout=src.timeout)
+        res = download(url, workdir / f"{src.key}.{name}", headers=headers, timeout=src.timeout,
+                       data=src.post_data)
         if not res.ok or res.path is None:
             raise RuntimeError(f"{name}: {res.error or 'download failed'} ({url})")
         if res.bytes == 0:
