@@ -237,7 +237,7 @@ def build_parser() -> argparse.ArgumentParser:
     p_ls.set_defaults(func=cmd_lists)
 
     p_sc = sub.add_parser("screen", help="Screen a person or organisation and write a dossier")
-    p_sc.add_argument("--name", help='Full name, quoted: --name "Vladimir Putin"')
+    p_sc.add_argument("--name", help='Full name, quoted: --name "Jeffrey Epstein"')
     p_sc.add_argument("--alias", nargs="+", help="Other known names to screen too")
     p_sc.add_argument("--dob", help="Date of birth (any format; year-only accepted)")
     p_sc.add_argument("--country", help="Nationality/country, e.g. 'KW' or 'Kuwait'")
