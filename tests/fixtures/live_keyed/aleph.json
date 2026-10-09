@@ -1,0 +1,1 @@
+{"status": "ok", "total": 1, "results": [{"id": "abc.def", "schema": "Person", "caption": "Jon Testerman", "properties": {"name": ["Jon Testerman"], "alias": ["J. Testerman"], "country": ["gb"]}, "collection": {"label": "Test leak"}}]}
