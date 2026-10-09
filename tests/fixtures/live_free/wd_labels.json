@@ -1,0 +1,25 @@
+{
+"entities": {
+"Q100877419": {
+"type": "item",
+"id": "Q100877419",
+"labels": {
+"en": {
+"language": "en",
+"value": "emir of Kuwait"
+}
+}
+},
+"Q12243161": {
+"type": "item",
+"id": "Q12243161",
+"labels": {
+"en": {
+"language": "en",
+"value": "Mishal Al-Ahmad Al-Jaber Al-Sabah"
+}
+}
+}
+},
+"success": 1
+}

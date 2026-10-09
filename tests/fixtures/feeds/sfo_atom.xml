@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xml:lang="en-US" xmlns="http://www.w3.org/2005/Atom">
+  <id>tag:www.gov.uk,2005:/search/news-and-communications</id>
+  <link rel="alternate" type="text/html" href="https://www.gov.uk"/>
+  <link rel="self" type="application/atom+xml" href="https://www.gov.uk/search/news-and-communications.atom?organisations%5B%5D=serious-fraud-office"/>
+  <title>News and communications from Serious Fraud Office (SFO)</title>
+  <updated>2026-10-07T13:18:51+01:00</updated>
+  <author>
+    <name>HM Government</name>
+  </author>
+  <entry>
+    <id>tag:www.gov.uk,2005:/government/news/response-to-supreme-court-judgment</id>
+    <updated>2026-10-07T13:18:51+01:00</updated>
+    <link rel="alternate" type="text/html" href="https://www.gov.uk/government/news/response-to-supreme-court-judgment"/>
+    <title>Response to Supreme Court judgment</title>
+    <summary type="html">A statement by the Serious Fraud Office on R v Hayes and R v Palombo.</summary>
+  </entry>
+  <entry>
+    <id>tag:www.gov.uk,2005:/government/news/applications-open-for-next-director-of-the-serious-fraud-office</id>
+    <updated>2026-10-07T11:03:00+01:00</updated>
+    <link rel="alternate" type="text/html" href="https://www.gov.uk/government/news/applications-open-for-next-director-of-the-serious-fraud-office"/>
+    <title>Applications open for next Director of the Serious Fraud Office</title>
+    <summary type="html">The Attorney General has announced applications are open for a new Director to lead the Serious Fraud Office.</summary>
+  </entry>
+  <entry>
+    <id>tag:www.gov.uk,2005:/government/news/prison-for-directors-behind-70-million-investment-fraud</id>
+    <updated>2026-09-03T12:47:25+01:00</updated>
+    <link rel="alternate" type="text/html" href="https://www.gov.uk/government/news/prison-for-directors-behind-70-million-investment-fraud"/>
+    <title>Prison for directors behind £70 million investment fraud</title>
+    <summary type="html">Former directors sentenced for defrauding 3,000 people. </summary>
+  </entry>
+</feed>

@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<CONSOLIDATED_LIST xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://www.un.org/sc/resources/sc-sanctions.xsd" dateGenerated="2026-10-08T23:00:04.278Z">
+  <INDIVIDUALS><INDIVIDUAL>
+      <DATAID>6908072</DATAID>
+      <VERSIONNUM>1</VERSIONNUM>
+      <FIRST_NAME>طارق</FIRST_NAME>
+      <SECOND_NAME>عزيز</SECOND_NAME>
+      <UN_LIST_TYPE>Iraq</UN_LIST_TYPE>
+      <REFERENCE_NUMBER>IQi.025</REFERENCE_NUMBER>
+      <LISTED_ON>2003-06-27</LISTED_ON>
+      <NAME_ORIGINAL_SCRIPT>طارق عزيز</NAME_ORIGINAL_SCRIPT>
+      <COMMENTS1/>
+      <HAS_INTERPOL_LINK>NO</HAS_INTERPOL_LINK>
+      <INTERPOL_LINK/>
+      <NATIONALITY>
+        <VALUE>Iraq</VALUE>
+      </NATIONALITY>
+      <LIST_TYPE>
+        <VALUE>UN List</VALUE>
+      </LIST_TYPE>
+      <LAST_DAY_UPDATED>
+        <VALUE/>
+      </LAST_DAY_UPDATED>
+      <INDIVIDUAL_ALIAS>
+        <QUALITY>Good</QUALITY>
+        <ALIAS_NAME>Tariq Mikhail Aziz</ALIAS_NAME>
+        <CITY_OF_BIRTH>Baghdad</CITY_OF_BIRTH>
+        <COUNTRY_OF_BIRTH>Iraq</COUNTRY_OF_BIRTH>
+      </INDIVIDUAL_ALIAS>
+      <INDIVIDUAL_ADDRESS>
+        <COUNTRY/>
+      </INDIVIDUAL_ADDRESS>
+      <INDIVIDUAL_DATE_OF_BIRTH>
+        <TYPE_OF_DATE>EXACT</TYPE_OF_DATE>
+        <DATE>1936-07-01</DATE>
+      </INDIVIDUAL_DATE_OF_BIRTH>
+      <INDIVIDUAL_PLACE_OF_BIRTH>
+        <CITY>الموصل</CITY>
+        <COUNTRY>Iraq</COUNTRY>
+      </INDIVIDUAL_PLACE_OF_BIRTH>
+      <INDIVIDUAL_DOCUMENT>
+        <TYPE_OF_DOCUMENT>Passport</TYPE_OF_DOCUMENT>
+        <NUMBER>No34409/129</NUMBER>
+        <NOTE>(July 1997)</NOTE>
+      </INDIVIDUAL_DOCUMENT>
+      <SORT_KEY/>
+      <SORT_KEY_LAST_MOD/>
+    </INDIVIDUAL><INDIVIDUAL>
+      <DATAID>6907994</DATAID>
+      <VERSIONNUM>1</VERSIONNUM>
+      <FIRST_NAME>فرانك كاكوليلي</FIRST_NAME>
+      <SECOND_NAME>بوامباليه</SECOND_NAME>
+      <UN_LIST_TYPE>DRC</UN_LIST_TYPE>
+      <REFERENCE_NUMBER>CDi.002</REFERENCE_NUMBER>
+      <LISTED_ON>2005-11-01</LISTED_ON>
+      <GENDER>الذكر</GENDER>
+      <COMMENTS1>غادر المؤتمر الوطني للدفاع عن الشعب في كانون الثاني/يناير 2008. وكان مقيما في كينشاسا في حزيران/يونيه 2011. ودأب كاكوليلي (Kakolele) منذ عام 2010 على المشاركة في أنشطة يبدو أنها تتم باسم برنامج تحقيق الاستقرار والإعمار في المناطق الخارجة من النزاع المسلح، التابع لحكومة جمهورية الكونغو الديمقراطية، بما في ذلك مشاركته في بعثة أوفدها البرنامج إلى غوما وبيني في آذار/مارس 2011. واعتقلته سلطات جمهورية الكونغو الديمقراطية في كانون الأول/ديسمبر 2013 في بيني، بمقاطعة كيفو الشمالية، بتهمة عرقلة عملية التسريح ونزع السلاح وإعادة الإدماج. وغادر جمهورية الكونغو الديمقراطية ليقيم في كينيا لبعض الوقت، قبل أن تستدعيه حكومة جمهورية الكونغو الديمقراطية لمساعدتها في معالجة الحالة في إقليم بيني. واعتُقل في تشرين الأول/أكتوبر 2015 في منطقة مامباسا بدعوى قيامه بدعم إحدى جماعات ماي ماي، ولكن لم توجَّه له أي تهم، وقد كان مقيما في كينشاسا في حزيران/يونيه 2016.  الإشعار الخاص المشترك بين الإنتربول ومجلس الأمنhttps://www.interpol.int/en/How-we-work/Notices/View-UN-Notices-Individuals</COMMENTS1>
+      <HAS_INTERPOL_LINK>YES</HAS_INTERPOL_LINK>
+      <INTERPOL_LINK>https://www.interpol.int/en/How-we-work/Notices/View-UN-Notices-Individuals#2014-13466</INTERPOL_LINK>
+      <DESIGNATION>
+        <VALUE>جنرال بالقوات المسلحة لجمهورية الكونغو الديمقراطية</VALUE>
+      </DESIGNATION>
+      <NATIONALITY>
+        <VALUE>Democratic Republic of the Congo</VALUE>
+      </NATIONALITY>
+      <LIST_TYPE>
+        <VALUE>UN List</VALUE>
+      </LIST_TYPE>
+      <LAST_DAY_UPDATED>
+        <VALUE>2016-10-13</VALUE>
+      </LAST_DAY_UPDATED>
+      <INDIVIDUAL_ALIAS>
+        <QUALITY>Good</QUALITY>
+        <ALIAS_NAME>FRANK KAKORERE</ALIAS_NAME>
+      </INDIVIDUAL_ALIAS>
+      <INDIVIDUAL_ALIAS>
+        <QUALITY>Good</QUALITY>
+        <ALIAS_NAME>FRANK KAKORERE BWAMBALE</ALIAS_NAME>
+      </INDIVIDUAL_ALIAS>
+      <INDIVIDUAL_ALIAS>
+        <QUALITY>Good</QUALITY>
+        <ALIAS_NAME>AIGLE BLANC</ALIAS_NAME>
+      </INDIVIDUAL_ALIAS>
+      <INDIVIDUAL_ADDRESS>
+        <CITY>كينشاسا، جمهورية الكونغو الديمقراطية </CITY>
+        <COUNTRY>Democratic Republic of the Congo</COUNTRY>
+        <NOTE>في حزيران/يونيه 2016</NOTE>
+      </INDIVIDUAL_ADDRESS>
+      <INDIVIDUAL_DATE_OF_BIRTH>
+        <TYPE_OF_DATE/>
+      </INDIVIDUAL_DATE_OF_BIRTH>
+      <INDIVIDUAL_PLACE_OF_BIRTH>
+        <COUNTRY/>
+      </INDIVIDUAL_PLACE_OF_BIRTH>
+      <INDIVIDUAL_DOCUMENT/>
+      <SORT_KEY/>
+      <SORT_KEY_LAST_MOD/>
+    </INDIVIDUAL></INDIVIDUALS><ENTITIES><ENTITY>
+      <DATAID>6908402</DATAID>
+      <VERSIONNUM>1</VERSIONNUM>
+      <FIRST_NAME>تحالف القوى الديمقراطية</FIRST_NAME>
+      <UN_LIST_TYPE>DRC</UN_LIST_TYPE>
+      <REFERENCE_NUMBER>CDe.001</REFERENCE_NUMBER>
+      <LISTED_ON>2014-06-30</LISTED_ON>
+      <COMMENTS1>اعتُقل مؤسس تحالف القوى الديمقراطية وقائده، جميل موكولو (CDi.015)، في دار السلام، تنزانيا في نيسان/أبريل 2015. وسُلِّم لاحقا إلى كمبالا، أوغندا في تموز/يوليه 2015. وتفيد التقارير أن موكولو (Mukulu) كان في حزيران/يونيه 2016 محتجزاً في زنزانة للشرطة في انتظار محاكمته. وقد خلَف سيكا بالوكو (CDi.036) جميل موكولو (CDi.015) كقائد عام لتحالف القوى الديمقراطية. وكما هو موضح في عدة تقارير أعدها فريق الخبراء المعني بجمهورية الكونغو الديمقراطية (S/2015/19، S/2015/797، S/2016/1102، S/2017/672، S/2018/531، S/2019/469، S/2019/974، S/2020/482)، فقد ظل تحالف القوى الديمقراطية، بما في ذلك بقيادة سيكا بالوكو، يرتكب عمليات استهداف متكررة ضد المدنيين، بمن فيهم الأطفال، ومنها القتل والتشويه والاغتصاب وغير ذلك من أعمال العنف الجنسي والاختطاف، وكذلك الهجمات على القرى والمرافق الصحية، لا سيما في ماموفِه بإقليم بيني في 12 و 24 شباط/فبراير 2019، ومانتومبي بإقليم بيني في 5 كانون الأول/ديسمبر 2019 و 30 كانون الثاني/يناير 2020، وكذلك التجنيد المستمر للأطفال واستخدامهم أثناء الهجمات ومن أجل العمل القسري في إقليم بيني بجمهورية الكونغو الديمقراطية منذ عام 2015 على الأقل.  الإشعار الخاص المشترك بين الإنتربول ومجلس الأمنhttps://www.interpol.int/en/How-we-work/Notices/View-UN-Notices-Entities</COMMENTS1>
+      <HAS_INTERPOL_LINK>YES</HAS_INTERPOL_LINK>
+      <INTERPOL_LINK>https://www.interpol.int/en/How-we-work/Notices/View-UN-Notices-Entities#2015-28326</INTERPOL_LINK>
+      <LIST_TYPE>
+        <VALUE>UN List</VALUE>
+      </LIST_TYPE>
+      <LAST_DAY_UPDATED>
+        <VALUE>2016-10-19</VALUE>
+        <VALUE>2020-08-19</VALUE>
+      </LAST_DAY_UPDATED>
+      <ENTITY_ALIAS>
+        <QUALITY>a.k.a.</QUALITY>
+        <ALIAS_NAME>Allied Democratic Forces</ALIAS_NAME>
+      </ENTITY_ALIAS>
+      <ENTITY_ALIAS>
+        <QUALITY>f.k.a.</QUALITY>
+        <ALIAS_NAME>Forces Démocratiques Alliées-Armée Nationale de Libération de l’Ouganda</ALIAS_NAME>
+      </ENTITY_ALIAS>
+      <ENTITY_ALIAS>
+        <QUALITY>f.k.a.</QUALITY>
+        <ALIAS_NAME>ADF/NALU</ALIAS_NAME>
+      </ENTITY_ALIAS>
+      <ENTITY_ALIAS>
+        <QUALITY>f.k.a.</QUALITY>
+        <ALIAS_NAME>NALU</ALIAS_NAME>
+      </ENTITY_ALIAS>
+      <ENTITY_ADDRESS>
+        <STATE_PROVINCE>كيفو الشمالية</STATE_PROVINCE>
+        <COUNTRY>Democratic Republic of the Congo</COUNTRY>
+      </ENTITY_ADDRESS>
+      <SORT_KEY/>
+      <SORT_KEY_LAST_MOD/>
+    </ENTITY></ENTITIES></CONSOLIDATED_LIST>

@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" standalone="yes"?>
+<NewDataSet>
+  <Table>
+    <IndividualID>4</IndividualID>
+    <ReferenceNumber>QDi.430</ReferenceNumber>
+    <FullName>EMRAAN ALI  </FullName>
+    <ListedOn>2021-11-23</ListedOn>
+    <Comments>Senior member of Islamic State in Iraq and the Levant (ISIL), listed as Al-Qaida in Iraq (QDe.115). Recruited for ISIL and instructed individuals to perpetrate terrorist acts. Physical description: height 176 cm, weight 73 kg, medium built, colour of eyes- brown, colour of hair- black/bald, complexion- brown. Speaks English. INTERPOL-UN Security Council Special Notice web link: https://www.interpol.int/en/How-we-work/Notices/View-UN-Notices-Individuals</Comments>
+    <IndividualDateOfBirth>1967-07-04</IndividualDateOfBirth>
+    <IndividualPlaceOfBirth>Rio Claro, Trinidad and Tobago</IndividualPlaceOfBirth>
+    <IndividualAlias>Low, Abu Jihad TNT</IndividualAlias>
+    <Nationality>Trinidad and Tobago</Nationality>
+    <IndividualDocument>National Identification Number, 19670704052, Passport, 420985453, Passport, TB162181</IndividualDocument>
+    <IndividualAddress>#12 Rio Claro Mayaro Road, Rio Claro Trinidad and Tobago, #7 GUAYAGUAYARE Road, Rio Claro Trinidad and Tobago, United States of America</IndividualAddress>
+  </Table>
+  <Table>
+    <IndividualID>148</IndividualID>
+    <ReferenceNumber>YEi.010</ReferenceNumber>
+    <FullName>MANSUR AL-SAADI   </FullName>
+    <ListedOn>2022-09-26</ListedOn>
+    <Comments>Houthi Naval Forces Chief of Staff, who has masterminded lethal attacks against international shipping in the Red Sea, plays a leading role in Houthi naval efforts that directly threaten the peace, security, and stability of Yemen. Physical Description: Eye Color: Brown; Hair: Brown. INTERPOL-UN Security Council Special Notice web link: https://www.interpol.int/en/How-we-work/Notices/View-UN-Notices-Individuals</Comments>
+    <Designation>Major General, Houthi Commander of Yemens Naval and Coastal Defense Forces</Designation>
+    <IndividualAlias>Low, Abu Sajjad, Low, Mansoor Ahmed Al Saadi, Low, Mansur Ahmad al-Saadi</IndividualAlias>
+    <Nationality>Yemen</Nationality>
+    <IndividualAddress>Yemen</IndividualAddress>
+  </Table>
+  <Table1>
+    <EntityID>3</EntityID>
+    <ReferenceNumber>QDe.144</ReferenceNumber>
+    <FirstName>ABDALLAH AZZAM BRIGADES (AAB)</FirstName>
+    <ListedOn>23-09-2014</ListedOn>
+    <Comments>An armed group that has carried out joint attacks with Al-Nusrah Front for the People of the Levant (QDe.137). Review pursuant to Security Council resolution 2368 (2017) was concluded on 4 Dec. 2019. INTERPOL-UN Security Council Special Notice web link: https://www.interpol.int/en/How-we-work/Notices/View-UN-Notices-Entities</Comments>
+    <EntityAlias>a.k.a., Abdullah Azzam Brigades, a.k.a., Yusuf al-Uyayri Battalions of the Abdallah Azzam Brigades, a.k.a., Ziyad al-Jarrah Battalions of the Abdallah Azzam Brigades</EntityAlias>
+    <EntityAddress>Operates in Lebanon, Syria and the Arabian Peninsula</EntityAddress>
+  </Table1>
+</NewDataSet>

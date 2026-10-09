@@ -1,0 +1,5 @@
+state,stateLabel,role,person,personLabel,dob,start
+http://www.wikidata.org/entity/Q184,Belarus,head_of_state,http://www.wikidata.org/entity/Q2866,Alexander Lukashenka,1954-08-30T00:00:00Z,1994-07-20T00:00:00Z
+http://www.wikidata.org/entity/Q159,Russia,head_of_state,http://www.wikidata.org/entity/Q7747,Vladimir Putin,1952-10-07T00:00:00Z,2012-05-07T00:00:00Z
+http://www.wikidata.org/entity/Q148,People's Republic of China,head_of_state,http://www.wikidata.org/entity/Q15031,Xi Jinping,1953-06-15T00:00:00Z,2013-03-14T00:00:00Z
+http://www.wikidata.org/entity/Q155,Brazil,head_of_state,http://www.wikidata.org/entity/Q37181,Luiz Inácio Lula da Silva,1945-10-27T00:00:00Z,2023-01-01T00:00:00Z

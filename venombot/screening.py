@@ -275,3 +275,77 @@ def overall(hits: List[Hit]) -> Dict[str, Any]:
         rating, decision = "NONE", "NO_MATCH_IN_SCREENED_LISTS"
         reasons.append("no candidate above threshold in the lists screened")
     return {"rating": rating, "decision": decision, "reasons": reasons[:20]}
+
+
+@dataclass
+class Cluster:
+    """The same real-world party listed by several authorities.
+
+    Seven lists naming one person are one match with seven sources, not seven
+    matches; reporting them separately overstates the finding.
+    """
+
+    hits: List[Hit]
+
+    @property
+    def best(self) -> Hit:
+        return max(self.hits, key=lambda h: (_CLASS_RANK[h.match_class], _SEV_RANK[h.severity], h.confidence))
+
+    @property
+    def label(self) -> str:
+        return self.best.entity.caption
+
+    @property
+    def sources(self) -> List[str]:
+        return sorted({h.entity.source for h in self.hits})
+
+
+def _names_of(ent: Entity) -> List[str]:
+    return [n.value for n in ent.names if n.kind != "weak"][:12]
+
+
+def _same_party(a: Hit, b: Hit) -> bool:
+    ea, eb = a.entity, b.entity
+    if ea.is_org != eb.is_org:
+        return False
+    if ea.birth_dates and eb.birth_dates:
+        if all(compare_dates(d, eb.birth_dates) == "conflict" for d in ea.birth_dates):
+            return False
+    org = ea.is_org
+    best = 0.0
+    for na in _names_of(ea):
+        ta = tokens(na, is_org=org)
+        for nb in _names_of(eb):
+            nm = compare_tokens(ta, tokens(nb, is_org=org), is_org=org,
+                                consonantal=has_arabic(na) or has_arabic(nb))
+            best = max(best, nm.score)
+            if best >= 0.92:
+                return True
+    return False
+
+
+def cluster_hits(hits: List[Hit]) -> List[Cluster]:
+    """Group hits that name the same party across lists (union-find on name + DOB agreement).
+
+    Discounted hits stay in their own clusters so they never merge into a live match.
+    """
+    parent = list(range(len(hits)))
+
+    def find(i: int) -> int:
+        while parent[i] != i:
+            parent[i] = parent[parent[i]]
+            i = parent[i]
+        return i
+
+    for i in range(len(hits)):
+        for j in range(i + 1, len(hits)):
+            if (hits[i].match_class == "DISCOUNTED") != (hits[j].match_class == "DISCOUNTED"):
+                continue
+            if find(i) != find(j) and _same_party(hits[i], hits[j]):
+                parent[find(j)] = find(i)
+    groups: Dict[int, List[Hit]] = {}
+    for i, h in enumerate(hits):
+        groups.setdefault(find(i), []).append(h)
+    clusters = [Cluster(g) for g in groups.values()]
+    clusters.sort(key=lambda c: (-_CLASS_RANK[c.best.match_class], -_SEV_RANK[c.best.severity], -c.best.confidence))
+    return clusters

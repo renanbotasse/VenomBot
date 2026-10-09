@@ -1,0 +1,28 @@
+{
+"count": 2,
+"results": [
+{
+"caseName": "United States v. Testperson",
+"court": "Court of Appeals for the Second Circuit",
+"dateFiled": "2026-01-05",
+"docketNumber": "25-100",
+"absolute_url": "/opinion/1/united-states-v-testperson/",
+"opinions": [
+{
+"snippet": "The defendant Jane Q. Testperson was convicted of money laundering."
+}
+]
+},
+{
+"caseName": "State v. Someone Else",
+"court": "Court of Appeals",
+"dateFiled": "2026-01-01",
+"absolute_url": "/opinion/2/x/",
+"opinions": [
+{
+"snippet": "Unrelated text about contracts."
+}
+]
+}
+]
+}

@@ -1,0 +1,291 @@
+{
+"id": "https://www.thegazette.co.uk/all-notices/notice/data.feed?text=&quot;JSC BTA Bank&quot;&results-page-size=3&results-page=1",
+"link": [
+{
+"@href": "https://www.thegazette.co.uk/all-notices/notice/data.feed?text=%22JSC BTA Bank%22&results-page-size=3&results-page=1",
+"@rel": "alternate",
+"@type": "application/atom+xml",
+"@title": "ATOM"
+},
+{
+"@href": "https://www.thegazette.co.uk/all-notices/notice/data.json?text=%22JSC BTA Bank%22&results-page=1",
+"@rel": "first",
+"@type": "application/json"
+},
+{
+"@href": "https://www.thegazette.co.uk/all-notices/notice/data.json?text=%22JSC BTA Bank%22&results-page=2",
+"@rel": "next",
+"@type": "application/json"
+},
+{
+"@href": "https://www.thegazette.co.uk/all-notices/notice/data.json?text=%22JSC BTA Bank%22&results-page=2",
+"@rel": "last",
+"@type": "application/json"
+},
+{
+"@href": "https://www.thegazette.co.uk/all-notices/notice/data.htm?text=%22JSC BTA Bank%22&results-page-size=3&results-page=1",
+"@rel": "alternate",
+"@title": "HTML",
+"@type": "application/xhtml+xml"
+},
+{
+"@href": "https://www.thegazette.co.uk/all-notices/notice/data.json?text=%22JSC BTA Bank%22&results-page-size=3&results-page=1",
+"@rel": "self",
+"@type": "application/json"
+}
+],
+"title": "Search Result",
+"updated": "2026-10-09T11:19:47.182526+01:00",
+"openSearch:Query": {
+"@role": "request",
+"@searchTerms": "\"JSC BTA Bank\""
+},
+"f:page-number": "1",
+"f:page-size": "3",
+"f:page-start": "1",
+"f:page-stop": "3",
+"f:total": "5",
+"f:facets": null,
+"entry": [
+{
+"id": "https://www.thegazette.co.uk/id/notice/2786556",
+"f:status": "published",
+"f:notice-code": "2408",
+"f:name": "Gazette production team",
+"f:familyName": "Gazette production team",
+"title": "JSC BTA BANK",
+"link": [
+{
+"@href": "https://www.thegazette.co.uk/id/notice/2786556",
+"@rel": "self"
+},
+{
+"@href": "https://www.thegazette.co.uk/notice/2786556"
+},
+{
+"@href": "https://www.thegazette.co.uk/notice/2786556/data.ttl",
+"@rel": "alternate",
+"@title": "TURTLE",
+"@type": "text/turtle"
+},
+{
+"@href": "https://www.thegazette.co.uk/notice/2786556/data.jsonld",
+"@rel": "alternate",
+"@title": "JSON-LD",
+"@type": "application/json"
+},
+{
+"@href": "https://www.thegazette.co.uk/notice/2786556/data.rdf",
+"@rel": "alternate",
+"@title": "RDF/XML",
+"@type": "application/rdf+xml"
+},
+{
+"@href": "https://www.thegazette.co.uk/notice/2786556/data.ttl?view=linked-data",
+"@rel": "alternate",
+"@title": "TURTLE",
+"@type": "text/turtle"
+},
+{
+"@href": "https://www.thegazette.co.uk/notice/2786556/data.json?view=linked-data",
+"@rel": "alternate",
+"@title": "JSON-SIMPLE",
+"@type": "application/json"
+},
+{
+"@href": "https://www.thegazette.co.uk/notice/2786556/data.rdfjson?view=linked-data",
+"@rel": "alternate",
+"@title": "JSON-RDF",
+"@type": "application/rdf+json"
+},
+{
+"@href": "https://www.thegazette.co.uk/notice/2786556/data.rdf?view=linked-data",
+"@rel": "alternate",
+"@title": "RDF/XML",
+"@type": "application/rdf+xml"
+},
+{
+"@href": "https://www.thegazette.co.uk/notice/2786556/data.xml?view=linked-data",
+"@rel": "alternate",
+"@title": "XML",
+"@type": "application/xml"
+},
+{
+"@href": "https://www.thegazette.co.uk/notice/2786556/data.html?view=linked-data",
+"@rel": "alternate",
+"@title": "HTML",
+"@type": "application/html"
+}
+],
+"author": {
+"name": "tso"
+},
+"updated": "2017-05-22T13:44:22+01:00",
+"published": "2017-05-19T00:10:43",
+"category": {
+"@term": "Other Corporate Insolvency Notices"
+},
+"content": "<div><p>…the HIGH COURT OF JUSTICE (QUEEN’S BENCH DIVISION) COMMERCIAL COURT Claim No: CL-2010-000032 BETWEEN …</p></div>"
+},
+{
+"id": "https://www.thegazette.co.uk/id/notice/2787209",
+"f:status": "published",
+"f:notice-code": "2408",
+"f:name": "Gazette production team",
+"f:familyName": "Gazette production team",
+"title": "JSC BTA BANK",
+"link": [
+{
+"@href": "https://www.thegazette.co.uk/id/notice/2787209",
+"@rel": "self"
+},
+{
+"@href": "https://www.thegazette.co.uk/notice/2787209"
+},
+{
+"@href": "https://www.thegazette.co.uk/notice/2787209/data.ttl",
+"@rel": "alternate",
+"@title": "TURTLE",
+"@type": "text/turtle"
+},
+{
+"@href": "https://www.thegazette.co.uk/notice/2787209/data.jsonld",
+"@rel": "alternate",
+"@title": "JSON-LD",
+"@type": "application/json"
+},
+{
+"@href": "https://www.thegazette.co.uk/notice/2787209/data.rdf",
+"@rel": "alternate",
+"@title": "RDF/XML",
+"@type": "application/rdf+xml"
+},
+{
+"@href": "https://www.thegazette.co.uk/notice/2787209/data.ttl?view=linked-data",
+"@rel": "alternate",
+"@title": "TURTLE",
+"@type": "text/turtle"
+},
+{
+"@href": "https://www.thegazette.co.uk/notice/2787209/data.json?view=linked-data",
+"@rel": "alternate",
+"@title": "JSON-SIMPLE",
+"@type": "application/json"
+},
+{
+"@href": "https://www.thegazette.co.uk/notice/2787209/data.rdfjson?view=linked-data",
+"@rel": "alternate",
+"@title": "JSON-RDF",
+"@type": "application/rdf+json"
+},
+{
+"@href": "https://www.thegazette.co.uk/notice/2787209/data.rdf?view=linked-data",
+"@rel": "alternate",
+"@title": "RDF/XML",
+"@type": "application/rdf+xml"
+},
+{
+"@href": "https://www.thegazette.co.uk/notice/2787209/data.xml?view=linked-data",
+"@rel": "alternate",
+"@title": "XML",
+"@type": "application/xml"
+},
+{
+"@href": "https://www.thegazette.co.uk/notice/2787209/data.html?view=linked-data",
+"@rel": "alternate",
+"@title": "HTML",
+"@type": "application/html"
+}
+],
+"author": {
+"name": "tso"
+},
+"updated": "2017-05-22T13:44:25+01:00",
+"published": "2017-05-19T10:00:03",
+"category": {
+"@term": "Other Corporate Insolvency Notices"
+},
+"content": "<div><p>…the HIGH COURT OF JUSTICE (QUEEN’S BENCH DIVISION) COMMERCIAL COURT Claim No: CL-2010-000032 BETWEEN …</p></div>"
+},
+{
+"id": "https://www.thegazette.co.uk/id/notice/L-59553-1211105",
+"f:status": "published",
+"f:notice-code": "2301",
+"f:name": "User",
+"f:familyName": "Migration",
+"title": "Other Notices",
+"link": [
+{
+"@href": "https://www.thegazette.co.uk/id/notice/L-59553-1211105",
+"@rel": "self"
+},
+{
+"@href": "https://www.thegazette.co.uk/notice/L-59553-1211105"
+},
+{
+"@href": "https://www.thegazette.co.uk/notice/L-59553-1211105/data.ttl",
+"@rel": "alternate",
+"@title": "TURTLE",
+"@type": "text/turtle"
+},
+{
+"@href": "https://www.thegazette.co.uk/notice/L-59553-1211105/data.jsonld",
+"@rel": "alternate",
+"@title": "JSON-LD",
+"@type": "application/json"
+},
+{
+"@href": "https://www.thegazette.co.uk/notice/L-59553-1211105/data.rdf",
+"@rel": "alternate",
+"@title": "RDF/XML",
+"@type": "application/rdf+xml"
+},
+{
+"@href": "https://www.thegazette.co.uk/notice/L-59553-1211105/data.ttl?view=linked-data",
+"@rel": "alternate",
+"@title": "TURTLE",
+"@type": "text/turtle"
+},
+{
+"@href": "https://www.thegazette.co.uk/notice/L-59553-1211105/data.json?view=linked-data",
+"@rel": "alternate",
+"@title": "JSON-SIMPLE",
+"@type": "application/json"
+},
+{
+"@href": "https://www.thegazette.co.uk/notice/L-59553-1211105/data.rdfjson?view=linked-data",
+"@rel": "alternate",
+"@title": "JSON-RDF",
+"@type": "application/rdf+json"
+},
+{
+"@href": "https://www.thegazette.co.uk/notice/L-59553-1211105/data.rdf?view=linked-data",
+"@rel": "alternate",
+"@title": "RDF/XML",
+"@type": "application/rdf+xml"
+},
+{
+"@href": "https://www.thegazette.co.uk/notice/L-59553-1211105/data.xml?view=linked-data",
+"@rel": "alternate",
+"@title": "XML",
+"@type": "application/xml"
+},
+{
+"@href": "https://www.thegazette.co.uk/notice/L-59553-1211105/data.html?view=linked-data",
+"@rel": "alternate",
+"@title": "HTML",
+"@type": "application/html"
+}
+],
+"author": {
+"name": "tso"
+},
+"updated": "2014-06-01T10:37:14+01:00",
+"published": "2010-09-23T00:00:00",
+"category": {
+"@term": "Other Notices"
+},
+"content": "<div><p>…06 In the Companies Court, Chancery Division of the High Court of England and Wales No 21894 of 2009 …</p></div>"
+}
+]
+}

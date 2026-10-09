@@ -1,0 +1,158 @@
+{
+"meta": {
+"goldenCopy": {
+"publishDate": "2026-10-09T00:00:00Z"
+},
+"pagination": {
+"currentPage": 1,
+"perPage": 3,
+"from": 1,
+"to": 3,
+"total": 4,
+"lastPage": 2
+}
+},
+"data": [
+{
+"type": "lei-records",
+"id": "2549007KX0N057S9BC98",
+"attributes": {
+"lei": "2549007KX0N057S9BC98",
+"entity": {
+"legalName": {
+"name": "Kuwait Finance House (K.S.C.P.)",
+"language": "en"
+},
+"otherNames": [],
+"transliteratedOtherNames": [],
+"legalAddress": {
+"language": "en",
+"addressLines": [
+"Abdullah Al-Mubarak St",
+"Murqab - Kuwait",
+"PO BOX 24989",
+"Safat"
+],
+"addressNumber": null,
+"addressNumberWithinBuilding": null,
+"mailRouting": null,
+"city": "Kuwait",
+"region": "KW-KU",
+"country": "KW",
+"postalCode": "13110"
+},
+"registeredAt": {
+"id": "RA000420",
+"other": null
+},
+"registeredAs": "26066",
+"jurisdiction": "KW",
+"category": "GENERAL",
+"legalForm": {
+"id": "7CAL",
+"other": null
+},
+"associatedEntity": {
+"lei": null,
+"name": null
+},
+"status": "ACTIVE",
+"expiration": {
+"date": null,
+"reason": null
+},
+"successorEntity": {
+"lei": null,
+"name": null
+},
+"successorEntities": [],
+"creationDate": "1994-11-14T00:00:00Z",
+"subCategory": null
+},
+"registration": {
+"status": "ISSUED"
+},
+"mic": null,
+"ocid": null,
+"qcc": "QKWB3RWXF3",
+"gem": null,
+"spglobal": [
+"5502924"
+],
+"conformityFlag": "CONFORMING"
+}
+},
+{
+"type": "lei-records",
+"id": "213800F3IFWY8CWYWO07",
+"attributes": {
+"lei": "213800F3IFWY8CWYWO07",
+"entity": {
+"legalName": {
+"name": "KUWAIT FINANCE HOUSE PLC",
+"language": "en"
+},
+"otherNames": [
+{
+"name": "AHLI UNITED BANK (UK) PLC",
+"language": "en",
+"type": "PREVIOUS_LEGAL_NAME"
+}
+],
+"transliteratedOtherNames": [],
+"legalAddress": {
+"language": "en",
+"addressLines": [
+"35 PORTMAN SQUARE"
+],
+"addressNumber": null,
+"addressNumberWithinBuilding": null,
+"mailRouting": null,
+"city": "LONDON",
+"region": null,
+"country": "GB",
+"postalCode": "W1H 6LR"
+},
+"registeredAt": {
+"id": "RA000585",
+"other": null
+},
+"registeredAs": "00877859",
+"jurisdiction": "GB",
+"category": "GENERAL",
+"legalForm": {
+"id": "B6ES",
+"other": null
+},
+"associatedEntity": {
+"lei": null,
+"name": null
+},
+"status": "ACTIVE",
+"expiration": {
+"date": null,
+"reason": null
+},
+"successorEntity": {
+"lei": null,
+"name": null
+},
+"successorEntities": [],
+"creationDate": "1966-04-27T00:00:00Z",
+"subCategory": null
+},
+"registration": {
+"status": "ISSUED"
+},
+"mic": null,
+"ocid": "gb/00877859",
+"qcc": "QGBN65TDDC",
+"gem": null,
+"spglobal": [
+"8295283"
+],
+"conformityFlag": "CONFORMING"
+}
+}
+]
+}

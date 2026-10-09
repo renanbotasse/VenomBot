@@ -1,0 +1,1 @@
+Real responses (trimmed) for public entities/figures: registries, GLEIF, FIGI, EDGAR, HUDOC, CELLAR, UK case law, Gazette, gov.uk, Federal Register, ICIJ, Wikidata, LittleSis, sanctions.network. Synthetic records in the exact real format for private-person sources: DOJ, FINRA, CourtListener (Jane Q. Testperson).

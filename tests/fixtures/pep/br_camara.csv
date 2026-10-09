@@ -1,0 +1,4 @@
+﻿"uri";"nome";"idLegislaturaInicial";"idLegislaturaFinal";"nomeCivil";"cpf";"siglaSexo";"urlRedeSocial";"urlWebsite";"dataNascimento";"dataFalecimento";"ufNascimento";"municipioNascimento"
+"https://dadosabertos.camara.leg.br/api/v2/deputados/220593";"Abilio Brunini";"57";"57";"ABILIO JACQUES BRUNINI MOUMER";"";"M";"";"";"1984-01-31";"";"MT";"Cuiabá"
+"https://dadosabertos.camara.leg.br/api/v2/deputados/204379";"Acácio Favacho";"56";"57";"ACÁCIO DA SILVA FAVACHO NETO";"";"M";"https://twitter.com/acaciofavacho, https://www.facebook.com/deputadofederalacaciofavacho, https://youtube.com/channel/UCWNbptIjAriL2pt8H3W6CGw";"";"1983-09-28";"";"AP";"Macapá"
+"https://dadosabertos.camara.leg.br/api/v2/deputados/204554";"Abílio Santana";"56";"56";"JOSE ABILIO SILVA DE SANTANA";"";"M";"";"";"1965-02-13";"";"BA";"Salvador"

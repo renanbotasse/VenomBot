@@ -1,0 +1,56 @@
+{
+"hits": {
+"total": 2,
+"hits": [
+{
+"_type": "_doc",
+"_source": {
+"ind_source_id": "9000001",
+"ind_firstname": "JANE",
+"ind_middlename": "Q",
+"ind_lastname": "TESTPERSON",
+"ind_other_names": [
+"JANE Q TESTPERSON"
+],
+"ind_bc_scope": "Barred",
+"ind_ia_scope": "NotInScope",
+"ind_bc_disclosure_fl": "Y",
+"ind_permanent_bar": "Y",
+"ind_current_employments": []
+}
+},
+{
+"_type": "_doc",
+"_source": {
+"ind_source_id": "9000002",
+"ind_firstname": "Jane",
+"ind_middlename": "",
+"ind_lastname": "Testperson",
+"ind_other_names": [],
+"ind_bc_scope": "Active",
+"ind_ia_scope": "NotInScope",
+"ind_bc_disclosure_fl": "N",
+"ind_permanent_bar": "N",
+"ind_current_employments": [
+{
+"firm_id": "1",
+"firm_name": "EXAMPLE SECURITIES LLC"
+}
+]
+}
+},
+{
+"_type": "_doc",
+"_source": {
+"ind_source_id": "9000003",
+"ind_firstname": "Robert",
+"ind_lastname": "Unrelated",
+"ind_other_names": [],
+"ind_bc_scope": "Active",
+"ind_bc_disclosure_fl": "N",
+"ind_permanent_bar": "N"
+}
+}
+]
+}
+}

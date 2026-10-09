@@ -1,0 +1,11 @@
+[
+ {
+  "ariregistri_kood":10000001,
+  "nimi":"Näidis OÜ",
+  "kasusaajad":[
+   {"kirje_id":1,"algus_kpv":"05.06.2023","lopp_kpv":null,"eesnimi":"Test","nimi":"Kasutaja","isikukood":null,"valis_kood_riik":"LVA","synniaeg":"12.03.1980","aadress_riik":"EST","kontrolli_teostamise_viis":"O","kontrolli_teostamise_viis_tekstina":"otsene osalus"},
+   {"kirje_id":2,"algus_kpv":"01.01.2019","lopp_kpv":"01.01.2021","eesnimi":"Ended","nimi":"Owner","aadress_riik":"EST"}
+  ]
+ },
+ {"ariregistri_kood":10000002,"nimi":"Teine AS","kasusaajad":[{"kirje_id":3,"algus_kpv":"01.01.2022","lopp_kpv":null,"eesnimi":"Sample","nimi":"Beneficiary","aadress_riik":"FIN"}]}
+]

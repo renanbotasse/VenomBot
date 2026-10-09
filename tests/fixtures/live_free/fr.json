@@ -1,0 +1,71 @@
+{
+"results": [
+{
+"siren": "542051180",
+"siren_conserve": null,
+"nom_complet": "TOTALENERGIES SE (TOTALENERGIE SE)",
+"nom_raison_sociale": "TOTALENERGIES SE",
+"sigle": null,
+"nombre_etablissements": 16,
+"nombre_etablissements_ouverts": 3,
+"siege": {
+"adresse": "LA DEFENSE 6 2 PLACE JEAN MILLIER 92400 COURBEVOIE",
+"siret": "54205118000066",
+"code_postal": "92400",
+"libelle_commune": "COURBEVOIE"
+},
+"activite_principale": "70.10Z",
+"activite_principale_naf25": "70.10Y",
+"categorie_entreprise": "GE",
+"caractere_employeur": null,
+"annee_categorie_entreprise": "2024",
+"date_creation": "1954-01-01",
+"date_fermeture": null,
+"date_mise_a_jour": "2026-10-08T09:05:45",
+"date_mise_a_jour_insee": "2025-12-06T10:51:09",
+"date_mise_a_jour_rne": "2026-09-24T15:57:42",
+"dirigeants": [
+{
+"nom": "ASCHENBROICH",
+"prenoms": "JACQUES ANDRE",
+"annee_de_naissance": "1954",
+"date_de_naissance": "1954-06",
+"qualite": "Administrateur",
+"nationalite": null,
+"type_dirigeant": "personne physique"
+},
+{
+"nom": "COISNE",
+"prenoms": "MARIE CHRISTINE",
+"annee_de_naissance": "1956",
+"date_de_naissance": "1956-11",
+"qualite": "Administrateur",
+"nationalite": null,
+"type_dirigeant": "personne physique"
+},
+{
+"nom": "CROTEAU",
+"prenoms": "LISE",
+"annee_de_naissance": "1960",
+"date_de_naissance": "1960-05",
+"qualite": "Administrateur",
+"nationalite": null,
+"type_dirigeant": "personne physique"
+}
+],
+"etat_administratif": "A",
+"nature_juridique": "5800",
+"section_activite_principale": "M",
+"tranche_effectif_salarie": "51",
+"annee_tranche_effectif_salarie": "2024",
+"statut_diffusion": "O",
+"tva": [
+"FR59542051180"
+]
+}
+],
+"total_results": 637,
+"page": 1,
+"per_page": 2,
+"total_pages": 319
+}

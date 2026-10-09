@@ -1,0 +1,72 @@
+{
+"head": {
+"vars": [
+"p",
+"posLabel",
+"start",
+"end"
+]
+},
+"results": {
+"bindings": [
+{
+"p": {
+"type": "uri",
+"value": "http://www.wikidata.org/entity/Q12243161"
+},
+"posLabel": {
+"xml:lang": "en",
+"type": "literal",
+"value": "crown prince"
+},
+"start": {
+"datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+"type": "literal",
+"value": "2020-10-08T00:00:00Z"
+},
+"end": {
+"datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+"type": "literal",
+"value": "2023-12-16T00:00:00Z"
+}
+},
+{
+"p": {
+"type": "uri",
+"value": "http://www.wikidata.org/entity/Q12243161"
+},
+"posLabel": {
+"xml:lang": "en",
+"type": "literal",
+"value": "emir of Kuwait"
+},
+"start": {
+"datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+"type": "literal",
+"value": "2023-12-16T00:00:00Z"
+}
+},
+{
+"p": {
+"type": "uri",
+"value": "http://www.wikidata.org/entity/Q12243161"
+},
+"posLabel": {
+"xml:lang": "en",
+"type": "literal",
+"value": "military position"
+},
+"start": {
+"datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+"type": "literal",
+"value": "2004-01-13T00:00:00Z"
+},
+"end": {
+"datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+"type": "literal",
+"value": "2020-10-08T00:00:00Z"
+}
+}
+]
+}
+}

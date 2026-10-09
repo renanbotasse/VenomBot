@@ -1,0 +1,8 @@
+﻿Lastname;Firstname;Middlename;Wholename;Gender;Birth date;Birth place;Birth country;Function;Number;Remark;Embargos;type;Regulation;Publication date;Links
+DUPONT-TEST;Jean-Claude;;Jean-Claude DUPONT-TEST;M;28-02-87;;;;NRN 87.02.28-000.00;;BE;P;;08-06-26;https://www.ejustice.just.fgov.be/cgi/article.pl?language=fr&sum_date=2026-06-08
+MAES-TEST;Fatima;;Fatima MAES-TEST;F;14-12-72;Bruxelles;BELGIQUE;;NRN 72.12.14-000.00;;BE;p;;12-10-17;http://www.ejustice.just.fgov.be/mopdf/2017/12/11_1.pdf#page=51
+"";"";"";"Example Front
+EF
+Front Exemple";;;;;;;;TAQA;E;"350/2003 (OJ L51)
+667/2004 (OJ L104)";"2003-02-26
+2004-04-08";http://eur-lex.europa.eu/LexUriServ/LexUriServ.do?uri=OJ:L:2012:015:0001:0019:EN:PDF

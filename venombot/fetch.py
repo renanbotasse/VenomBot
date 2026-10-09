@@ -139,6 +139,67 @@ def download(
     return FetchResult(False, url, None, status, 0, "", "", last_error)
 
 
+def get_bytes(
+    url: str,
+    *,
+    headers: Optional[Dict[str, str]] = None,
+    data: Optional[bytes] = None,
+    timeout: int = 30,
+    retries: int = 2,
+    max_bytes: int = 20_000_000,
+) -> bytes:
+    """GET (or POST with ``data``) a small resource into memory.
+
+    For search APIs and feeds, not bulk lists (use ``download`` for those).
+    Raises RuntimeError with the HTTP status on failure so callers can record
+    it; transient errors are retried.
+
+    @param max_bytes safety cap; larger bodies raise instead of truncating
+    """
+    hdrs = {"User-Agent": DEFAULT_USER_AGENT, "Accept": "*/*", "Accept-Encoding": "gzip"}
+    hdrs.update(headers or {})
+    last = ""
+    for attempt in range(1, retries + 2):
+        req = urllib.request.Request(url, headers=hdrs, data=data)
+        try:
+            with urllib.request.urlopen(req, timeout=timeout, context=_SSL) as resp:
+                body = resp.read(max_bytes + 1)
+                if len(body) > max_bytes:
+                    raise RuntimeError(f"response larger than {max_bytes} bytes: {url}")
+                if (resp.headers.get("Content-Encoding") or "").lower() == "gzip":
+                    import gzip
+
+                    body = gzip.decompress(body)
+                return body
+        except urllib.error.HTTPError as exc:
+            last = f"HTTP {exc.code}"
+            if exc.code < 500 and exc.code != 429:
+                raise RuntimeError(f"{last} for {url}") from exc
+        except (urllib.error.URLError, TimeoutError, OSError, http.client.HTTPException) as exc:
+            last = f"{type(exc).__name__}: {exc}"
+        if attempt <= retries:
+            time.sleep(min(2 ** attempt, 10))
+    raise RuntimeError(f"{last} for {url}")
+
+
+def get_text(url: str, **kw) -> str:
+    """``get_bytes`` decoded with the encodings lists/feeds actually use."""
+    raw = get_bytes(url, **kw)
+    for enc in ("utf-8-sig", "utf-8", "cp1256", "cp1252", "latin-1"):
+        try:
+            return raw.decode(enc)
+        except UnicodeDecodeError:
+            continue
+    return raw.decode("utf-8", errors="replace")
+
+
+def get_json(url: str, **kw):
+    """``get_text`` parsed as JSON."""
+    import json
+
+    return json.loads(get_text(url, **kw))
+
+
 def _gunzip_in_place(path: Path) -> None:
     import gzip
     import shutil

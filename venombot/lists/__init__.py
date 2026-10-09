@@ -43,6 +43,8 @@ class ListSource:
     max_age_days: int = 7
     notes: str = ""
     timeout: int = 180
+    # Some endpoints only answer POST; a body (even b"") turns the download into one.
+    post_data: Optional[bytes] = None
 
     def api_key(self) -> Optional[str]:
         return os.environ.get(self.api_key_env) if self.api_key_env else None

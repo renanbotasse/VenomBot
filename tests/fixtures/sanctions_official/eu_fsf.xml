@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<export xmlns="http://eu.europa.ec/fpi/fsd/export" generationDate="2026-09-22T20:01:34.799+02:00" globalFileId="185564">
+    
+    <sanctionEntity designationDetails="" unitedNationId="" euReferenceNumber="EU.27.28" logicalId="13">
+        <remark>UNSC RESOLUTION 1483</remark>
+        <regulation regulationType="regulation" organisationType="commission" publicationDate="2003-07-08" entryIntoForceDate="2003-07-07" numberTitle="1210/2003 (OJ L169)" programme="IRQ" logicalId="348">
+            <publicationUrl>http://eur-lex.europa.eu/LexUriServ/LexUriServ.do?uri=OJ:L:2003:169:0006:0023:EN:PDF</publicationUrl>
+        </regulation>
+        <subjectType code="person" classificationCode="P"/>
+        <nameAlias firstName="Saddam" middleName="" lastName="Hussein Al-Tikriti" wholeName="Saddam Hussein Al-Tikriti" function="" gender="M" title="" nameLanguage="" strong="true" regulationLanguage="en" logicalId="17">
+            <regulationSummary regulationType="regulation" publicationDate="2003-07-08" numberTitle="1210/2003 (OJ L169)" publicationUrl="http://eur-lex.europa.eu/LexUriServ/LexUriServ.do?uri=OJ:L:2003:169:0006:0023:EN:PDF"/>
+        </nameAlias>
+        <nameAlias firstName="" middleName="" lastName="" wholeName="Abu Ali" function="" title="" nameLanguage="" strong="true" regulationLanguage="en" logicalId="19">
+            <regulationSummary regulationType="regulation" publicationDate="2003-07-08" numberTitle="1210/2003 (OJ L169)" publicationUrl="http://eur-lex.europa.eu/LexUriServ/LexUriServ.do?uri=OJ:L:2003:169:0006:0023:EN:PDF"/>
+        </nameAlias>
+        <nameAlias firstName="" middleName="" lastName="" wholeName="Abou Ali" function="" title="" nameLanguage="FR" strong="true" regulationLanguage="en" logicalId="380">
+            <regulationSummary regulationType="regulation" publicationDate="2003-07-08" numberTitle="1210/2003 (OJ L169)" publicationUrl="http://eur-lex.europa.eu/LexUriServ/LexUriServ.do?uri=OJ:L:2003:169:0006:0023:EN:PDF"/>
+        </nameAlias>
+        <citizenship region="" countryIso2Code="IQ" countryDescription="IRAQ" regulationLanguage="en" logicalId="1">
+            <regulationSummary regulationType="regulation" publicationDate="2003-07-08" numberTitle="1210/2003 (OJ L169)" publicationUrl="http://eur-lex.europa.eu/LexUriServ/LexUriServ.do?uri=OJ:L:2003:169:0006:0023:EN:PDF"/>
+        </citizenship>
+        <birthdate circa="false" calendarType="GREGORIAN" city="al-Awja, near Tikrit" zipCode="" birthdate="1937-04-28" dayOfMonth="28" monthOfYear="4" year="1937" region="" place="" countryIso2Code="IQ" countryDescription="IRAQ" regulationLanguage="en" logicalId="14">
+            <regulationSummary regulationType="regulation" publicationDate="2003-07-08" numberTitle="1210/2003 (OJ L169)" publicationUrl="http://eur-lex.europa.eu/LexUriServ/LexUriServ.do?uri=OJ:L:2003:169:0006:0023:EN:PDF"/>
+        </birthdate>
+    </sanctionEntity>
+    <sanctionEntity designationDate="2020-07-30" designationDetails="" unitedNationId="" euReferenceNumber="EU.5703.86" logicalId="124966">
+        <regulation regulationType="amendment" organisationType="council" publicationDate="2025-05-12" entryIntoForceDate="2025-05-13" numberTitle="2025/886 (OJ L202500886)" programme="CYB" logicalId="212886">
+            <publicationUrl>http://data.europa.eu/eli/reg_impl/2025/886/oj</publicationUrl>
+        </regulation>
+        <subjectType code="person" classificationCode="P"/>
+        <nameAlias firstName="Алексей" middleName="Валерьевич" lastName="МИНИН" wholeName="Алексей Валерьевич МИНИН" function="" gender="M" title="" nameLanguage="RU" strong="true" regulationLanguage="en" logicalId="124971">
+            <regulationSummary regulationType="amendment" publicationDate="2024-05-17" numberTitle="2024/1390 (OJ L17052024)" publicationUrl="https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=OJ:L_202401390"/>
+        </nameAlias>
+        <nameAlias firstName="Alexey" middleName="Valeryevich" lastName="MININ" wholeName="Alexey Valeryevich MININ" function="Human intelligence support officer of the Main Directorate of the General Staff of the Armed Forces of the Russian Federation (GU/GRU). A grand jury in the Western District of Pennsylvania (United States of America) has indicted Alexey Minin, as an officer of the GRU, for computer aggravated identity theft and money laundering." gender="M" title="" nameLanguage="EN" strong="true" regulationLanguage="en" logicalId="124972">
+            <remark>A grand jury in the Western District of Pennsylvania (United States of America) has indicted Alexey Minin, as an officer of the GRU, for computer aggravated identity theft and money laundering.</remark>
+            <regulationSummary regulationType="amendment" publicationDate="2025-05-12" numberTitle="2025/886 (OJ L202500886)" publicationUrl="http://data.europa.eu/eli/reg_impl/2025/886/oj"/>
+        </nameAlias>
+        <nameAlias firstName="Alexej" middleName="" lastName="Minin" wholeName="Alexej Minin" function="" gender="M" title="" nameLanguage="SK" strong="true" regulationLanguage="en" logicalId="165542">
+            <regulationSummary regulationType="amendment" publicationDate="2024-05-17" numberTitle="2024/1390 (OJ L17052024)" publicationUrl="https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=OJ:L_202401390"/>
+        </nameAlias>
+        <citizenship region="" countryIso2Code="RU" countryDescription="RUSSIAN FEDERATION" regulationLanguage="en" logicalId="124969">
+            <regulationSummary regulationType="amendment" publicationDate="2020-07-30" numberTitle="2020/1125 (OJ L246)" publicationUrl="https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=uriserv:OJ.L_.2020.246.01.0004.01.ENG&amp;toc=OJ:L:2020:246:TOC"/>
+        </citizenship>
+        <birthdate circa="false" calendarType="GREGORIAN" city="" zipCode="" birthdate="1972-05-27" dayOfMonth="27" monthOfYear="5" year="1972" region="Perm Oblast" place="" countryIso2Code="RU" countryDescription="RUSSIAN FEDERATION" regulationLanguage="en" logicalId="124968">
+            <remark>Russian SFSR (now Russian Federation)</remark>
+            <regulationSummary regulationType="amendment" publicationDate="2024-05-17" numberTitle="2024/1390 (OJ L17052024)" publicationUrl="https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=OJ:L_202401390"/>
+        </birthdate>
+        <address city="Moscow" street="" poBox="" zipCode="" region="" place="" asAtListingTime="false" countryIso2Code="RU" countryDescription="RUSSIAN FEDERATION" regulationLanguage="en" logicalId="124967">
+            <regulationSummary regulationType="amendment" publicationDate="2020-07-30" numberTitle="2020/1125 (OJ L246)" publicationUrl="https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=uriserv:OJ.L_.2020.246.01.0004.01.ENG&amp;toc=OJ:L:2020:246:TOC"/>
+        </address>
+        <identification diplomatic="false" knownExpired="false" knownFalse="false" reportedLost="false" revokedByIssuer="false" issuedBy="Ministry of Foreign Affairs of the Russian Federation" latinNumber="" nameOnDocument="" number="120017582" validFrom="2017-04-17" validTo="2022-04-17" region="" identificationTypeCode="passport" identificationTypeDescription="National passport" countryIso2Code="RU" countryDescription="RUSSIAN FEDERATION" regulationLanguage="en" logicalId="124970">
+            <regulationSummary regulationType="amendment" publicationDate="2020-07-30" numberTitle="2020/1125 (OJ L246)" publicationUrl="https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=uriserv:OJ.L_.2020.246.01.0004.01.ENG&amp;toc=OJ:L:2020:246:TOC"/>
+        </identification>
+    </sanctionEntity>
+    <sanctionEntity designationDate="2018-07-31" designationDetails="" unitedNationId="" euReferenceNumber="EU.4667.93" logicalId="117789">
+        <regulation regulationType="amendment" organisationType="council" publicationDate="2023-09-14" entryIntoForceDate="2023-09-15" numberTitle="2023/1765 (OJ L226)" programme="UKR" logicalId="182020">
+            <publicationUrl>https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=CELEX:32023R1765</publicationUrl>
+        </regulation>
+        <subjectType code="enterprise" classificationCode="E"/>
+        <nameAlias firstName="" middleName="" lastName="" wholeName="Strojgazmontazj-Most OOO" function="" title="" nameLanguage="SV" strong="true" regulationLanguage="en" logicalId="152588">
+            <regulationSummary regulationType="amendment" publicationDate="2023-09-14" numberTitle="2023/1765 (OJ L226)" publicationUrl="https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=CELEX:32023R1765"/>
+        </nameAlias>
+        <nameAlias firstName="" middleName="" lastName="" wholeName="Strojgazmontaž Most OOO" function="" title="" nameLanguage="CS" strong="true" regulationLanguage="en" logicalId="158418">
+            <regulationSummary regulationType="amendment" publicationDate="2023-09-14" numberTitle="2023/1765 (OJ L226)" publicationUrl="https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=CELEX:32023R1765"/>
+        </nameAlias>
+        <nameAlias firstName="" middleName="" lastName="" wholeName="ООО Стройгазмонтаж-Мост" function="" title="" nameLanguage="RU" strong="true" regulationLanguage="en" logicalId="117793">
+            <regulationSummary regulationType="amendment" publicationDate="2023-09-14" numberTitle="2023/1765 (OJ L226)" publicationUrl="https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=CELEX:32023R1765"/>
+        </nameAlias>
+        <nameAlias firstName="" middleName="" lastName="" wholeName="Stroygazmontazh-Most OOO" function="" title="" nameLanguage="EN" strong="true" regulationLanguage="en" logicalId="117794">
+            <remark>Stroygazmontazh-Most OOO was  a subsidiary of lead contractor Stroygazmontazh that managed  the construction project of the bridge over the Kerch Strait and participated in the construction. 
+In process of liquidation. Liquidator: Igor Staloverov.</remark>
+            <regulationSummary regulationType="amendment" publicationDate="2023-09-14" numberTitle="2023/1765 (OJ L226)" publicationUrl="https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=CELEX:32023R1765"/>
+        </nameAlias>
+        <nameAlias firstName="" middleName="" lastName="" wholeName="ООО СГМ-Мост" function="" title="" nameLanguage="RU" strong="true" regulationLanguage="en" logicalId="124268">
+            <remark>СГМ: Стройгазмонтаж</remark>
+            <regulationSummary regulationType="amendment" publicationDate="2023-09-14" numberTitle="2023/1765 (OJ L226)" publicationUrl="https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=CELEX:32023R1765"/>
+        </nameAlias>
+        <nameAlias firstName="" middleName="" lastName="" wholeName="SGM-Most OOO" function="" title="" nameLanguage="EN" strong="true" regulationLanguage="en" logicalId="124269">
+            <remark>SGM: Stroygazmontazh</remark>
+            <regulationSummary regulationType="amendment" publicationDate="2023-09-14" numberTitle="2023/1765 (OJ L226)" publicationUrl="https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=CELEX:32023R1765"/>
+        </nameAlias>
+        <nameAlias firstName="" middleName="" lastName="" wholeName="Strojgazmontaż-Most OOO" function="" title="" nameLanguage="PL" strong="true" regulationLanguage="en" logicalId="152447">
+            <regulationSummary regulationType="amendment" publicationDate="2023-03-14" numberTitle="2023/571 (OJ L75 I)" publicationUrl="https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=CELEX:32023R0571"/>
+        </nameAlias>
+        <address city="Moscow" street="Barklaya street 6, building 7" poBox="" zipCode="121087" region="" place="" asAtListingTime="false" countryIso2Code="RU" countryDescription="RUSSIAN FEDERATION" regulationLanguage="en" logicalId="117790">
+            <regulationSummary regulationType="amendment" publicationDate="2023-03-14" numberTitle="2023/571 (OJ L75 I)" publicationUrl="https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=CELEX:32023R0571"/>
+            <contactInfo key="WEB" value="http://kerch-most.ru/"/>
+            <contactInfo key="EMAIL" value="kerch-most@yandex.ru"/>
+        </address>
+        <identification diplomatic="false" knownExpired="false" knownFalse="false" reportedLost="false" revokedByIssuer="false" issuedBy="" latinNumber="" nameOnDocument="" number="1157746088170" region="" identificationTypeCode="regnumber" identificationTypeDescription="Registration Number" countryIso2Code="00" countryDescription="UNKNOWN" regulationLanguage="en" logicalId="117792">
+            <remark>Registration ID</remark>
+            <regulationSummary regulationType="amendment" publicationDate="2020-09-11" numberTitle="2020/1267 (OJ L298)" publicationUrl="https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=uriserv:OJ.L_.2020.298.01.0001.01.ENG&amp;toc=OJ:L:2020:298:TOC"/>
+        </identification>
+        <identification diplomatic="false" knownExpired="false" knownFalse="false" reportedLost="false" revokedByIssuer="false" issuedBy="" latinNumber="" nameOnDocument="" number="7730018980" region="" identificationTypeCode="fiscalcode" identificationTypeDescription="National Fiscal Code" countryIso2Code="00" countryDescription="UNKNOWN" regulationLanguage="en" logicalId="117791">
+            <remark>Tax ID No.</remark>
+            <regulationSummary regulationType="amendment" publicationDate="2023-09-14" numberTitle="2023/1765 (OJ L226)" publicationUrl="https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=CELEX:32023R1765"/>
+        </identification>
+    </sanctionEntity>
+    <sanctionEntity designationDate="2011-02-26" designationDetails="" unitedNationId="LYi.006" euReferenceNumber="EU.3886.3" logicalId="6106">
+        <remark>Listed pursuant to paragraph 15 of resolution 1970 (Travel Ban). Listed on 17 March 2011 pursuant to paragraph 17 of resolution 1970 (Asset Freeze).</remark>
+        <regulation regulationType="amendment" organisationType="council" publicationDate="2022-09-12" entryIntoForceDate="2022-09-13" numberTitle="2022/1502 (OJ L235)" programme="LBY" logicalId="161744">
+            <publicationUrl>https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=uriserv%3AOJ.L_.2022.235.01.0004.01.ENG&amp;toc=OJ%3AL%3A2022%3A235%3ATOC</publicationUrl>
+        </regulation>
+        <subjectType code="person" classificationCode="P"/>
+        <nameAlias firstName="Abu" middleName="Zayd Umar" lastName="DORDA" wholeName="Abu Zayd Umar DORDA" function="Director, External Security Organisation. Head of external intelligence agency." title="" nameLanguage="" strong="true" regulationLanguage="en" logicalId="8986">
+            <regulationSummary regulationType="amendment" publicationDate="2014-10-20" numberTitle="1103/2014 (OJ L301)" publicationUrl="http://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=OJ:JOL_2014_301_R_0002&amp;from=EN"/>
+        </nameAlias>
+        <nameAlias firstName="" middleName="" lastName="" wholeName="ABÚ ZAJD UMAR DÚRDA" function="" title="" nameLanguage="CS" strong="true" regulationLanguage="en" logicalId="143588">
+            <regulationSummary regulationType="amendment" publicationDate="2022-09-12" numberTitle="2022/1502 (OJ L235)" publicationUrl="https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=uriserv%3AOJ.L_.2022.235.01.0004.01.ENG&amp;toc=OJ%3AL%3A2022%3A235%3ATOC"/>
+        </nameAlias>
+        <nameAlias firstName="" middleName="" lastName="" wholeName="Abu  Zayd Umar Hmeid Dorda" function="" title="" nameLanguage="" strong="true" regulationLanguage="en" logicalId="143087">
+            <remark>Good quality alias</remark>
+            <regulationSummary regulationType="amendment" publicationDate="2022-09-12" numberTitle="2022/1502 (OJ L235)" publicationUrl="https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=uriserv%3AOJ.L_.2022.235.01.0004.01.ENG&amp;toc=OJ%3AL%3A2022%3A235%3ATOC"/>
+        </nameAlias>
+        <nameAlias firstName="" middleName="" lastName="" wholeName="Dorda Abuzed OE" function="" title="" nameLanguage="" strong="true" regulationLanguage="en" logicalId="122750">
+            <remark>Good quality alias</remark>
+            <regulationSummary regulationType="amendment" publicationDate="2020-03-06" numberTitle="2020/371 (OJ L71)" publicationUrl="https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=CELEX:32020R0371&amp;from=EN"/>
+        </nameAlias>
+        <birthdate circa="false" calendarType="GREGORIAN" city="" zipCode="" birthdate="1944-04-04" dayOfMonth="4" monthOfYear="4" year="1944" region="" place="Alrhaybat" countryIso2Code="00" countryDescription="UNKNOWN" regulationLanguage="en" logicalId="111613">
+            <regulationSummary regulationType="amendment" publicationDate="2020-03-06" numberTitle="2020/371 (OJ L71)" publicationUrl="https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=CELEX:32020R0371&amp;from=EN"/>
+        </birthdate>
+        <address city="" street="" poBox="" zipCode="" region="" place="" asAtListingTime="false" countryIso2Code="LY" countryDescription="LIBYA" regulationLanguage="en" logicalId="107521">
+            <remark>Libya (Believed status/location: residing in Egypt)</remark>
+            <regulationSummary regulationType="amendment" publicationDate="2020-03-06" numberTitle="2020/371 (OJ L71)" publicationUrl="https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=CELEX:32020R0371&amp;from=EN"/>
+        </address>
+        <identification diplomatic="false" knownExpired="false" knownFalse="false" reportedLost="false" revokedByIssuer="false" issueDate="2018-11-25" issuedBy="" latinNumber="" nameOnDocument="" number="FK117RK0" validTo="2026-11-24" region="Tripoli" identificationTypeCode="passport" identificationTypeDescription="National passport" countryIso2Code="LY" countryDescription="LIBYA" regulationLanguage="en" logicalId="122749">
+            <regulationSummary regulationType="amendment" publicationDate="2020-03-06" numberTitle="2020/371 (OJ L71)" publicationUrl="https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=CELEX:32020R0371&amp;from=EN"/>
+        </identification>
+    </sanctionEntity>
+</export>

@@ -1,0 +1,45 @@
+{
+"q0": {
+"result": [
+{
+"id": "11011863",
+"name": "MOSSACK FONSECA & CO.",
+"description": "Intermediary node extracted from the Panama Papers data.",
+"match": false,
+"score": 83.33333333333334,
+"types": [
+{
+"id": "https://offshoreleaks.icij.org/schema/oldb/intermediary",
+"name": "Intermediary"
+}
+]
+},
+{
+"id": "10022201",
+"name": "MOSSACK FONSECA LIMITED",
+"description": "Entity node extracted from the Panama Papers data.",
+"match": false,
+"score": 65.21739130434783,
+"types": [
+{
+"id": "https://offshoreleaks.icij.org/schema/oldb/entity",
+"name": "Entity"
+}
+]
+},
+{
+"id": "11010976",
+"name": "MOSSACK FONSECA GUATEMALA",
+"description": "Intermediary node extracted from the Panama Papers data.",
+"match": false,
+"score": 60.0,
+"types": [
+{
+"id": "https://offshoreleaks.icij.org/schema/oldb/intermediary",
+"name": "Intermediary"
+}
+]
+}
+]
+}
+}

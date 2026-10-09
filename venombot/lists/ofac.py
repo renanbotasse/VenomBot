@@ -87,6 +87,14 @@ def _parse(paths: Dict[str, Path], source: ListSource, prefix: str) -> Iterator[
         for row in iter_csv(paths[f"{prefix}add"], fieldnames=ADD_FIELDS):
             addresses.setdefault(clean(row["ent_num"]), []).append(clean(row.get("country")))
 
+    # sdn.csv truncates long remarks; the overflow (IDs, LEIs, listing dates)
+    # lives in sdn_comments.csv keyed by ent_num and must be appended.
+    overflow: Dict[str, str] = {}
+    if f"{prefix}comments" in paths:
+        for row in iter_csv(paths[f"{prefix}comments"], fieldnames=["ent_num", "text"]):
+            overflow.setdefault(clean(row.get("ent_num")), "")
+            overflow[clean(row.get("ent_num"))] += row.get("text") or ""
+
     for row in iter_csv(paths[f"{prefix}main"], fieldnames=SDN_FIELDS):
         ent_num = clean(row.get("ent_num"))
         name = clean(row.get("name"))
@@ -106,7 +114,7 @@ def _parse(paths: Dict[str, Path], source: ListSource, prefix: str) -> Iterator[
         title = clean(row.get("title"))
         if title:
             ent.extra["title"] = title
-        remarks = clean(row.get("remarks"))
+        remarks = clean(row.get("remarks")) + clean(overflow.get(ent_num))
         ent.remarks = remarks
         _parse_remarks(ent, remarks)
         for country in addresses.get(ent_num, []):
@@ -128,7 +136,8 @@ SOURCES = [
         name="OFAC Specially Designated Nationals (SDN) List",
         jurisdiction="US",
         list_type="SANCTIONS",
-        urls={"main": _BASE + "sdn.csv", "alt": _BASE + "alt.csv", "add": _BASE + "add.csv"},
+        urls={"main": _BASE + "sdn.csv", "alt": _BASE + "alt.csv", "add": _BASE + "add.csv",
+              "comments": _BASE + "sdn_comments.csv"},
         parser=parse_sdn,
         homepage="https://ofac.treasury.gov/specially-designated-nationals-and-blocked-persons-list-sdn-human-readable-lists",
         license="public",

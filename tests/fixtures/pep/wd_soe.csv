@@ -1,0 +1,5 @@
+org,orgLabel,country,countryLabel,role,person,personLabel,dob,dod,start,end
+http://www.wikidata.org/entity/Q1141123,Rosneft,http://www.wikidata.org/entity/Q159,Russia,ceo,http://www.wikidata.org/entity/Q525666,Igor Sechin,1960-09-07T00:00:00Z,,,
+http://www.wikidata.org/entity/Q1114680,Comisión Federal de Electricidad,http://www.wikidata.org/entity/Q96,Mexico,ceo,http://www.wikidata.org/entity/Q1863124,Manuel Bartlett Díaz,1936-02-23T00:00:00Z,,2018-01-01T00:00:00Z,
+http://www.wikidata.org/entity/Q1416687,Finavia,http://www.wikidata.org/entity/Q33,Finland,ceo,http://www.wikidata.org/entity/Q11892308,Samuli Haapasalo,1952-09-03T00:00:00Z,,2005-01-01T00:00:00Z,2011-01-01T00:00:00Z
+http://www.wikidata.org/entity/Q1416687,Finavia,http://www.wikidata.org/entity/Q33,Finland,ceo,http://www.wikidata.org/entity/Q17384235,Mikko Talvitie,1945-07-29T00:00:00Z,2005-03-17T00:00:00Z,1991-01-01T00:00:00Z,2005-01-01T00:00:00Z

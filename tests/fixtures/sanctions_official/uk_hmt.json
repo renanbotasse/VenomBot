@@ -1,0 +1,7 @@
+{
+ "base_path": "/guidance/russia-list-of-persons-named-in-relation-to-financial-and-investment-restrictions",
+ "public_updated_at": "2026-02-24T17:56:40+00:00",
+ "details": {
+  "body": "<div class=\"govspeak\"><table><thead><tr>\n      <th scope=\"col\">Organisation</th>\n      <th scope=\"col\">Subject to other sanctions (see entry on the UK Sanctions List)</th>\n      <th scope=\"col\">Historic Group ID <sup>1</sup>\n</th>\n      <th scope=\"col\">UK Sanctions List Unique ID <sup>2</sup>\n</th>\n    </tr></thead><tbody><tr>\n      <td>GAZPROM NEFT</td>\n      <td><a rel=\"external\" href=\"https://search-uk-sanctions-list.service.gov.uk/designations/RUS2383/Entity\">Yes - see entry</a></td>\n      <td>13119</td>\n      <td>RUS2383</td>\n    </tr><tr>\n      <td>GAZPROMBANK</td>\n      <td><a rel=\"external\" href=\"https://search-uk-sanctions-list.service.gov.uk/designations/RUS1072/Entity\">Yes - see entry</a></td>\n      <td>13081</td>\n      <td>RUS1072</td>\n    </tr><tr>\n      <td>OPK OBORONPROM</td>\n      <td>-</td>\n      <td>13120</td>\n      <td>-</td>\n    </tr><tr>\n      <td>PJSC SBERBANK (PUBLIC JOINT-STOCK COMPANY SBERBANK)</td>\n      <td><a rel=\"external\" href=\"https://search-uk-sanctions-list.service.gov.uk/designations/RUS0256/Entity\">Yes - see entry</a></td>\n      <td>13079</td>\n      <td>RUS0256</td>\n    </tr></tbody></table></div>"
+ }
+}
