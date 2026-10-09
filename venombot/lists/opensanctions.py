@@ -48,6 +48,7 @@ SEED = [
     _row("peps", "Politically Exposed Persons", "collection", [], 716929),
     _row("wanted", "Wanted Persons", "collection", [], 65203),
     _row("crime", "Crime and Organised Crime", "collection", [], 251127),
+    _row("interpol_red_notices", "INTERPOL Red Notices", "source", ["list.wanted"], 6369, "", True, "Interpol"),
     _row("debarment", "Debarment and Exclusion Lists", "collection", [], 197960),
     _row("enforcement", "Enforcement Actions", "collection", [], 7885),
     _row("regulatory", "Regulatory Warnings and Actions", "collection", [], 163240),
