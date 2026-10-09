@@ -1,0 +1,46 @@
+{
+"results": [
+{
+"title": "Glencore employees",
+"link": "/sfo-cases/glencore-employees",
+"public_timestamp": "2025-11-10T15:40:30Z",
+"description": "The Serious Fraud Office (SFO) has charged six former employees of Glencore with conspiring to make corrupt payments to benefit the company's oil operations in West Africa.",
+"format": "sfo_case",
+"index": "govuk",
+"es_score": 0.038922742,
+"_id": "/sfo-cases/glencore-employees",
+"elasticsearch_type": "sfo_case",
+"document_type": "sfo_case"
+},
+{
+"title": "Glencore group of companies",
+"link": "/sfo-cases/glencore-group-of-companies",
+"public_timestamp": "2024-11-29T15:05:24Z",
+"description": "The SFO launched an investigation into suspected bribery offences at the Glencore group of companies in 2019.",
+"format": "sfo_case",
+"index": "govuk",
+"es_score": 0.03539218,
+"_id": "/sfo-cases/glencore-group-of-companies",
+"elasticsearch_type": "sfo_case",
+"document_type": "sfo_case"
+},
+{
+"title": "SFO charges five former Glencore employees",
+"link": "/government/news/sfo-charges-five-former-glencore-employees",
+"public_timestamp": "2024-07-31T23:00:00Z",
+"description": "The SFO has today charged Alex Beard, Andrew Gibson, Paul Hopkirk, Ramon Labiaga and Martin Wakefield with conspiring to make corrupt payments.",
+"format": "press_release",
+"index": "govuk",
+"es_score": 0.031168707,
+"_id": "/government/news/sfo-charges-five-former-glencore-employees",
+"elasticsearch_type": "edition",
+"document_type": "edition"
+}
+],
+"total": 11,
+"start": 0,
+"aggregates": {},
+"suggested_queries": [],
+"suggested_autocomplete": [],
+"es_cluster": "A"
+}
